@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF - 8"?>
+
+<CWeaponModelInfo__InitDataList>
+	<InitDatas>
+		<Item>
+			<modelName>victusxmr</modelName>
+			<txdName>victusxmr</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="50"/>
+		</Item>
+		<Item>
+			<modelName>victusxmr_clip_01</modelName>
+			<txdName>victusxmr_clip_01</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="50"/>
+		</Item>
+		<Item>
+			<modelName>victusxmr_scope_01</modelName>
+			<txdName>victusxmr_scope_01</txdName>
+			<ptfxAssetName>NULL</ptfxAssetName>
+			<lodDist value="50"/>
+		</Item>		
+	</InitDatas>
+</CWeaponModelInfo__InitDataList>
+

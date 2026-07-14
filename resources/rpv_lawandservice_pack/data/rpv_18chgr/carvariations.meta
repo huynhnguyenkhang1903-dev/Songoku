@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CVehicleModelInfoVariation>
+	<variationData>
+		<Item>
+			<modelName>rpv_18chgr</modelName>
+			<colors>
+				<Item>
+					<indices content="char_array">
+						134
+						134
+						134
+						29
+						53
+						54
+					</indices>
+					<liveries />
+				</Item>
+			</colors>
+			<kits>
+				<Item>409_valor_modkit</Item>
+			</kits>
+			<windowsWithExposedEdges />
+			<plateProbabilities>
+				<Probabilities>
+					<Item>
+						<Name>Police guv plate</Name>
+						<Value value="100" />
+					</Item>
+				</Probabilities>
+			</plateProbabilities>
+			<lightSettings value="1" />
+			<sirenSettings value="532864176529" />
+		</Item>
+		<Item>
+			<modelName>18f150vs</modelName>
+			<colors>
+				<Item>
+					<indices content="char_array">
+						0
+						70
+						0
+						0
+						0
+						0
+					</indices>
+					<liveries />
+				</Item>
+			</colors>
+			<kits>
+				<Item>355_setinaf150_modkit</Item>
+			</kits>
+			<windowsWithExposedEdges />
+			<plateProbabilities>
+				<Probabilities>
+					<Item>
+						<Name>Police guv plate</Name>
+						<Value value="100" />
+					</Item>
+				</Probabilities>
+			</plateProbabilities>
+			<lightSettings value="2" />
+			<sirenSettings value="3722134049239" />
+		</Item>
+		<Item>
+			<modelName>18f150vw</modelName>
+			<colors>
+				<Item>
+					<indices content="char_array">
+						0
+						70
+						0
+						0
+						0
+						0
+					</indices>
+					<liveries />
+				</Item>
+			</colors>
+			<kits>
+				<Item>931_westinf150_modkit</Item>
+			</kits>
+			<windowsWithExposedEdges />
+			<plateProbabilities>
+				<Probabilities>
+					<Item>
+						<Name>Police guv plate</Name>
+						<Value value="100" />
+					</Item>
+				</Probabilities>
+			</plateProbabilities>
+			<lightSettings value="2" />
+			<sirenSettings value="3722134049239" />
+		</Item>
+		<Item>
+			<modelName>18tahoevs</modelName>
+			<colors>
+				<Item>
+					<indices content="char_array">
+						134
+						134
+						134
+						29
+						53
+						54
+					</indices>
+					<liveries />
+				</Item>
+			</colors>
+			<kits>
+				<Item>808_valortahoeset_modkit</Item>
+			</kits>
+			<windowsWithExposedEdges />
+			<plateProbabilities>
+				<Probabilities>
+					<Item>
+						<Name>Police guv plate</Name>
+						<Value value="100" />
+					</Item>
+				</Probabilities>
+			</plateProbabilities>
+			<lightSettings value="1" />
+			<sirenSettings value="4448189312835" />
+		</Item>
+	</variationData>
+</CVehicleModelInfoVariation>

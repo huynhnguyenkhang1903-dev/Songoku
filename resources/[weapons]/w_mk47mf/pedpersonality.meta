@@ -1,0 +1,2503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CPedModelInfo__PersonalityDataList>
+	<MovementModeUnholsterData>
+		<Item>
+			<Name>UNHOLSTER_UNARMED</Name>
+			<UnholsterClips>
+				<Item>
+                    <Weapons>
+                        <Item>WEAPON_WEAPON</Item>
+                    </Weapons>
+                    <Clip>unarmed_holster_unarmed</Clip>
+                </Item>
+                <Item>
+                    <Weapons>
+                        <Item>WEAPON_KATANA</Item>
+                    </Weapons>
+                    <Clip>unarmed_holster_2h_melee</Clip>
+                </Item>
+ 				<Item>
+					<Weapons>
+						<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+					</Weapons>
+					<Clip>unarmed_holster_1h</Clip>
+				</Item>
+				<Item>
+					<Weapons>
+						<Item>WEAPON_AK102</Item>
+						<Item>WEAPON_CBQ</Item>
+						<Item>WEAPON_GALIL</Item>
+						<Item>WEAPON_HK43</Item>
+						<Item>WEAPON_HK416</Item>
+						<Item>WEAPON_M4A4</Item>
+						<Item>WEAPON_MARINE</Item>	
+						<Item>WEAPON_SUNDA</Item>
+						<Item>WEAPON_ZLR</Item>
+						<Item>WEAPON_BARSKA</Item>
+						<Item>WEAPON_HK516</Item>	
+						<Item>WEAPON_MALYUK</Item>	
+						<Item>WEAPON_MK47FM</Item>
+						<Item>WEAPON_VSS</Item>	
+						<Item>WEAPON_M9BAY</Item>	
+						<Item>WEAPON_MP5A5</Item>
+						<Item>WEAPON_MP5SD</Item>
+  						<Item>WEAPON_MP5A1</Item>
+						<Item>WEAPON_MP40</Item>
+						<Item>WEAPON_VC30</Item>
+						<Item>WEAPON_45ACP</Item>
+						<Item>WEAPON_AUGA1</Item>
+						<Item>WEAPON_AUGA2</Item>	
+						<Item>WEAPON_BIZON</Item>
+						<Item>WEAPON_M16A1</Item>
+						<Item>WEAPON_P90</Item>
+						<Item>WEAPON_SIG516</Item>
+						<Item>WEAPON_TAR</Item>					
+					</Weapons>
+					<Clip>unarmed_holster_2h</Clip>
+				</Item>
+			</UnholsterClips>
+		</Item>
+		<Item>
+			<Name>UNHOLSTER_2H_MELEE</Name>
+			<UnholsterClips>
+			    <Item>
+                    <Weapons>
+                        <Item>WEAPON_KATANA</Item>
+                    </Weapons>
+                    <Clip>2h_melee_holster_2h_melee</Clip>
+                </Item>
+ 				<Item>
+					<Weapons>
+						<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+					</Weapons>
+					<Clip>2h_melee_holster_1h</Clip>
+				</Item>
+				<Item>
+					<Weapons>
+						<Item>WEAPON_AK102</Item>
+						<Item>WEAPON_CBQ</Item>
+						<Item>WEAPON_GALIL</Item>
+						<Item>WEAPON_HK43</Item>
+						<Item>WEAPON_HK416</Item>
+						<Item>WEAPON_M4A4</Item>
+						<Item>WEAPON_MARINE</Item>	
+						<Item>WEAPON_SUNDA</Item>
+						<Item>WEAPON_ZLR</Item>
+						<Item>WEAPON_BARSKA</Item>
+						<Item>WEAPON_HK516</Item>
+						<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>	
+						<Item>WEAPON_MCX</Item>
+<Item>WEAPON_FENNEC</Item>	
+						<Item>WEAPON_PKM</Item>
+						<Item>WEAPON_BTR</Item>	
+						<Item>WEAPON_AUG</Item>
+						<Item>WEAPON_M4A5</Item>
+<Item>WEAPON_KILO433</Item>
+<Item>WEAPON_YANDERE</Item>
+<Item>WEAPON_MDR</Item>
+<Item>WEAPON_STG</Item>
+<Item>WEAPON_T9ACC</Item>
+<Item>WEAPON_FNFAL</Item>
+<Item>WEAPON_BEOWULF</Item>
+<Item>WEAPON_AK12</Item>
+<Item>WEAPON_AK103</Item>
+<Item>WEAPON_ASGARD</Item>
+<Item>WEAPON_HKG28</Item>
+<Item>WEAPON_BARM19</Item>
+<Item>WEAPON_DRAGUNITE</Item>
+						<Item>WEAPON_MALYUK</Item>	
+						<Item>WEAPON_MK47FM</Item>
+						<Item>WEAPON_VSS</Item>	
+						<Item>WEAPON_M9BAY</Item>	
+						<Item>WEAPON_MP5A5</Item>
+						<Item>WEAPON_MP5SD</Item>
+  					<Item>WEAPON_MP5A1</Item>
+						<Item>WEAPON_MP40</Item>
+						<Item>WEAPON_VC30</Item>
+						<Item>WEAPON_45ACP</Item>
+						<Item>WEAPON_AUGA1</Item>
+						<Item>WEAPON_AUGA2</Item>	
+						<Item>WEAPON_BIZON</Item>
+						<Item>WEAPON_M16A1</Item>
+						<Item>WEAPON_P90</Item>
+						<Item>WEAPON_SIG516</Item>
+						<Item>WEAPON_TAR</Item>		
+						<Item>WEAPON_MP5A5</Item>
+						<Item>WEAPON_MP5SD</Item>
+  					<Item>WEAPON_MP5A1</Item>								
+					</Weapons>
+					<Clip>2h_melee_holster_2h</Clip>
+				</Item>
+			</UnholsterClips>
+		</Item>
+		<Item>
+			<Name>UNHOLSTER_1H</Name>
+			<UnholsterClips>
+                <Item>
+                    <Weapons>
+                        <Item>WEAPON_KATANA</Item>
+                    </Weapons>
+                    <Clip>1h_holster_2h_melee</Clip>
+                </Item>
+ 				<Item>
+					<Weapons>
+						<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+					</Weapons>
+					<Clip>1h_holster_1h</Clip>
+				</Item>
+				<Item>
+					<Weapons>
+						<Item>WEAPON_AK102</Item>
+						<Item>WEAPON_CBQ</Item>
+						<Item>WEAPON_GALIL</Item>
+						<Item>WEAPON_HK43</Item>
+						<Item>WEAPON_HK416</Item>
+						<Item>WEAPON_M4A4</Item>
+						<Item>WEAPON_MARINE</Item>	
+						<Item>WEAPON_SUNDA</Item>
+						<Item>WEAPON_ZLR</Item>
+						<Item>WEAPON_BARSKA</Item>
+						<Item>WEAPON_HK516</Item>
+						<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>	
+						<Item>WEAPON_MCX</Item>
+<Item>WEAPON_FENNEC</Item>	
+						<Item>WEAPON_PKM</Item>
+						<Item>WEAPON_BTR</Item>	
+						<Item>WEAPON_AUG</Item>
+						<Item>WEAPON_M4A5</Item>
+<Item>WEAPON_KILO433</Item>
+<Item>WEAPON_YANDERE</Item>
+<Item>WEAPON_MDR</Item>
+<Item>WEAPON_STG</Item>
+<Item>WEAPON_T9ACC</Item>
+<Item>WEAPON_FNFAL</Item>
+<Item>WEAPON_BEOWULF</Item>
+<Item>WEAPON_AK12</Item>
+<Item>WEAPON_AK103</Item>
+<Item>WEAPON_ASGARD</Item>
+<Item>WEAPON_HKG28</Item>
+<Item>WEAPON_BARM19</Item>
+<Item>WEAPON_DRAGUNITE</Item>
+<Item>WEAPON_BORNBEAST</Item>
+						<Item>WEAPON_MALYUK</Item>	
+						<Item>WEAPON_MK47FM</Item>
+						<Item>WEAPON_VSS</Item>	
+						<Item>WEAPON_M9BAY</Item>	
+						<Item>WEAPON_MP5A5</Item>
+						<Item>WEAPON_MP5SD</Item>
+  						<Item>WEAPON_MP5A1</Item>
+						<Item>WEAPON_MP40</Item>
+						<Item>WEAPON_VC30</Item>
+						<Item>WEAPON_45ACP</Item>
+						<Item>WEAPON_AUGA1</Item>
+						<Item>WEAPON_AUGA2</Item>	
+						<Item>WEAPON_BIZON</Item>
+						<Item>WEAPON_M16A1</Item>
+						<Item>WEAPON_P90</Item>
+						<Item>WEAPON_SIG516</Item>
+						<Item>WEAPON_TAR</Item>									
+					</Weapons>
+					<Clip>1h_holster_2h</Clip>
+				</Item>
+			</UnholsterClips>
+		</Item>
+		<Item>
+			<Name>UNHOLSTER_2H</Name>
+			<UnholsterClips>
+                <Item>
+                    <Weapons>
+                        <Item>WEAPON_KATANA</Item>
+                    </Weapons>
+                    <Clip>2h_holster_2h_melee</Clip>
+                </Item>
+ 				<Item>
+					<Weapons>
+						<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+					</Weapons>
+					<Clip>2h_holster_1h</Clip>
+				</Item>
+				<Item>
+					<Weapons>
+						<Item>WEAPON_AK102</Item>
+						<Item>WEAPON_CBQ</Item>
+						<Item>WEAPON_GALIL</Item>
+						<Item>WEAPON_HK43</Item>
+						<Item>WEAPON_HK416</Item>
+						<Item>WEAPON_M4A4</Item>
+						<Item>WEAPON_MARINE</Item>	
+						<Item>WEAPON_SUNDA</Item>
+						<Item>WEAPON_ZLR</Item>
+						<Item>WEAPON_BARSKA</Item>
+						<Item>WEAPON_HK516</Item>
+						<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>	
+						<Item>WEAPON_MCX</Item>
+<Item>WEAPON_FENNEC</Item>	
+						<Item>WEAPON_PKM</Item>
+						<Item>WEAPON_BTR</Item>	
+						<Item>WEAPON_AUG</Item>
+						<Item>WEAPON_M4A5</Item>
+<Item>WEAPON_KILO433</Item>
+<Item>WEAPON_YANDERE</Item>
+<Item>WEAPON_MDR</Item>
+<Item>WEAPON_STG</Item>
+<Item>WEAPON_T9ACC</Item>
+<Item>WEAPON_FNFAL</Item>
+<Item>WEAPON_BEOWULF</Item>
+<Item>WEAPON_AK12</Item>
+<Item>WEAPON_AK103</Item>
+<Item>WEAPON_ASGARD</Item>
+<Item>WEAPON_HKG28</Item>
+<Item>WEAPON_BARM19</Item>
+<Item>WEAPON_DRAGUNITE</Item>
+<Item>WEAPON_BORNBEAST</Item>
+						<Item>WEAPON_MALYUK</Item>	
+						<Item>WEAPON_MK47FM</Item>
+						<Item>WEAPON_VSS</Item>	
+						<Item>WEAPON_M9BAY</Item>	
+						<Item>WEAPON_MP5A5</Item>
+						<Item>WEAPON_MP5SD</Item>
+  					<Item>WEAPON_MP5A1</Item>
+						<Item>WEAPON_MP40</Item>
+						<Item>WEAPON_VC30</Item>
+						<Item>WEAPON_45ACP</Item>
+						<Item>WEAPON_AUGA1</Item>
+						<Item>WEAPON_AUGA2</Item>	
+						<Item>WEAPON_BIZON</Item>
+						<Item>WEAPON_M16A1</Item>
+						<Item>WEAPON_P90</Item>
+						<Item>WEAPON_SIG516</Item>
+						<Item>WEAPON_TAR</Item>									
+					</Weapons>
+					<Clip>2h_holster_2h</Clip>
+				</Item>
+			</UnholsterClips>
+		</Item>
+		<Item>
+			<Name>UNHOLSTER_MINIGUN</Name>
+			<UnholsterClips>
+                <Item>
+                    <Weapons>
+                        <Item>WEAPON_KATANA</Item>
+                    </Weapons>
+                    <Clip>mini_holster_2h_melee</Clip>
+                </Item>
+ 				<Item>
+					<Weapons>
+						<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+					</Weapons>
+					<Clip>mini_holster_1h</Clip>
+				</Item>
+				<Item>
+					<Weapons>
+						<Item>WEAPON_AK102</Item>
+						<Item>WEAPON_CBQ</Item>
+						<Item>WEAPON_GALIL</Item>
+						<Item>WEAPON_HK43</Item>
+						<Item>WEAPON_HK416</Item>
+						<Item>WEAPON_M4A4</Item>
+						<Item>WEAPON_MARINE</Item>	
+						<Item>WEAPON_SUNDA</Item>
+						<Item>WEAPON_ZLR</Item>
+						<Item>WEAPON_BARSKA</Item>
+						<Item>WEAPON_HK516</Item>
+						<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>	
+						<Item>WEAPON_MCX</Item>
+<Item>WEAPON_FENNEC</Item>	
+						<Item>WEAPON_PKM</Item>
+						<Item>WEAPON_BTR</Item>	
+						<Item>WEAPON_AUG</Item>
+						<Item>WEAPON_M4A5</Item>
+<Item>WEAPON_KILO433</Item>
+<Item>WEAPON_YANDERE</Item>
+<Item>WEAPON_MDR</Item>
+<Item>WEAPON_STG</Item>
+<Item>WEAPON_T9ACC</Item>
+<Item>WEAPON_FNFAL</Item>
+<Item>WEAPON_BEOWULF</Item>
+<Item>WEAPON_AK12</Item>
+<Item>WEAPON_AK103</Item>
+<Item>WEAPON_ASGARD</Item>
+<Item>WEAPON_HKG28</Item>
+<Item>WEAPON_BARM19</Item>
+<Item>WEAPON_DRAGUNITE</Item>
+<Item>WEAPON_BORNBEAST</Item>
+						<Item>WEAPON_MALYUK</Item>	
+						<Item>WEAPON_MK47FM</Item>
+						<Item>WEAPON_VSS</Item>	
+						<Item>WEAPON_M9BAY</Item>	
+						<Item>WEAPON_MP5A5</Item>
+						<Item>WEAPON_MP5SD</Item>
+  					<Item>WEAPON_MP5A1</Item>
+						<Item>WEAPON_MP40</Item>
+						<Item>WEAPON_VC30</Item>
+						<Item>WEAPON_45ACP</Item>
+						<Item>WEAPON_AUGA1</Item>
+						<Item>WEAPON_AUGA2</Item>	
+						<Item>WEAPON_BIZON</Item>
+						<Item>WEAPON_M16A1</Item>
+						<Item>WEAPON_P90</Item>
+						<Item>WEAPON_SIG516</Item>
+						<Item>WEAPON_TAR</Item>									
+					</Weapons>
+					<Clip>mini_holster_2h</Clip>
+				</Item>
+			</UnholsterClips>
+		</Item>
+		<Item>
+			<Name>UNHOLSTER_UNARMED_STEALTH</Name>
+			<UnholsterClips>
+                <Item>
+                    <Weapons>
+                        <Item>WEAPON_KATANA</Item>
+                    </Weapons>
+                    <Clip>unarmed_holster_unarmed</Clip>
+                </Item>
+ 				<Item>
+					<Weapons>
+						<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+					</Weapons>
+					<Clip>unarmed_holster_1h</Clip>
+				</Item>
+				<Item>
+					<Weapons>
+						<Item>WEAPON_AK102</Item>
+						<Item>WEAPON_CBQ</Item>
+						<Item>WEAPON_GALIL</Item>
+						<Item>WEAPON_HK43</Item>
+						<Item>WEAPON_HK416</Item>
+						<Item>WEAPON_M4A4</Item>
+						<Item>WEAPON_MARINE</Item>	
+						<Item>WEAPON_SUNDA</Item>
+						<Item>WEAPON_ZLR</Item>
+						<Item>WEAPON_BARSKA</Item>
+						<Item>WEAPON_HK516</Item>
+						<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>	
+						<Item>WEAPON_MCX</Item>
+<Item>WEAPON_FENNEC</Item>	
+						<Item>WEAPON_PKM</Item>
+						<Item>WEAPON_BTR</Item>	
+						<Item>WEAPON_AUG</Item>
+						<Item>WEAPON_M4A5</Item>
+<Item>WEAPON_KILO433</Item>
+<Item>WEAPON_YANDERE</Item>
+<Item>WEAPON_MDR</Item>
+<Item>WEAPON_STG</Item>
+<Item>WEAPON_T9ACC</Item>
+<Item>WEAPON_FNFAL</Item>
+<Item>WEAPON_BEOWULF</Item>
+<Item>WEAPON_AK12</Item>
+<Item>WEAPON_AK103</Item>
+<Item>WEAPON_ASGARD</Item>
+<Item>WEAPON_HKG28</Item>
+<Item>WEAPON_BARM19</Item>
+<Item>WEAPON_DRAGUNITE</Item>
+<Item>WEAPON_BORNBEAST</Item>
+						<Item>WEAPON_MALYUK</Item>	
+						<Item>WEAPON_MK47FM</Item>
+						<Item>WEAPON_VSS</Item>	
+						<Item>WEAPON_M9BAY</Item>	
+						<Item>WEAPON_MP5A5</Item>
+						<Item>WEAPON_MP5SD</Item>
+  					<Item>WEAPON_MP5A1</Item>
+						<Item>WEAPON_MP40</Item>
+						<Item>WEAPON_VC30</Item>
+						<Item>WEAPON_45ACP</Item>
+						<Item>WEAPON_AUGA1</Item>
+						<Item>WEAPON_AUGA2</Item>	
+						<Item>WEAPON_BIZON</Item>
+						<Item>WEAPON_M16A1</Item>
+						<Item>WEAPON_P90</Item>
+						<Item>WEAPON_SIG516</Item>
+						<Item>WEAPON_TAR</Item>									
+					</Weapons>
+					<Clip>unarmed_holster_2h</Clip>
+				</Item>
+			</UnholsterClips>
+		</Item>
+		<Item>
+			<Name>UNHOLSTER_2H_MELEE_STEALTH</Name>
+			<UnholsterClips>
+                <Item>
+                    <Weapons>
+                        <Item>WEAPON_KATANA</Item>
+                    </Weapons>
+                    <Clip>unarmed_holster_unarmed</Clip>
+                </Item>
+ 				<Item>
+					<Weapons>
+						<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+					</Weapons>
+					<Clip>unarmed_holster_1h</Clip>
+				</Item>
+				<Item>
+					<Weapons>
+						<Item>WEAPON_AK102</Item>
+						<Item>WEAPON_CBQ</Item>
+						<Item>WEAPON_GALIL</Item>
+						<Item>WEAPON_HK43</Item>
+						<Item>WEAPON_HK416</Item>
+						<Item>WEAPON_M4A4</Item>
+						<Item>WEAPON_MARINE</Item>	
+						<Item>WEAPON_SUNDA</Item>
+						<Item>WEAPON_ZLR</Item>
+						<Item>WEAPON_BARSKA</Item>
+						<Item>WEAPON_HK516</Item>
+						<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>	
+						<Item>WEAPON_MCX</Item>
+<Item>WEAPON_FENNEC</Item>	
+						<Item>WEAPON_PKM</Item>
+						<Item>WEAPON_BTR</Item>	
+						<Item>WEAPON_AUG</Item>
+						<Item>WEAPON_M4A5</Item>
+<Item>WEAPON_KILO433</Item>
+<Item>WEAPON_YANDERE</Item>
+<Item>WEAPON_MDR</Item>
+<Item>WEAPON_STG</Item>
+<Item>WEAPON_T9ACC</Item>
+<Item>WEAPON_FNFAL</Item>
+<Item>WEAPON_BEOWULF</Item>
+<Item>WEAPON_AK12</Item>
+<Item>WEAPON_AK103</Item>
+<Item>WEAPON_ASGARD</Item>
+<Item>WEAPON_HKG28</Item>
+<Item>WEAPON_BARM19</Item>
+<Item>WEAPON_DRAGUNITE</Item>
+<Item>WEAPON_BORNBEAST</Item>
+						<Item>WEAPON_MALYUK</Item>	
+						<Item>WEAPON_MK47FM</Item>
+						<Item>WEAPON_VSS</Item>	
+						<Item>WEAPON_M9BAY</Item>	
+						<Item>WEAPON_MP5A5</Item>
+						<Item>WEAPON_MP5SD</Item>
+  					<Item>WEAPON_MP5A1</Item>
+						<Item>WEAPON_MP40</Item>
+						<Item>WEAPON_VC30</Item>
+						<Item>WEAPON_45ACP</Item>
+						<Item>WEAPON_AUGA1</Item>
+						<Item>WEAPON_AUGA2</Item>	
+						<Item>WEAPON_BIZON</Item>
+						<Item>WEAPON_M16A1</Item>
+						<Item>WEAPON_P90</Item>
+						<Item>WEAPON_SIG516</Item>
+						<Item>WEAPON_TAR</Item>			
+					</Weapons>
+					<Clip>unarmed_holster_2h</Clip>
+				</Item>
+			</UnholsterClips>
+		</Item>
+		<Item>
+			<Name>UNHOLSTER_1H_STEALTH</Name>
+			<UnholsterClips>
+                <Item>
+                    <Weapons>
+                        <Item>WEAPON_KATANA</Item>
+                    </Weapons>
+                    <Clip>1h_holster_unarmed</Clip>
+                </Item>
+ 				<Item>
+					<Weapons>
+						<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+					</Weapons>
+					<Clip>1h_holster_1h</Clip>
+				</Item>
+				<Item>
+					<Weapons>
+						<Item>WEAPON_AK102</Item>
+						<Item>WEAPON_CBQ</Item>
+						<Item>WEAPON_GALIL</Item>
+						<Item>WEAPON_HK43</Item>
+						<Item>WEAPON_HK416</Item>
+						<Item>WEAPON_M4A4</Item>
+						<Item>WEAPON_MARINE</Item>	
+						<Item>WEAPON_SUNDA</Item>
+						<Item>WEAPON_ZLR</Item>
+						<Item>WEAPON_BARSKA</Item>
+						<Item>WEAPON_HK516</Item>
+						<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>	
+						<Item>WEAPON_MCX</Item>
+<Item>WEAPON_FENNEC</Item>	
+						<Item>WEAPON_PKM</Item>
+						<Item>WEAPON_BTR</Item>	
+						<Item>WEAPON_AUG</Item>
+						<Item>WEAPON_M4A5</Item>
+<Item>WEAPON_KILO433</Item>
+<Item>WEAPON_YANDERE</Item>
+<Item>WEAPON_MDR</Item>
+<Item>WEAPON_STG</Item>
+<Item>WEAPON_T9ACC</Item>
+<Item>WEAPON_FNFAL</Item>
+<Item>WEAPON_BEOWULF</Item>
+<Item>WEAPON_AK12</Item>
+<Item>WEAPON_AK103</Item>
+<Item>WEAPON_ASGARD</Item>
+<Item>WEAPON_HKG28</Item>
+<Item>WEAPON_BARM19</Item>
+<Item>WEAPON_DRAGUNITE</Item>
+<Item>WEAPON_BORNBEAST</Item>
+						<Item>WEAPON_MALYUK</Item>	
+						<Item>WEAPON_MK47FM</Item>
+						<Item>WEAPON_VSS</Item>	
+						<Item>WEAPON_M9BAY</Item>	
+						<Item>WEAPON_MP5A5</Item>
+						<Item>WEAPON_MP5SD</Item>
+  					<Item>WEAPON_MP5A1</Item>
+						<Item>WEAPON_MP40</Item>
+						<Item>WEAPON_VC30</Item>
+						<Item>WEAPON_45ACP</Item>
+						<Item>WEAPON_AUGA1</Item>
+						<Item>WEAPON_AUGA2</Item>	
+						<Item>WEAPON_BIZON</Item>
+						<Item>WEAPON_M16A1</Item>
+						<Item>WEAPON_P90</Item>
+						<Item>WEAPON_SIG516</Item>
+						<Item>WEAPON_TAR</Item>									
+					</Weapons>
+					<Clip>1h_holster_2h</Clip>
+				</Item>
+			</UnholsterClips>
+		</Item>
+		<Item>
+			<Name>UNHOLSTER_2H_STEALTH</Name>
+			<UnholsterClips>
+                <Item>
+                    <Weapons>
+                        <Item>WEAPON_KATANA</Item>
+                    </Weapons>
+                    <Clip>2h_holster_unarmed</Clip>
+                </Item>
+ 				<Item>
+					<Weapons>
+						<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+					</Weapons>
+					<Clip>2h_holster_1h</Clip>
+				</Item>
+				<Item>
+					<Weapons>
+						<Item>WEAPON_AK102</Item>
+						<Item>WEAPON_CBQ</Item>
+						<Item>WEAPON_GALIL</Item>
+						<Item>WEAPON_HK43</Item>
+						<Item>WEAPON_HK416</Item>
+						<Item>WEAPON_M4A4</Item>
+						<Item>WEAPON_MARINE</Item>	
+						<Item>WEAPON_SUNDA</Item>
+						<Item>WEAPON_ZLR</Item>
+						<Item>WEAPON_BARSKA</Item>
+						<Item>WEAPON_HK516</Item>
+						<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>	
+						<Item>WEAPON_MCX</Item>
+<Item>WEAPON_FENNEC</Item>	
+						<Item>WEAPON_PKM</Item>
+						<Item>WEAPON_BTR</Item>	
+						<Item>WEAPON_AUG</Item>
+						<Item>WEAPON_M4A5</Item>
+<Item>WEAPON_KILO433</Item>
+<Item>WEAPON_YANDERE</Item>
+<Item>WEAPON_MDR</Item>
+<Item>WEAPON_STG</Item>
+<Item>WEAPON_T9ACC</Item>
+<Item>WEAPON_FNFAL</Item>
+<Item>WEAPON_BEOWULF</Item>
+<Item>WEAPON_AK12</Item>
+<Item>WEAPON_AK103</Item>
+<Item>WEAPON_ASGARD</Item>
+<Item>WEAPON_HKG28</Item>
+<Item>WEAPON_BARM19</Item>
+<Item>WEAPON_DRAGUNITE</Item>
+<Item>WEAPON_BORNBEAST</Item>
+						<Item>WEAPON_MALYUK</Item>	
+						<Item>WEAPON_MK47FM</Item>
+						<Item>WEAPON_VSS</Item>	
+						<Item>WEAPON_M9BAY</Item>	
+						<Item>WEAPON_MP5A5</Item>
+						<Item>WEAPON_MP5SD</Item>
+  					<Item>WEAPON_MP5A1</Item>
+						<Item>WEAPON_MP40</Item>
+						<Item>WEAPON_VC30</Item>
+						<Item>WEAPON_45ACP</Item>
+						<Item>WEAPON_AUGA1</Item>
+						<Item>WEAPON_AUGA2</Item>	
+						<Item>WEAPON_BIZON</Item>
+						<Item>WEAPON_M16A1</Item>
+						<Item>WEAPON_P90</Item>
+						<Item>WEAPON_SIG516</Item>
+						<Item>WEAPON_TAR</Item>									
+					</Weapons>
+					<Clip>2h_holster_2h</Clip>
+				</Item>
+			</UnholsterClips>
+		</Item>
+	</MovementModeUnholsterData>
+	<MovementModes>
+		<Item>
+			<Name>DEFAULT_ACTION</Name>
+			<MovementModes>
+				<Item>
+ 					<Item>
+						<Weapons>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_action@p_m_zero@armed@core</MovementClipSetId>
+								<WeaponClipSetId>move_action@p_m_zero@armed@1H@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="true" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="true" />
+								<IdleTransitionBlendOutTime value="0.500000" />
+								<IdleTransitions>
+									<Item>MOVE_ACTION@GENERIC@TRANS@1H</Item>
+								</IdleTransitions>
+								<UnholsterClipSetId>MOVE_ACTION@P_M_ZERO@HOLSTER</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_1H</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+ 					<Item>
+						<Weapons>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_action@p_m_zero@armed@core</MovementClipSetId>
+								<WeaponClipSetId>move_action@p_m_zero@armed@1H@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="true" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="true" />
+								<IdleTransitionBlendOutTime value="0.500000" />
+								<IdleTransitions>
+									<Item>MOVE_ACTION@GENERIC@TRANS@1H</Item>
+								</IdleTransitions>
+								<UnholsterClipSetId>ANIM@WEAPONS@PISTOL@DOUBLEACTION_HOLSTER_ACTION</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_1H</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+					<Item>
+						<Weapons>
+							<Item>WEAPON_AK102</Item>
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_action@p_m_zero@armed@core</MovementClipSetId>
+								<WeaponClipSetId>move_action@p_m_zero@armed@2H_short@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="false" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="true" />
+								<IdleTransitions>
+									<Item>MOVE_ACTION@GENERIC@TRANS@2H_SHORT</Item>
+								</IdleTransitions>
+								<IdleTransitionBlendOutTime value="0.500000"/>
+								<UnholsterClipSetId>MOVE_ACTION@P_M_ZERO@HOLSTER</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_2H</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+					<Item>
+						<Weapons>
+							<Item>WEAPON_CBQ</Item>
+							<Item>WEAPON_GALIL</Item>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+							<Item>WEAPON_HK43</Item>
+							<Item>WEAPON_ZLR</Item>
+							<Item>WEAPON_BARSKA</Item>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>	
+						<Item>WEAPON_MCX</Item>
+<Item>WEAPON_FENNEC</Item>	
+						<Item>WEAPON_PKM</Item>
+						<Item>WEAPON_BTR</Item>	
+						<Item>WEAPON_AUG</Item>
+						<Item>WEAPON_M4A5</Item>
+<Item>WEAPON_KILO433</Item>
+<Item>WEAPON_YANDERE</Item>
+<Item>WEAPON_MDR</Item>
+<Item>WEAPON_STG</Item>
+<Item>WEAPON_T9ACC</Item>
+<Item>WEAPON_FNFAL</Item>
+<Item>WEAPON_BEOWULF</Item>
+<Item>WEAPON_AK12</Item>
+<Item>WEAPON_AK103</Item>
+<Item>WEAPON_ASGARD</Item>
+<Item>WEAPON_HKG28</Item>
+<Item>WEAPON_BARM19</Item>
+<Item>WEAPON_DRAGUNITE</Item>
+<Item>WEAPON_BORNBEAST</Item>
+						<Item>WEAPON_MALYUK</Item>	
+						<Item>WEAPON_MK47FM</Item>
+						<Item>WEAPON_VSS</Item>	
+						<Item>WEAPON_M9BAY</Item>	
+						<Item>WEAPON_MP5A5</Item>
+						<Item>WEAPON_MP5SD</Item>
+  					<Item>WEAPON_MP5A1</Item>
+						<Item>WEAPON_MP40</Item>
+						<Item>WEAPON_VC30</Item>
+						<Item>WEAPON_45ACP</Item>
+						<Item>WEAPON_AUGA1</Item>
+						<Item>WEAPON_AUGA2</Item>	
+						<Item>WEAPON_BIZON</Item>
+						<Item>WEAPON_M16A1</Item>
+						<Item>WEAPON_P90</Item>
+						<Item>WEAPON_SIG516</Item>
+						<Item>WEAPON_TAR</Item>																
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_action@p_m_zero@armed@core</MovementClipSetId>
+								<WeaponClipSetId>move_action@p_m_zero@armed@2H@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="true" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="true" />
+								<IdleTransitionBlendOutTime value="0.500000" />
+								<IdleTransitions>
+									<Item>MOVE_ACTION@GENERIC@TRANS@2H</Item>
+								</IdleTransitions>
+								<UnholsterClipSetId>MOVE_ACTION@P_M_ZERO@HOLSTER</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_2H</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+				</Item>
+				<Item>
+ 					<Item>
+						<Weapons>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_stealth@p_m_zero@unarmed@core</MovementClipSetId>
+								<WeaponClipSetId>move_stealth@p_m_zero@1h@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="true" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="true" />
+								<IdleTransitionBlendOutTime value="0.500000" />
+								<IdleTransitions>
+									<Item>move_stealth@generic@trans@1h</Item>
+								</IdleTransitions>
+								<UnholsterClipSetId>move_stealth@p_m_zero@holster</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_1H_STEALTH</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+ 					<Item>
+						<Weapons>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_stealth@p_m_zero@unarmed@core</MovementClipSetId>
+								<WeaponClipSetId>move_stealth@p_m_zero@1h@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="true" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="true" />
+								<IdleTransitionBlendOutTime value="0.500000" />
+								<IdleTransitions>
+									<Item>move_stealth@generic@trans@1h</Item>
+								</IdleTransitions>
+								<UnholsterClipSetId>ANIM@WEAPONS@PISTOL@DOUBLEACTION_HOLSTER_STEALTH</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_1H_STEALTH</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+					<Item>
+						<Weapons>
+							<Item>WEAPON_AK102</Item>
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_stealth@p_m_zero@unarmed@core</MovementClipSetId>
+								<WeaponClipSetId>move_stealth@p_m_zero@2h_short@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="true" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="true" />
+								<IdleTransitions>
+									<Item>move_stealth@generic@trans@2h_short</Item>
+								</IdleTransitions>
+								<IdleTransitionBlendOutTime value="0.500000"/>
+								<UnholsterClipSetId>move_stealth@p_m_zero@holster</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_2H_STEALTH</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+					<Item>
+						<Weapons>
+							<Item>WEAPON_CBQ</Item>
+							<Item>WEAPON_GALIL</Item>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+							<Item>WEAPON_HK43</Item>
+							<Item>WEAPON_ZLR</Item>
+							<Item>WEAPON_BARSKA</Item>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>	
+						<Item>WEAPON_MCX</Item>
+<Item>WEAPON_FENNEC</Item>	
+						<Item>WEAPON_PKM</Item>
+						<Item>WEAPON_BTR</Item>	
+						<Item>WEAPON_AUG</Item>
+						<Item>WEAPON_M4A5</Item>
+<Item>WEAPON_KILO433</Item>
+<Item>WEAPON_YANDERE</Item>
+<Item>WEAPON_MDR</Item>
+<Item>WEAPON_STG</Item>
+<Item>WEAPON_T9ACC</Item>
+<Item>WEAPON_FNFAL</Item>
+<Item>WEAPON_BEOWULF</Item>
+<Item>WEAPON_AK12</Item>
+<Item>WEAPON_AK103</Item>
+<Item>WEAPON_ASGARD</Item>
+<Item>WEAPON_HKG28</Item>
+<Item>WEAPON_BARM19</Item>
+<Item>WEAPON_DRAGUNITE</Item>
+<Item>WEAPON_BORNBEAST</Item>
+						<Item>WEAPON_MALYUK</Item>	
+						<Item>WEAPON_MK47FM</Item>
+						<Item>WEAPON_VSS</Item>	
+						<Item>WEAPON_M9BAY</Item>	
+						<Item>WEAPON_MP5A5</Item>
+						<Item>WEAPON_MP5SD</Item>
+  					<Item>WEAPON_MP5A1</Item>
+						<Item>WEAPON_MP40</Item>
+						<Item>WEAPON_VC30</Item>
+						<Item>WEAPON_45ACP</Item>
+						<Item>WEAPON_AUGA1</Item>
+						<Item>WEAPON_AUGA2</Item>	
+						<Item>WEAPON_BIZON</Item>
+						<Item>WEAPON_M16A1</Item>
+						<Item>WEAPON_P90</Item>
+						<Item>WEAPON_SIG516</Item>
+						<Item>WEAPON_TAR</Item>															
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_stealth@p_m_zero@unarmed@core</MovementClipSetId>
+								<WeaponClipSetId>move_stealth@p_m_zero@2h@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="true" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="true" />
+								<IdleTransitionBlendOutTime value="0.500000" />
+								<IdleTransitions>
+									<Item>move_stealth@generic@trans@2h</Item>
+								</IdleTransitions>
+								<UnholsterClipSetId>move_stealth@p_m_zero@holster</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_2H_STEALTH</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+				</Item>
+			</MovementModes>
+		</Item>
+		<Item>
+			<Name>MP_FEMALE_ACTION</Name>
+			<MovementModes>
+				<Item>
+ 					<Item>
+						<Weapons>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_action@p_m_zero@armed@core</MovementClipSetId>
+								<WeaponClipSetId>move_action@p_m_zero@armed@1H@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="true" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="true" />
+								<IdleTransitionBlendOutTime value="0.500000" />
+								<IdleTransitions>
+									<Item>MOVE_ACTION@MP_FEMALE@ARMED@1H@TRANS</Item>
+								</IdleTransitions>
+								<UnholsterClipSetId>MOVE_ACTION@P_M_ZERO@HOLSTER</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_1H</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+ 					<Item>
+						<Weapons>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_action@p_m_zero@armed@core</MovementClipSetId>
+								<WeaponClipSetId>move_action@p_m_zero@armed@1H@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="true" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="true" />
+								<IdleTransitionBlendOutTime value="0.500000" />
+								<IdleTransitions>
+									<Item>MOVE_ACTION@MP_FEMALE@ARMED@1H@TRANS</Item>
+								</IdleTransitions>
+								<UnholsterClipSetId>ANIM@WEAPONS@PISTOL@DOUBLEACTION_HOLSTER_ACTION</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_1H</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+					<Item>
+						<Weapons>
+							<Item>WEAPON_AK102</Item>
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_action@p_m_zero@armed@core</MovementClipSetId>
+								<WeaponClipSetId>move_action@mp_female@armed@2H_short@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="false" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="true" />
+								<IdleTransitions>
+									<Item>MOVE_ACTION@MP_FEMALE@ARMED@2H_SHORT@TRANS</Item>
+								</IdleTransitions>
+								<IdleTransitionBlendOutTime value="0.500000"/>
+								<UnholsterClipSetId>MOVE_ACTION@P_M_ZERO@HOLSTER</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_2H</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+					<Item>
+						<Weapons>
+							<Item>WEAPON_CBQ</Item>
+							<Item>WEAPON_GALIL</Item>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+							<Item>WEAPON_HK43</Item>
+							<Item>WEAPON_ZLR</Item>	
+							<Item>WEAPON_BARSKA</Item>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>	
+						<Item>WEAPON_MCX</Item>
+<Item>WEAPON_FENNEC</Item>	
+						<Item>WEAPON_PKM</Item>
+						<Item>WEAPON_BTR</Item>	
+						<Item>WEAPON_AUG</Item>
+						<Item>WEAPON_M4A5</Item>
+<Item>WEAPON_KILO433</Item>
+<Item>WEAPON_YANDERE</Item>
+<Item>WEAPON_MDR</Item>
+<Item>WEAPON_STG</Item>
+<Item>WEAPON_T9ACC</Item>
+<Item>WEAPON_FNFAL</Item>
+<Item>WEAPON_BEOWULF</Item>
+<Item>WEAPON_AK12</Item>
+<Item>WEAPON_AK103</Item>
+<Item>WEAPON_ASGARD</Item>
+<Item>WEAPON_HKG28</Item>
+<Item>WEAPON_BARM19</Item>
+<Item>WEAPON_DRAGUNITE</Item>
+<Item>WEAPON_BORNBEAST</Item>
+						<Item>WEAPON_MALYUK</Item>	
+						<Item>WEAPON_MK47FM</Item>
+						<Item>WEAPON_VSS</Item>	
+						<Item>WEAPON_M9BAY</Item>	
+						<Item>WEAPON_MP5A5</Item>
+						<Item>WEAPON_MP5SD</Item>
+  					<Item>WEAPON_MP5A1</Item>
+						<Item>WEAPON_MP40</Item>
+						<Item>WEAPON_VC30</Item>
+						<Item>WEAPON_45ACP</Item>
+						<Item>WEAPON_AUGA1</Item>
+						<Item>WEAPON_AUGA2</Item>	
+						<Item>WEAPON_BIZON</Item>
+						<Item>WEAPON_M16A1</Item>
+						<Item>WEAPON_P90</Item>
+						<Item>WEAPON_SIG516</Item>
+						<Item>WEAPON_TAR</Item>																						
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_action@p_m_zero@armed@core</MovementClipSetId>
+								<WeaponClipSetId>move_action@mp_female@armed@2H@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="true" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="true" />
+								<IdleTransitionBlendOutTime value="0.500000" />
+								<IdleTransitions>
+									<Item>MOVE_ACTION@MP_FEMALE@ARMED@2H@TRANS</Item>
+								</IdleTransitions>
+								<UnholsterClipSetId>MOVE_ACTION@P_M_ZERO@HOLSTER</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_2H</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+				</Item>
+				<Item>
+ 					<Item>
+						<Weapons>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_stealth@p_m_zero@unarmed@core</MovementClipSetId>
+								<WeaponClipSetId>move_stealth@p_m_zero@1h@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="true" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="true" />
+								<IdleTransitionBlendOutTime value="0.500000" />
+								<IdleTransitions>
+									<Item>MOVE_STEALTH@MP_FEMALE@1H@TRANS</Item>
+								</IdleTransitions>
+								<UnholsterClipSetId>move_stealth@p_m_zero@holster</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_1H_STEALTH</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+ 					<Item>
+						<Weapons>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_stealth@p_m_zero@unarmed@core</MovementClipSetId>
+								<WeaponClipSetId>move_stealth@p_m_zero@1h@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="true" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="true" />
+								<IdleTransitionBlendOutTime value="0.500000" />
+								<IdleTransitions>
+									<Item>MOVE_STEALTH@MP_FEMALE@1H@TRANS</Item>
+								</IdleTransitions>
+								<UnholsterClipSetId>ANIM@WEAPONS@PISTOL@DOUBLEACTION_HOLSTER_STEALTH</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_1H_STEALTH</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+					<Item>
+						<Weapons>
+							<Item>WEAPON_AK102</Item>
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_stealth@p_m_zero@unarmed@core</MovementClipSetId>
+								<WeaponClipSetId>move_stealth@p_m_zero@2h_short@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="true" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="true" />
+								<IdleTransitions>
+									<Item>MOVE_STEALTH@MP_FEMALE@2H_SHORT@TRANS</Item>
+								</IdleTransitions>
+								<IdleTransitionBlendOutTime value="0.500000"/>
+								<UnholsterClipSetId>move_stealth@p_m_zero@holster</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_2H_STEALTH</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+					<Item>
+						<Weapons>
+							<Item>WEAPON_CBQ</Item>
+							<Item>WEAPON_GALIL</Item>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+							<Item>WEAPON_HK43</Item>
+							<Item>WEAPON_ZLR</Item>	
+							<Item>WEAPON_BARSKA</Item>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>	
+						<Item>WEAPON_MCX</Item>
+<Item>WEAPON_FENNEC</Item>	
+						<Item>WEAPON_PKM</Item>
+						<Item>WEAPON_BTR</Item>	
+						<Item>WEAPON_AUG</Item>
+						<Item>WEAPON_M4A5</Item>
+<Item>WEAPON_KILO433</Item>
+<Item>WEAPON_YANDERE</Item>
+<Item>WEAPON_MDR</Item>
+<Item>WEAPON_STG</Item>
+<Item>WEAPON_T9ACC</Item>
+<Item>WEAPON_FNFAL</Item>
+<Item>WEAPON_BEOWULF</Item>
+<Item>WEAPON_AK12</Item>
+<Item>WEAPON_AK103</Item>
+<Item>WEAPON_ASGARD</Item>
+<Item>WEAPON_HKG28</Item>
+<Item>WEAPON_BARM19</Item>
+<Item>WEAPON_DRAGUNITE</Item>
+<Item>WEAPON_BORNBEAST</Item>
+						<Item>WEAPON_MALYUK</Item>	
+						<Item>WEAPON_MK47FM</Item>
+						<Item>WEAPON_VSS</Item>	
+						<Item>WEAPON_M9BAY</Item>	
+						<Item>WEAPON_MP5A5</Item>
+						<Item>WEAPON_MP5SD</Item>
+  					<Item>WEAPON_MP5A1</Item>
+						<Item>WEAPON_MP40</Item>
+						<Item>WEAPON_VC30</Item>
+						<Item>WEAPON_45ACP</Item>
+						<Item>WEAPON_AUGA1</Item>
+						<Item>WEAPON_AUGA2</Item>	
+						<Item>WEAPON_BIZON</Item>
+						<Item>WEAPON_M16A1</Item>
+						<Item>WEAPON_P90</Item>
+						<Item>WEAPON_SIG516</Item>
+						<Item>WEAPON_TAR</Item>																							
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_stealth@p_m_zero@unarmed@core</MovementClipSetId>
+								<WeaponClipSetId>move_stealth@p_m_zero@2h@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="true" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="true" />
+								<IdleTransitionBlendOutTime value="0.500000" />
+								<IdleTransitions>
+									<Item>MOVE_STEALTH@MP_FEMALE@2H@TRANS</Item>
+								</IdleTransitions>
+								<UnholsterClipSetId>move_stealth@p_m_zero@holster</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_2H_STEALTH</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+				</Item>
+			</MovementModes>
+		</Item>
+		<Item>
+			<Name>MICHAEL_ACTION</Name>
+			<MovementModes>
+				<Item>
+ 					<Item>
+						<Weapons>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_action@p_m_zero@armed@core</MovementClipSetId>
+								<WeaponClipSetId>move_action@p_m_zero@armed@1H@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="true" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="true" />
+								<IdleTransitionBlendOutTime value="0.500000" />
+								<IdleTransitions>
+									<Item>MOVE_ACTION@P_M_ZERO@ARMED@1H@TRANS@A</Item>
+								</IdleTransitions>
+								<UnholsterClipSetId>MOVE_ACTION@P_M_ZERO@HOLSTER</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_1H</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+ 					<Item>
+						<Weapons>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_action@p_m_zero@armed@core</MovementClipSetId>
+								<WeaponClipSetId>move_action@p_m_zero@armed@1H@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="true" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="true" />
+								<IdleTransitionBlendOutTime value="0.500000" />
+								<IdleTransitions>
+									<Item>MOVE_ACTION@P_M_ZERO@ARMED@1H@TRANS@A</Item>
+								</IdleTransitions>
+								<UnholsterClipSetId>ANIM@WEAPONS@PISTOL@DOUBLEACTION_HOLSTER_ACTION</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_1H</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+					<Item>
+						<Weapons>
+							<Item>WEAPON_AK102</Item>
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_action@p_m_zero@armed@core</MovementClipSetId>
+								<WeaponClipSetId>move_action@p_m_zero@armed@2H_short@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="false" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="true" />
+								<IdleTransitions>
+									<Item>MOVE_ACTION@P_M_ZERO@ARMED@2H_SHORT@TRANS@A</Item>
+								</IdleTransitions>
+								<IdleTransitionBlendOutTime value="0.500000"/>
+								<UnholsterClipSetId>MOVE_ACTION@P_M_ZERO@HOLSTER</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_2H</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+					<Item>
+						<Weapons>
+							<Item>WEAPON_CBQ</Item>
+							<Item>WEAPON_GALIL</Item>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+							<Item>WEAPON_HK43</Item>
+							<Item>WEAPON_ZLR</Item>
+							<Item>WEAPON_BARSKA</Item>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>	
+						<Item>WEAPON_MCX</Item>
+<Item>WEAPON_FENNEC</Item>	
+						<Item>WEAPON_PKM</Item>
+						<Item>WEAPON_BTR</Item>	
+						<Item>WEAPON_AUG</Item>
+						<Item>WEAPON_M4A5</Item>
+<Item>WEAPON_KILO433</Item>
+<Item>WEAPON_YANDERE</Item>
+<Item>WEAPON_MDR</Item>
+<Item>WEAPON_STG</Item>
+<Item>WEAPON_T9ACC</Item>
+<Item>WEAPON_FNFAL</Item>
+<Item>WEAPON_BEOWULF</Item>
+<Item>WEAPON_AK12</Item>
+<Item>WEAPON_AK103</Item>
+<Item>WEAPON_ASGARD</Item>
+<Item>WEAPON_HKG28</Item>
+<Item>WEAPON_BARM19</Item>
+<Item>WEAPON_DRAGUNITE</Item>
+<Item>WEAPON_BORNBEAST</Item>
+						<Item>WEAPON_MALYUK</Item>	
+						<Item>WEAPON_MK47FM</Item>
+						<Item>WEAPON_VSS</Item>	
+						<Item>WEAPON_M9BAY</Item>	
+						<Item>WEAPON_MP5A5</Item>
+						<Item>WEAPON_MP5SD</Item>
+  					<Item>WEAPON_MP5A1</Item>
+						<Item>WEAPON_MP40</Item>
+						<Item>WEAPON_VC30</Item>
+						<Item>WEAPON_45ACP</Item>
+						<Item>WEAPON_AUGA1</Item>
+						<Item>WEAPON_AUGA2</Item>	
+						<Item>WEAPON_BIZON</Item>
+						<Item>WEAPON_M16A1</Item>
+						<Item>WEAPON_P90</Item>
+						<Item>WEAPON_SIG516</Item>
+						<Item>WEAPON_TAR</Item>																						
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_action@p_m_zero@armed@core</MovementClipSetId>
+								<WeaponClipSetId>move_action@p_m_zero@armed@2H@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="true" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="true" />
+								<IdleTransitionBlendOutTime value="0.500000" />
+								<IdleTransitions>
+									<Item>MOVE_ACTION@P_M_ZERO@ARMED@2H@TRANS@A</Item>
+								</IdleTransitions>
+								<UnholsterClipSetId>MOVE_ACTION@P_M_ZERO@HOLSTER</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_2H</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+				</Item>
+				<Item>
+ 					<Item>
+						<Weapons>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_stealth@p_m_zero@unarmed@core</MovementClipSetId>
+								<WeaponClipSetId>move_stealth@p_m_zero@1h@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="true" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="true" />
+								<IdleTransitionBlendOutTime value="0.500000" />
+								<IdleTransitions>
+									<Item>move_stealth@p_m_zero@1h@trans@a</Item>
+								</IdleTransitions>
+								<UnholsterClipSetId>move_stealth@p_m_zero@holster</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_1H_STEALTH</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+ 					<Item>
+						<Weapons>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_stealth@p_m_zero@unarmed@core</MovementClipSetId>
+								<WeaponClipSetId>move_stealth@p_m_zero@1h@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="true" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="true" />
+								<IdleTransitionBlendOutTime value="0.500000" />
+								<IdleTransitions>
+									<Item>move_stealth@p_m_zero@1h@trans@a</Item>
+								</IdleTransitions>
+								<UnholsterClipSetId>ANIM@WEAPONS@PISTOL@DOUBLEACTION_HOLSTER_STEALTH</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_1H_STEALTH</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+					<Item>
+						<Weapons>
+							<Item>WEAPON_AK102</Item>
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_stealth@p_m_zero@unarmed@core</MovementClipSetId>
+								<WeaponClipSetId>move_stealth@p_m_zero@2h_short@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="true" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="true" />
+								<IdleTransitions>
+									<Item>move_stealth@p_m_zero@2h_short@trans</Item>
+								</IdleTransitions>
+								<IdleTransitionBlendOutTime value="0.500000"/>
+								<UnholsterClipSetId>move_stealth@p_m_zero@holster</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_2H_STEALTH</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+					<Item>
+						<Weapons>
+							<Item>WEAPON_CBQ</Item>
+							<Item>WEAPON_GALIL</Item>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+							<Item>WEAPON_HK43</Item>
+							<Item>WEAPON_ZLR</Item>
+							<Item>WEAPON_BARSKA</Item>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>	
+						<Item>WEAPON_MCX</Item>
+<Item>WEAPON_FENNEC</Item>	
+						<Item>WEAPON_PKM</Item>
+						<Item>WEAPON_BTR</Item>	
+						<Item>WEAPON_AUG</Item>
+						<Item>WEAPON_M4A5</Item>
+<Item>WEAPON_KILO433</Item>
+<Item>WEAPON_YANDERE</Item>
+<Item>WEAPON_MDR</Item>
+<Item>WEAPON_STG</Item>
+<Item>WEAPON_T9ACC</Item>
+<Item>WEAPON_FNFAL</Item>
+<Item>WEAPON_BEOWULF</Item>
+<Item>WEAPON_AK12</Item>
+<Item>WEAPON_AK103</Item>
+<Item>WEAPON_ASGARD</Item>
+<Item>WEAPON_HKG28</Item>
+<Item>WEAPON_BARM19</Item>
+<Item>WEAPON_DRAGUNITE</Item>
+<Item>WEAPON_BORNBEAST</Item>
+						<Item>WEAPON_MALYUK</Item>	
+						<Item>WEAPON_MK47FM</Item>
+						<Item>WEAPON_VSS</Item>	
+						<Item>WEAPON_M9BAY</Item>	
+						<Item>WEAPON_MP5A5</Item>
+						<Item>WEAPON_MP5SD</Item>
+  					<Item>WEAPON_MP5A1</Item>
+						<Item>WEAPON_MP40</Item>
+						<Item>WEAPON_VC30</Item>
+						<Item>WEAPON_45ACP</Item>
+						<Item>WEAPON_AUGA1</Item>
+						<Item>WEAPON_AUGA2</Item>	
+						<Item>WEAPON_BIZON</Item>
+						<Item>WEAPON_M16A1</Item>
+						<Item>WEAPON_P90</Item>
+						<Item>WEAPON_SIG516</Item>
+						<Item>WEAPON_TAR</Item>																
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_stealth@p_m_zero@unarmed@core</MovementClipSetId>
+								<WeaponClipSetId>move_stealth@p_m_zero@2h@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="true" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="true" />
+								<IdleTransitionBlendOutTime value="0.500000" />
+								<IdleTransitions>
+									<Item>move_stealth@p_m_zero@2h@trans@a</Item>
+								</IdleTransitions>
+								<UnholsterClipSetId>move_stealth@p_m_zero@holster</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_2H_STEALTH</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+				</Item>
+			</MovementModes>
+		</Item>
+		<Item>
+			<Name>FRANKLIN_ACTION</Name>
+			<MovementModes>
+				<Item>
+ 					<Item>
+						<Weapons>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_action@p_m_one@armed@core</MovementClipSetId>
+								<WeaponClipSetId>move_action@p_m_one@armed@1H@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="true" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="false" />
+								<IdleTransitionBlendOutTime value="0.500000" />
+								<IdleTransitions>
+									<Item>MOVE_ACTION@P_M_ONE@ARMED@1H@TRANS@A</Item>
+								</IdleTransitions>
+								<UnholsterClipSetId>MOVE_ACTION@P_M_ONE@HOLSTER</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_1H</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+ 					<Item>
+						<Weapons>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_action@p_m_one@armed@core</MovementClipSetId>
+								<WeaponClipSetId>move_action@p_m_one@armed@1H@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="true" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="false" />
+								<IdleTransitionBlendOutTime value="0.500000" />
+								<IdleTransitions>
+									<Item>MOVE_ACTION@P_M_ONE@ARMED@1H@TRANS@A</Item>
+								</IdleTransitions>
+								<UnholsterClipSetId>ANIM@WEAPONS@PISTOL@DOUBLEACTION_HOLSTER_ACTION</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_1H</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+					<Item>
+						<Weapons>
+							<Item>WEAPON_AK102</Item>
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_action@p_m_one@armed@core</MovementClipSetId>
+								<WeaponClipSetId>move_action@P_M_ONE@armed@2H_short@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="false" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="true" />
+								<IdleTransitions>
+									<Item>MOVE_ACTION@P_M_ONE@ARMED@2H_SHORT@TRANS@A</Item>
+								</IdleTransitions>
+								<IdleTransitionBlendOutTime value="0.500000"/>
+								<UnholsterClipSetId>MOVE_ACTION@P_M_ONE@HOLSTER</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_2H</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+					<Item>
+						<Weapons>
+							<Item>WEAPON_CBQ</Item>
+							<Item>WEAPON_GALIL</Item>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+							<Item>WEAPON_HK43</Item>
+							<Item>WEAPON_ZLR</Item>	
+							<Item>WEAPON_BARSKA</Item>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>	
+						<Item>WEAPON_MCX</Item>
+<Item>WEAPON_FENNEC</Item>	
+						<Item>WEAPON_PKM</Item>
+						<Item>WEAPON_BTR</Item>	
+						<Item>WEAPON_AUG</Item>
+						<Item>WEAPON_M4A5</Item>
+<Item>WEAPON_KILO433</Item>
+<Item>WEAPON_YANDERE</Item>
+<Item>WEAPON_MDR</Item>
+<Item>WEAPON_STG</Item>
+<Item>WEAPON_T9ACC</Item>
+<Item>WEAPON_FNFAL</Item>
+<Item>WEAPON_BEOWULF</Item>
+<Item>WEAPON_AK12</Item>
+<Item>WEAPON_AK103</Item>
+<Item>WEAPON_ASGARD</Item>
+<Item>WEAPON_HKG28</Item>
+<Item>WEAPON_BARM19</Item>
+<Item>WEAPON_DRAGUNITE</Item>
+<Item>WEAPON_BORNBEAST</Item>
+						<Item>WEAPON_MALYUK</Item>	
+						<Item>WEAPON_MK47FM</Item>
+						<Item>WEAPON_VSS</Item>	
+						<Item>WEAPON_M9BAY</Item>	
+						<Item>WEAPON_MP5A5</Item>
+						<Item>WEAPON_MP5SD</Item>
+  					<Item>WEAPON_MP5A1</Item>
+						<Item>WEAPON_MP40</Item>
+						<Item>WEAPON_VC30</Item>
+						<Item>WEAPON_45ACP</Item>
+						<Item>WEAPON_AUGA1</Item>
+						<Item>WEAPON_AUGA2</Item>	
+						<Item>WEAPON_BIZON</Item>
+						<Item>WEAPON_M16A1</Item>
+						<Item>WEAPON_P90</Item>
+						<Item>WEAPON_SIG516</Item>
+						<Item>WEAPON_TAR</Item>															
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_action@p_m_one@armed@core</MovementClipSetId>
+								<WeaponClipSetId>move_action@P_M_ONE@armed@2H@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="true" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="true" />
+								<IdleTransitionBlendOutTime value="0.500000" />
+								<IdleTransitions>
+									<Item>MOVE_ACTION@P_M_ONE@ARMED@2H@TRANS@A</Item>
+								</IdleTransitions>
+								<UnholsterClipSetId>MOVE_ACTION@P_M_ONE@HOLSTER</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_2H</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+				</Item>
+				<Item>
+ 					<Item>
+						<Weapons>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_stealth@p_m_one@unarmed@core</MovementClipSetId>
+								<WeaponClipSetId>move_stealth@p_m_one@1h@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="true" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="false" />
+								<IdleTransitionBlendOutTime value="0.500000" />
+								<IdleTransitions>
+									<Item>move_stealth@p_m_one@1h@trans@a</Item>
+								</IdleTransitions>
+								<UnholsterClipSetId>MOVE_STEALTH@P_M_ONE@HOLSTER</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_1H_STEALTH</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+ 					<Item>
+						<Weapons>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_stealth@p_m_one@unarmed@core</MovementClipSetId>
+								<WeaponClipSetId>move_stealth@p_m_one@1h@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="true" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="false" />
+								<IdleTransitionBlendOutTime value="0.500000" />
+								<IdleTransitions>
+									<Item>move_stealth@p_m_one@1h@trans@a</Item>
+								</IdleTransitions>
+								<UnholsterClipSetId>ANIM@WEAPONS@PISTOL@DOUBLEACTION_HOLSTER_STEALTH</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_1H_STEALTH</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+					<Item>
+						<Weapons>
+							<Item>WEAPON_AK102</Item>
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_stealth@p_m_one@unarmed@core</MovementClipSetId>
+								<WeaponClipSetId>move_stealth@p_m_one@2h_short@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="true" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="true" />
+								<IdleTransitions>
+									<Item>move_stealth@p_m_one@2h_short@trans</Item>
+								</IdleTransitions>
+								<IdleTransitionBlendOutTime value="0.500000"/>
+								<UnholsterClipSetId>MOVE_STEALTH@P_M_ONE@HOLSTER</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_2H_STEALTH</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+					<Item>
+						<Weapons>
+							<Item>WEAPON_CBQ</Item>
+							<Item>WEAPON_GALIL</Item>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+							<Item>WEAPON_HK43</Item>
+							<Item>WEAPON_ZLR</Item>
+							<Item>WEAPON_BARSKA</Item>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>	
+						<Item>WEAPON_MCX</Item>
+<Item>WEAPON_FENNEC</Item>	
+						<Item>WEAPON_PKM</Item>
+						<Item>WEAPON_BTR</Item>	
+						<Item>WEAPON_AUG</Item>
+						<Item>WEAPON_M4A5</Item>
+<Item>WEAPON_KILO433</Item>
+<Item>WEAPON_YANDERE</Item>
+<Item>WEAPON_MDR</Item>
+<Item>WEAPON_STG</Item>
+<Item>WEAPON_T9ACC</Item>
+<Item>WEAPON_FNFAL</Item>
+<Item>WEAPON_BEOWULF</Item>
+<Item>WEAPON_AK12</Item>
+<Item>WEAPON_AK103</Item>
+<Item>WEAPON_ASGARD</Item>
+<Item>WEAPON_HKG28</Item>
+<Item>WEAPON_BARM19</Item>
+<Item>WEAPON_DRAGUNITE</Item>
+<Item>WEAPON_BORNBEAST</Item>
+						<Item>WEAPON_MALYUK</Item>	
+						<Item>WEAPON_MK47FM</Item>
+						<Item>WEAPON_VSS</Item>	
+						<Item>WEAPON_M9BAY</Item>	
+						<Item>WEAPON_MP5A5</Item>
+						<Item>WEAPON_MP5SD</Item>
+  					<Item>WEAPON_MP5A1</Item>
+						<Item>WEAPON_MP40</Item>
+						<Item>WEAPON_VC30</Item>
+						<Item>WEAPON_45ACP</Item>
+						<Item>WEAPON_AUGA1</Item>
+						<Item>WEAPON_AUGA2</Item>	
+						<Item>WEAPON_BIZON</Item>
+						<Item>WEAPON_M16A1</Item>
+						<Item>WEAPON_P90</Item>
+						<Item>WEAPON_SIG516</Item>
+						<Item>WEAPON_TAR</Item>																
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_stealth@p_m_one@unarmed@core</MovementClipSetId>
+								<WeaponClipSetId>move_stealth@p_m_one@2h@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="true" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="true" />
+								<IdleTransitionBlendOutTime value="0.500000" />
+								<IdleTransitions>
+									<Item>move_stealth@p_m_one@2h@trans@a</Item>
+								</IdleTransitions>
+								<UnholsterClipSetId>MOVE_STEALTH@P_M_ONE@HOLSTER</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_2H_STEALTH</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+				</Item>
+			</MovementModes>
+		</Item>
+		<Item>
+			<Name>TREVOR_ACTION</Name>
+			<MovementModes>
+				<Item>
+ 					<Item>
+						<Weapons>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_action@p_m_two@armed@core</MovementClipSetId>
+								<WeaponClipSetId>move_action@p_m_two@armed@1H@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="true" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="false" />
+								<IdleTransitionBlendOutTime value="0.500000" />
+								<IdleTransitions>
+									<Item>MOVE_ACTION@P_M_TWO@ARMED@1H@TRANS@A</Item>
+								</IdleTransitions>
+								<UnholsterClipSetId>MOVE_ACTION@P_M_TWO@HOLSTER</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_1H</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+ 					<Item>
+						<Weapons>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+							<Item>WEAPON_ISY</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_action@p_m_two@armed@core</MovementClipSetId>
+								<WeaponClipSetId>move_action@p_m_two@armed@1H@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="true" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="false" />
+								<IdleTransitionBlendOutTime value="0.500000" />
+								<IdleTransitions>
+									<Item>MOVE_ACTION@P_M_TWO@ARMED@1H@TRANS@A</Item>
+								</IdleTransitions>
+								<UnholsterClipSetId>ANIM@WEAPONS@PISTOL@DOUBLEACTION_HOLSTER_ACTION</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_1H</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+					<Item>
+						<Weapons>
+							<Item>WEAPON_AK102</Item>
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_action@p_m_two@armed@core</MovementClipSetId>
+								<WeaponClipSetId>move_action@p_m_two@armed@2H_short@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="false" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="true" />
+								<IdleTransitions>
+									<Item>MOVE_ACTION@P_M_TWO@ARMED@2H_SHORT@TRANS@A</Item>
+								</IdleTransitions>
+								<IdleTransitionBlendOutTime value="0.500000"/>
+								<UnholsterClipSetId>MOVE_ACTION@P_M_TWO@HOLSTER</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_2H</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+					<Item>
+						<Weapons>
+							<Item>WEAPON_CBQ</Item>
+							<Item>WEAPON_GALIL</Item>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+							<Item>WEAPON_HK43</Item>	
+							<Item>WEAPON_ZLR</Item>	
+							<Item>WEAPON_BARSKA</Item>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>	
+						<Item>WEAPON_MCX</Item>
+<Item>WEAPON_FENNEC</Item>	
+						<Item>WEAPON_PKM</Item>
+						<Item>WEAPON_BTR</Item>	
+						<Item>WEAPON_AUG</Item>
+						<Item>WEAPON_M4A5</Item>
+<Item>WEAPON_KILO433</Item>
+<Item>WEAPON_YANDERE</Item>
+<Item>WEAPON_MDR</Item>
+<Item>WEAPON_STG</Item>
+<Item>WEAPON_T9ACC</Item>
+<Item>WEAPON_FNFAL</Item>
+<Item>WEAPON_BEOWULF</Item>
+<Item>WEAPON_AK12</Item>
+<Item>WEAPON_AK103</Item>
+<Item>WEAPON_ASGARD</Item>
+<Item>WEAPON_HKG28</Item>
+<Item>WEAPON_BARM19</Item>
+<Item>WEAPON_DRAGUNITE</Item>
+<Item>WEAPON_BORNBEAST</Item>
+						<Item>WEAPON_MALYUK</Item>	
+						<Item>WEAPON_MK47FM</Item>
+						<Item>WEAPON_VSS</Item>	
+						<Item>WEAPON_M9BAY</Item>	
+						<Item>WEAPON_MP5A5</Item>
+						<Item>WEAPON_MP5SD</Item>
+  					<Item>WEAPON_MP5A1</Item>
+						<Item>WEAPON_MP40</Item>
+						<Item>WEAPON_VC30</Item>
+						<Item>WEAPON_45ACP</Item>
+						<Item>WEAPON_AUGA1</Item>
+						<Item>WEAPON_AUGA2</Item>	
+						<Item>WEAPON_BIZON</Item>
+						<Item>WEAPON_M16A1</Item>
+						<Item>WEAPON_P90</Item>
+						<Item>WEAPON_SIG516</Item>
+						<Item>WEAPON_TAR</Item>														
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_action@p_m_two@armed@core</MovementClipSetId>
+								<WeaponClipSetId>move_action@p_m_two@armed@2H@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="true" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="true" />
+								<IdleTransitionBlendOutTime value="0.500000" />
+								<IdleTransitions>
+									<Item>MOVE_ACTION@P_M_TWO@ARMED@2H@TRANS@A</Item>
+								</IdleTransitions>
+								<UnholsterClipSetId>MOVE_ACTION@P_M_TWO@HOLSTER</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_2H</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+				</Item>
+				<Item>
+ 					<Item>
+						<Weapons>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_stealth@p_m_two@unarmed@core</MovementClipSetId>
+								<WeaponClipSetId>move_stealth@p_m_two@1h@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="true" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="false" />
+								<IdleTransitionBlendOutTime value="0.500000" />
+								<IdleTransitions>
+									<Item>move_stealth@p_m_two@1h@trans@a</Item>
+								</IdleTransitions>
+								<UnholsterClipSetId>MOVE_STEALTH@P_M_TWO@HOLSTER</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_1H_STEALTH</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+ 					<Item>
+						<Weapons>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_stealth@p_m_two@unarmed@core</MovementClipSetId>
+								<WeaponClipSetId>move_stealth@p_m_two@1h@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="true" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="false" />
+								<IdleTransitionBlendOutTime value="0.500000" />
+								<IdleTransitions>
+									<Item>move_stealth@p_m_two@1h@trans@a</Item>
+								</IdleTransitions>
+								<UnholsterClipSetId>ANIM@WEAPONS@PISTOL@DOUBLEACTION_HOLSTER_STEALTH</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_1H_STEALTH</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+					<Item>
+						<Weapons>
+							<Item>WEAPON_AK102</Item>
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_stealth@p_m_two@unarmed@core</MovementClipSetId>
+								<WeaponClipSetId>move_stealth@p_m_two@2h_short@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="true" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="true" />
+								<IdleTransitions>
+									<Item>move_stealth@p_m_two@2h_short@trans</Item>
+								</IdleTransitions>
+								<IdleTransitionBlendOutTime value="0.500000"/>
+								<UnholsterClipSetId>MOVE_STEALTH@P_M_TWO@HOLSTER</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_2H_STEALTH</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+					<Item>
+						<Weapons>
+							<Item>WEAPON_CBQ</Item>
+							<Item>WEAPON_GALIL</Item>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>
+							<Item>WEAPON_HK43</Item>
+							<Item>WEAPON_ZLR</Item>
+							<Item>WEAPON_BARSKA</Item>
+							<Item>WEAPON_SCORPION</Item>
+						<Item>WEAPON_GLOCK17</Item>
+						<Item>WEAPON_M9</Item>
+<Item>WEAPON_MK43</Item>
+<Item>WEAPON_M45A1</Item>
+						<Item>WEAPON_MAC10</Item>
+<Item>WEAPON_M9BAY</Item>
+						
+						<Item>WEAPON_MP7</Item>
+						<Item>WEAPON_MP5K</Item>	
+						<Item>WEAPON_MCX</Item>
+<Item>WEAPON_FENNEC</Item>	
+						<Item>WEAPON_PKM</Item>
+						<Item>WEAPON_BTR</Item>	
+						<Item>WEAPON_AUG</Item>
+						<Item>WEAPON_M4A5</Item>
+<Item>WEAPON_KILO433</Item>
+<Item>WEAPON_YANDERE</Item>
+<Item>WEAPON_MDR</Item>
+<Item>WEAPON_STG</Item>
+<Item>WEAPON_T9ACC</Item>
+<Item>WEAPON_FNFAL</Item>
+<Item>WEAPON_BEOWULF</Item>
+<Item>WEAPON_AK12</Item>
+<Item>WEAPON_AK103</Item>
+<Item>WEAPON_ASGARD</Item>
+<Item>WEAPON_HKG28</Item>
+<Item>WEAPON_BARM19</Item>
+<Item>WEAPON_DRAGUNITE</Item>
+<Item>WEAPON_BORNBEAST</Item>
+						<Item>WEAPON_MALYUK</Item>	
+						<Item>WEAPON_MK47FM</Item>
+						<Item>WEAPON_VSS</Item>	
+						<Item>WEAPON_M9BAY</Item>	
+						<Item>WEAPON_MP5A5</Item>
+						<Item>WEAPON_MP5SD</Item>
+  					<Item>WEAPON_MP5A1</Item>
+						<Item>WEAPON_MP40</Item>
+						<Item>WEAPON_VC30</Item>
+						<Item>WEAPON_45ACP</Item>
+						<Item>WEAPON_AUGA1</Item>
+						<Item>WEAPON_AUGA2</Item>	
+						<Item>WEAPON_BIZON</Item>
+						<Item>WEAPON_M16A1</Item>
+						<Item>WEAPON_P90</Item>
+						<Item>WEAPON_SIG516</Item>
+						<Item>WEAPON_TAR</Item>																
+						</Weapons>
+						<ClipSets>
+							<Item>
+								<MovementClipSetId>move_stealth@p_m_two@unarmed@core</MovementClipSetId>
+								<WeaponClipSetId>move_stealth@p_m_two@2h@upper</WeaponClipSetId>
+								<WeaponClipFilterId>UpperbodyAndIk_filter</WeaponClipFilterId>
+								<UpperBodyShadowExpressionEnabled value="true" />
+								<UpperBodyFeatheredLeanEnabled value="true" />
+								<UseWeaponAnimsForGrip value="false" />
+								<UseLeftHandIk value="true" />
+								<IdleTransitionBlendOutTime value="0.500000" />
+								<IdleTransitions>
+									<Item>move_stealth@p_m_two@2h@trans@a</Item>
+								</IdleTransitions>
+								<UnholsterClipSetId>MOVE_STEALTH@P_M_TWO@HOLSTER</UnholsterClipSetId>
+								<UnholsterClipData>UNHOLSTER_2H_STEALTH</UnholsterClipData>
+							</Item>
+						</ClipSets>
+					</Item>
+				</Item>
+			</MovementModes>
+		</Item>
+	</MovementModes>
+</CPedModelInfo__PersonalityDataList>

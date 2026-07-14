@@ -1,0 +1,67 @@
+# # # # # # # # # # # # # # # # # # # # # # # # # # #
+#       GTA5VN FiveM Server Configuration File      #
+# # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+# Only change the IP if you're using a server with multiple network interfaces, otherwise change the port only.
+endpoint_add_tcp "0.0.0.0:30120"
+endpoint_add_udp "0.0.0.0:30120"
+
+# ---------------------------------------------------
+# System Default Resources (Do not modify)
+# ---------------------------------------------------
+ensure mapmanager
+ensure chat
+ensure spawnmanager
+ensure sessionmanager
+ensure basic-gamemode
+ensure hardcap
+ensure rconlog
+
+# ---------------------------------------------------
+# Custom Resources (Installed Mods)
+# ---------------------------------------------------
+# Custom Clothing Packs
+ensure tonghopquanaonam
+ensure rpv_lawandservice_pack
+
+# Custom Weapon Skins / Models
+ensure w_mk47mf
+ensure w_replace
+ensure w_scarh
+ensure weapon_addons
+ensure wp_cq300
+ensure wp_flowerbq
+ensure wp_victus
+
+# Custom Menus
+ensure xmenu
+
+# ---------------------------------------------------
+# Server Settings
+# ---------------------------------------------------
+# Set server permissions
+add_ace group.admin command allow # allow all commands
+add_ace group.admin command.quit deny # but don't allow quit
+
+# Server visibility & branding
+sv_hostname "GTA5VN Custom Standalone Server"
+sets sv_projectName "GTA5VN Local Server"
+sets sv_projectDesc "Server FiveM cài sẵn mod quần áo, vũ khí và xmenu."
+sets tags "vietnamese, custom, weapons, clothes, xmenu"
+sets locale "vi-VN"
+
+# Server icon (96x96 PNG file, place it in server-data folder and uncomment)
+#load_server_icon myLogo.png
+
+# Hide player endpoints in external log output.
+sv_endpointprivacy true
+
+# Server player limit
+sv_maxclients 48
+
+# Steam Web API key, if you want to use Steam authentication (https://steamcommunity.com/dev/apikey)
+set steam_webApiKey ""
+
+# License key for your server (https://keymaster.fivem.net)
+# IMPORTANT: Thay thế "change_me" bằng key đăng ký trên keymaster.fivem.net để chạy server.
+sv_licenseKey "cfxk...HaDMS"

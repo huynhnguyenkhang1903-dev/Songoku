@@ -1,0 +1,2765 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CWeaponComponentInfoBlob>
+  <Data>
+  </Data>
+  <Infos>
+  
+
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_CARBINERIFLE_TRUNGTHU</Name>
+      <Model>w_ar_carbinerifle_trungthu</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_CARBINERIFLE_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_carbinerifle_trungthu_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_CARBINERIFLE_CLIP_02</ComponentName>
+		  <ComponentModel>w_ar_carbinerifle_luxe_mag2</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_CARBINERIFLE_DRAGONR</Name>
+      <Model>w_ar_carbinerifle_dragonr</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_CARBINERIFLE_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_carbinerifle_dragonr_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_CARBINERIFLE_CLIP_02</ComponentName>
+		  <ComponentModel>w_ar_carbinerifle_luxe_mag2</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_CARBINERIFLE_DRAGONG</Name>
+      <Model>w_ar_carbinerifle_dragong</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+	  	<Item>
+		  <ComponentName>COMPONENT_CARBINERIFLE_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_carbinerifle_dragong_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_CARBINERIFLE_CLIP_02</ComponentName>
+		  <ComponentModel>w_ar_carbinerifle_luxe_mag2</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_CARBINERIFLE_DRAGONS</Name>
+      <Model>w_ar_carbinerifle_dragons</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_CARBINERIFLE_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_carbinerifle_dragons_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_CARBINERIFLE_CLIP_02</ComponentName>
+		  <ComponentModel>w_ar_carbinerifle_luxe_mag2</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_CARBINERIFLE_RPV_FZEB</Name>
+      <Model>w_ar_carbinerifle_fzeb</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_CARBINERIFLE_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_carbinerifle_fzeb_mag1</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_CARBINERIFLE_RPV_GIFFIN</Name>
+      <Model>w_ar_carbinerifle_giffin</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_CARBINERIFLE_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_carbinerifle_giffin_mag1</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_CARBINERIFLE_RPV_HEFIRE</Name>
+      <Model>w_ar_carbinerifle_hefire</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_CARBINERIFLE_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_carbinerifle_hefire_mag1</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_CARBINERIFLE_RPV_HOWL</Name>
+      <Model>w_ar_carbinerifle_howl</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_CARBINERIFLE_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_carbinerifle_howl_mag1</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_CARBINERIFLE_RPV_TCAMO</Name>
+      <Model>w_ar_carbinerifle_tcamo</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+	  
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_CARBINERIFLE_RPV_MHUNTE</Name>
+      <Model>w_ar_carbinerifle_mhunte</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_CARBINERIFLE_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_carbinerifle_mhunte_mag1</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_CARBINERIFLE_RPV_RHAZA</Name>
+      <Model>w_ar_carbinerifle_rhaza</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_CARBINERIFLE_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_carbinerifle_rhaza_mag1</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_CARBINERIFLE_RPV_TCALI</Name>
+      <Model>w_ar_carbinerifle_tcali</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_CARBINERIFLE_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_carbinerifle_tcali_mag1</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_ASSAULTRIFLE_RPV_DRAGON</Name>
+      <Model>w_ar_assaultrifle_dragon</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+	  <Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_dragon_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_02</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_dragon_mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_03</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_boxmag_luxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP_02</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_ASSAULTRIFLE_RPV_SILVER</Name>
+      <Model>w_ar_assaultrifle_silver</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+	  <Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_silver_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_02</ComponentName>
+		  <ComponentModel>W_AR_AssaultRifle_LUXE_Mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_03</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_boxmag_luxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP_02</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_ASSAULTRIFLE_RPV_LAN</Name>
+      <Model>w_ar_assaultrifle_lan</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+	  <Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_lan_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_02</ComponentName>
+		  <ComponentModel>W_AR_AssaultRifle_LUXE_Mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_03</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_boxmag_luxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP_02</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_ASSAULTRIFLE_RPV_GREEN</Name>
+      <Model>w_ar_assaultrifle_green</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+	  <Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_green_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_02</ComponentName>
+		  <ComponentModel>W_AR_AssaultRifle_LUXE_Mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_03</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_boxmag_luxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP_02</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_ASSAULTRIFLE_RPV_SHARK</Name>
+      <Model>w_ar_assaultrifle_shark</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_shark_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_02</ComponentName>
+		  <ComponentModel>W_AR_AssaultRifle_LUXE_Mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_03</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_boxmag_luxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP_02</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_ASSAULTRIFLE_POOLPARTY</Name>
+      <Model>w_ar_assaultrifle_poolparty</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_poolparty_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_02</ComponentName>
+		  <ComponentModel>W_AR_AssaultRifle_LUXE_Mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_03</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_boxmag_luxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP_02</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_ASSAULTRIFLE_RPV_FSER</Name>
+      <Model>w_ar_assaultrifle_fser</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_fser_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_02</ComponentName>
+		  <ComponentModel>W_AR_AssaultRifle_LUXE_Mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_03</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_boxmag_luxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP_02</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_ASSAULTRIFLE_RPV_FMISTY</Name>
+      <Model>w_ar_assaultrifle_fmisty</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_fmisty_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_02</ComponentName>
+		  <ComponentModel>W_AR_AssaultRifle_LUXE_Mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_03</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_boxmag_luxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP_02</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_ASSAULTRIFLE_RPV_FINJECT</Name>
+      <Model>w_ar_assaultrifle_finject</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_finject_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_02</ComponentName>
+		  <ComponentModel>W_AR_AssaultRifle_LUXE_Mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_03</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_boxmag_luxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP_02</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_ASSAULTRIFLE_RPV_HYDNIC</Name>
+      <Model>w_ar_assaultrifle_hydnic</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_hydnic_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_02</ComponentName>
+		  <ComponentModel>W_AR_AssaultRifle_LUXE_Mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_03</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_boxmag_luxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP_02</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_ASSAULTRIFLE_RPV_JAGUAR</Name>
+      <Model>w_ar_assaultrifle_jaguar</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_jaguar_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_02</ComponentName>
+		  <ComponentModel>W_AR_AssaultRifle_LUXE_Mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_03</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_boxmag_luxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP_02</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_ASSAULTRIFLE_RPV_NRIDER</Name>
+      <Model>w_ar_assaultrifle_nrider</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_nrider_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_02</ComponentName>
+		  <ComponentModel>W_AR_AssaultRifle_LUXE_Mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_03</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_boxmag_luxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP_02</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_ASSAULTRIFLE_RPV_PDIS</Name>
+      <Model>w_ar_assaultrifle_pdis</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_pdis_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_02</ComponentName>
+		  <ComponentModel>W_AR_AssaultRifle_LUXE_Mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_03</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_boxmag_luxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP_02</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_ASSAULTRIFLE_RPV_VULCAN</Name>
+      <Model>w_ar_assaultrifle_vulcan</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_vulcan_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_02</ComponentName>
+		  <ComponentModel>W_AR_AssaultRifle_LUXE_Mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_03</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_boxmag_luxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP_02</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_ASSAULTRIFLE_RPV_WLANDR</Name>
+      <Model>w_ar_assaultrifle_wlandr</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_wlandr_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_02</ComponentName>
+		  <ComponentModel>W_AR_AssaultRifle_LUXE_Mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_03</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_boxmag_luxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP_02</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_ASSAULTRIFLE_RPV_SUPREME</Name>
+      <Model>w_ar_assaultrifle_supreme</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_supreme_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_02</ComponentName>
+		  <ComponentModel>W_AR_AssaultRifle_LUXE_Mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_03</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_boxmag_luxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP_02</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_ASSAULTRIFLE_RPV_ORBIT1</Name>
+      <Model>w_ar_assaultrifle_orbit1</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_orbit1_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_02</ComponentName>
+		  <ComponentModel>W_AR_AssaultRifle_LUXE_Mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_03</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_boxmag_luxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP_02</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_MICROSMG_RPV_NEONR</Name>
+      <Model>w_sb_microsmg_neonr</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_MICROSMG_CLIP_01</ComponentName>
+		  <ComponentModel>w_sb_microsmg_neonr_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_MICROSMG_CLIP_02</ComponentName>
+		  <ComponentModel>W_SB_MicroSMG_Mag2_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_PI_FLSH</ComponentName>
+		  <ComponentModel>w_at_pi_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP_02</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>	
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_SPECIALCARBINE_RPV_PRINT</Name>
+      <Model>w_ar_specialcarbine_print</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_SPECIALCARBINE_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_specialcarbine_print_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_SPECIALCARBINE_CLIP_02</ComponentName>
+		  <ComponentModel>w_ar_specialcarbine_print_mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_SPECIALCARBINE_CLIP_03</ComponentName>
+		  <ComponentModel>w_ar_specialcarbine_boxmag_luxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP_02</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_BULLPUPRIFLE_MK2_PRINT</Name>
+	  <Model>w_ar_bullpupriflemk2_print</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_BULLPUPRIFLE_MK2_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_bullpupriflemk2_print_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_BULLPUPRIFLE_MK2_CLIP_02</ComponentName>
+		  <ComponentModel>w_ar_bullpupriflemk2_print_mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP_02</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_ASSAULTSMG_JUJUTSU</Name>
+      <Model>w_sb_assaultsmg_jujutsu</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTSMG_CLIP_01</ComponentName>
+		  <ComponentModel>w_sb_assaultsmg_luxe_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTSMG_CLIP_02</ComponentName>
+		  <ComponentModel>w_sb_assaultsmg_luxe_mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>w_at_scope_macro_luxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP_02</ComponentName>
+		  <ComponentModel>w_at_ar_supp_luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>	 
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_ADVANCEDRIFLE_WUKONG</Name>
+      <Model>w_ar_advancedrifle_wukong</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="0"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_ADVANCEDRIFLE_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_advancedrifle_wukong_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ADVANCEDRIFLE_CLIP_02</ComponentName>
+		  <ComponentModel>W_AR_AdvancedRifle_LUXE_mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_SMALL</ComponentName>
+		  <ComponentModel>W_AT_Scope_Small_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_LUXE</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_CARBINERIFLE_MK2_WUKONG</Name>
+	  <Model>w_ar_carbineriflemk2_wukong</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_CARBINERIFLE_MK2_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_carbineriflemk2_wukong_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP_02</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_PUMPSHOTGUN_EYE</Name>
+      <Model>w_sg_pumpshotgun_eye1</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SR_SUPP</ComponentName>
+		  <ComponentModel>w_at_ar_supp_luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+    <Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_MG_BOOM</Name>
+      <Model>w_mg_mg_boom</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_MG_CLIP_01</ComponentName>
+		  <ComponentModel>w_mg_mg_boom_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_MG_CLIP_02</ComponentName>
+		  <ComponentModel>w_mg_mg_luxe_mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_SMALL_02</ComponentName>
+		  <ComponentModel>w_at_scope_small_02a_luxe</ComponentModel>
+		</Item>
+	  </ExtraComponents>	 
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_APPISTOL_CAT</Name>
+      <Model>w_pi_appistol_cat</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="0"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_APPISTOL_CLIP_01</ComponentName>
+		  <ComponentModel>w_pi_appistol_cat_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_APPISTOL_CLIP_02</ComponentName>
+		  <ComponentModel>W_PI_APPistol_Mag2_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_PI_FLSH</ComponentName>
+		  <ComponentModel>w_at_pi_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_PI_SUPP</ComponentName>
+		  <ComponentModel>W_AT_PI_Supp_LUXE</ComponentModel>
+		</Item>
+	  </ExtraComponents>	
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_ASSAULTRIFLE_RPV_FMISTY</Name>
+      <Model>w_ar_assaultrifle_fmisty</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_fmisty_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_02</ComponentName>
+		  <ComponentModel>W_AR_AssaultRifle_LUXE_Mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_CLIP_03</ComponentName>
+		  <ComponentModel>w_ar_assaultrifle_boxmag_luxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP_02</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_BULLPUPRIFLE_BLACKLOVE</Name>
+      <Model>w_ar_bullpuprifle_blacklove</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_BULLPUPRIFLE_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_bullpuprifle_blacklove_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_BULLPUPRIFLE_CLIP_02</ComponentName>
+		  <ComponentModel>w_ar_bullpuprifle_luxe_mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP_02</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_BULLPUPRIFLE_TRUNGTHU</Name>
+      <Model>w_ar_bullpuprifle_lan</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_BULLPUPRIFLE_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_bullpuprifle_lan_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_BULLPUPRIFLE_CLIP_02</ComponentName>
+		  <ComponentModel>w_ar_bullpuprifle_luxe_mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP_02</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_CARBINERIFLE_MK2_TRUNGTHU</Name>
+	  <Model>w_ar_carbineriflemk2_lan</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_CARBINERIFLE_MK2_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_carbineriflemk2_lan_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_CARBINERIFLE_MK2_CLIP_02</ComponentName>
+		  <ComponentModel>w_ar_carbineriflemk2_mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP_02</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_CARBINERIFLE_MK2_RDRAGON</Name>
+	  <Model>w_ar_carbineriflemk2_royaldragon</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_CARBINERIFLE_MK2_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_carbineriflemk2_royaldragon_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP</ComponentName>
+		  <ComponentModel>w_ar_carbineriflemk2_royaldragon_supp</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP_02</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_BULLPUPRIFLE_MK2_GDRAGON</Name>
+	  <Model>w_ar_bullpupriflemk2_gdragon</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_BULLPUPRIFLE_MK2_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_bullpupriflemk2_gdragon_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_BULLPUPRIFLE_MK2_CLIP_02</ComponentName>
+		  <ComponentModel>w_ar_bullpupriflemk2_mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP_02</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_BULLPUPRIFLE_MK2_RDRAGON</Name>
+	  <Model>w_ar_bullpupriflemk2_rdragon</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_BULLPUPRIFLE_MK2_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_bullpupriflemk2_rdragon_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_BULLPUPRIFLE_MK2_CLIP_02</ComponentName>
+		  <ComponentModel>w_ar_bullpupriflemk2_mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_BULLPUPRIFLE_MK2_SDRAGON</Name>
+	  <Model>w_ar_bullpupriflemk2_sdragon</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_BULLPUPRIFLE_MK2_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_bullpupriflemk2_sdragon_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_BULLPUPRIFLE_MK2_CLIP_02</ComponentName>
+		  <ComponentModel>w_ar_bullpupriflemk2_mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_BULLPUPRIFLE_MK2_NOEL2024</Name>
+	  <Model>w_ar_bullpupriflemk2_noel</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_BULLPUPRIFLE_MK2_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_bullpupriflemk2_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_BULLPUPRIFLE_MK2_CLIP_02</ComponentName>
+		  <ComponentModel>w_ar_bullpupriflemk2_noel_mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_CARBINERIFLE_MK2_NOEL2024</Name>
+	  <Model>w_ar_carbineriflemk2_noel</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_CARBINERIFLE_MK2_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_carbineriflemk2_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_CARBINERIFLE_MK2_CLIP_02</ComponentName>
+		  <ComponentModel>w_ar_carbineriflemk2_noel_mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP_02</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_BULLPUPRIFLE_TET2025</Name>
+      <Model>w_ar_bullpuprifle_tet2025</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_BULLPUPRIFLE_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_bullpuprifle_tet2025_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_BULLPUPRIFLE_CLIP_02</ComponentName>
+		  <ComponentModel>w_ar_bullpuprifle_luxe_mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP_02</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_CARBINERIFLE_MK2_TET2025</Name>
+	  <Model>w_ar_carbineriflemk2_tet2025</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_CARBINERIFLE_MK2_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_carbineriflemk2_tet2025_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_CARBINERIFLE_MK2_CLIP_02</ComponentName>
+		  <ComponentModel>w_ar_carbineriflemk2_mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP_02</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_BULLPUPRIFLE_MK2_TET2025</Name>
+	  <Model>w_ar_bullpupriflemk2_tet2025</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_BULLPUPRIFLE_MK2_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_bullpupriflemk2_tet2025_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_BULLPUPRIFLE_MK2_CLIP_02</ComponentName>
+		  <ComponentModel>w_ar_bullpupriflemk2_mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_ASSAULTRIFLE_MK2_6TH</Name>
+	  <Model>w_ar_assaultriflemk2_6th</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_MK2_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_assaultriflemk2_6th_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_MK2_CLIP_02</ComponentName>
+		  <ComponentModel>w_ar_assaultriflemk2_6th_mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_CARBINERIFLE_MK2_6TH</Name>
+	  <Model>w_ar_carbineriflemk2_6th</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_CARBINERIFLE_MK2_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_carbineriflemk2_6th_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_CARBINERIFLE_MK2_CLIP_02</ComponentName>
+		  <ComponentModel>w_ar_carbineriflemk2_6th_mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_BULLPUPRIFLE_MK2_6TH</Name>
+	  <Model>w_ar_bullpupriflemk2_6th</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_BULLPUPRIFLE_MK2_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_bullpupriflemk2_6th_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_BULLPUPRIFLE_MK2_CLIP_02</ComponentName>
+		  <ComponentModel>w_ar_bullpupriflemk2_6th_mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_ASSAULTRIFLE_MK2_TRUNGTHU2025</Name>
+	  <Model>w_ar_assaultriflemk2_trungthu2025</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_MK2_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_assaultriflemk2_trungthu2025_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_ASSAULTRIFLE_MK2_CLIP_02</ComponentName>
+		  <ComponentModel>w_ar_assaultriflemk2_trungthu2025_mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_CARBINERIFLE_MK2_TRUNGTHU2025</Name>
+	  <Model>w_ar_carbineriflemk2_trungthu2025</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_CARBINERIFLE_MK2_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_carbineriflemk2_trungthu2025_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_CARBINERIFLE_MK2_CLIP_02</ComponentName>
+		  <ComponentModel>w_ar_carbineriflemk2_trungthu2025_mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_BULLPUPRIFLE_MK2_TRUNGTHU2025</Name>
+	  <Model>w_ar_bullpupriflemk2_trungthu2025</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+	  <ExtraComponents>
+		<Item>
+		  <ComponentName>COMPONENT_BULLPUPRIFLE_MK2_CLIP_01</ComponentName>
+		  <ComponentModel>w_ar_bullpupriflemk2_trungthu2025_mag1</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_BULLPUPRIFLE_MK2_CLIP_02</ComponentName>
+		  <ComponentModel>w_ar_bullpupriflemk2_trungthu2025_mag2</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_FLSH</ComponentName>
+		  <ComponentModel>w_at_ar_flsh_pdluxe</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_AFGRIP</ComponentName>
+		  <ComponentModel>W_AT_AR_AFGrip_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_SCOPE_MACRO</ComponentName>
+		  <ComponentModel>W_AT_Scope_Macro_LUXE</ComponentModel>
+		</Item>
+		<Item>
+		  <ComponentName>COMPONENT_AT_AR_SUPP</ComponentName>
+		  <ComponentModel>W_AT_AR_Supp_Luxe_02</ComponentModel>
+		</Item>
+	  </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_BAT_T12</Name>
+      <Model>w_me_bat_t12</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_MACHETE_GOLD</Name>
+      <Model>w_me_machette_gold</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+	  <TintIndexOverride value="2"/>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_POOLCUE_SKIN_05</Name>
+      <Model>gta5vn_w_me_bat</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+      <TintIndexOverride value="0"/>
+      <ExtraComponents/>
+    </Item>
+    <Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_POOLCUE_SKIN_MK</Name>
+      <Model>gta5vn_w_me_poolcue_mk</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+      <TintIndexOverride value="0"/>
+      <ExtraComponents/>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_POOLCUE_SKIN_04</Name>
+      <Model>gta5vn_w_me_bat_1</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+      <TintIndexOverride value="0"/>
+      <ExtraComponents/>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_MACHETE_SKIN_01</Name>
+      <Model>gta5vn_w_me_machete_cb</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+      <TintIndexOverride value="0"/>
+      <ExtraComponents/>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_MACHETE_SKIN_02</Name>
+      <Model>gta5vn_w_me_hatchet_1</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+      <TintIndexOverride value="0"/>
+      <ExtraComponents/>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_SWITCHBLADE_SKIN_01</Name>
+      <Model>gta5vn_w_me_crowbar_1</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+      <TintIndexOverride value="0"/>
+      <ExtraComponents/>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_POOLCUE_SKIN_01</Name>
+      <Model>gta5vn_w_me_poolcue_1</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+      <TintIndexOverride value="0"/>
+      <ExtraComponents/>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_POOLCUE_SKIN_02</Name>
+      <Model>gta5vn_w_me_gclub</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+      <TintIndexOverride value="0"/>
+      <ExtraComponents/>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_POOLCUE_SKIN_03</Name>
+      <Model>gta5vn_w_me_gclub_1</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+      <TintIndexOverride value="0"/>
+      <ExtraComponents/>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_KNUCKLE_SKIN_01</Name>
+      <Model>gta5vn_w_me_knuckle</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+      <TintIndexOverride value="0"/>
+      <ExtraComponents/>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_BOTTLE_WOLF_01</Name>
+      <Model>gta5vn_bottle_white_wolf</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+      <TintIndexOverride value="0"/>
+      <ExtraComponents/>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_SWITCHBLADE_WOLF_01</Name>
+      <Model>gta5vn_switchblade_white_wolf</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+      <TintIndexOverride value="0"/>
+      <ExtraComponents/>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_KNUCKLE_WOLF_01</Name>
+      <Model>gta5vn_knuckle_white_wolf</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+      <TintIndexOverride value="0"/>
+      <ExtraComponents/>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_POOLCUE_WOLF_01</Name>
+      <Model>gta5vn_poolcue_white_wolf</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+      <TintIndexOverride value="0"/>
+      <ExtraComponents/>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_ASSAULTRIFLEMK2_KAWAI_ANIM</Name>
+      <Model>w_ar_assaultriflemk2_kawai</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+      <TintIndexOverride value="2" />
+      <ExtraComponents>
+        <Item>
+          <ComponentName>COMPONENT_ASSAULTRIFLE_MK2_CLIP_01</ComponentName>
+          <ComponentModel>w_ar_assaultriflemk2_kawai_mag1</ComponentModel>
+        </Item>
+        <Item>
+          <ComponentName>COMPONENT_ASSAULTRIFLE_MK2_CLIP_02</ComponentName>
+          <ComponentModel>w_ar_assaultriflemk2_kawai_mag1</ComponentModel>
+        </Item>        
+        <Item>
+          <ComponentName>COMPONENT_AT_AR_BARREL_01</ComponentName>
+          <ComponentModel>assaultriflemk2_kawai_anim</ComponentModel>
+        </Item>
+        <Item>
+          <ComponentName>COMPONENT_AT_AR_BARREL_02</ComponentName>
+          <ComponentModel>assaultriflemk2_kawai_anim</ComponentModel>
+        </Item>
+        <Item>
+          <ComponentName>COMPONENT_AT_AR_AFGRIP_02</ComponentName>
+          <ComponentModel>skin_omex_base_anim</ComponentModel>
+        </Item>                 
+      </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_CARBINERIFLE_MK2_KAWAI_ANIM</Name>
+      <Model>w_ar_carbineriflemk2_kawai</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+      <TintIndexOverride value="2" />
+      <ExtraComponents>
+        <Item>
+          <ComponentName>COMPONENT_AT_CR_BARREL_01</ComponentName>
+          <ComponentModel>carbineriflemk2_kawai_anim</ComponentModel>
+        </Item>
+        <Item>
+          <ComponentName>COMPONENT_CARBINERIFLE_MK2_CLIP_01</ComponentName>
+          <ComponentModel>w_ar_carbineriflemk2_kawai_mag1</ComponentModel>
+        </Item>
+		<Item>
+          <ComponentName>COMPONENT_CARBINERIFLE_MK2_CLIP_02</ComponentName>
+          <ComponentModel>w_ar_carbineriflemk2_kawai_mag1</ComponentModel>
+        </Item>		
+        <Item>
+          <ComponentName>COMPONENT_AT_AR_AFGRIP_02</ComponentName>
+          <ComponentModel>skin_omex_base_anim</ComponentModel>
+        </Item>                
+      </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_SPECIALCARBINE_MK2_KAWAI_ANIM</Name>
+      <Model>w_ar_specialcarbinemk2_kawai</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+      <TintIndexOverride value="2" />
+      <ExtraComponents>      
+        <Item>
+          <ComponentName>COMPONENT_SPECIALCARBINE_MK2_CLIP_01</ComponentName>
+          <ComponentModel>w_ar_specialcarbinemk2_kawai_mag1</ComponentModel>
+        </Item>
+        <Item>
+          <ComponentName>COMPONENT_SPECIALCARBINE_MK2_CLIP_02</ComponentName>
+          <ComponentModel>w_ar_specialcarbinemk2_kawai_mag1</ComponentModel>
+        </Item>		
+        <Item>
+          <ComponentName>COMPONENT_AT_SC_BARREL_01</ComponentName>
+          <ComponentModel>specialcarbinemk2_kawai_anim</ComponentModel>
+        </Item>
+        <Item>
+          <ComponentName>COMPONENT_AT_AR_AFGRIP_02</ComponentName>
+          <ComponentModel>skin_omex_base_anim</ComponentModel>
+        </Item>	        		
+      </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_BULLPUPRIFLE_MK2_KAWAI_ANIM</Name>
+      <Model>w_bullpupriflemk2_kawai</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+      <TintIndexOverride value="2" />
+      <ExtraComponents>
+        <Item>
+          <ComponentName>COMPONENT_BULLPUPRIFLE_MK2_CLIP_01</ComponentName>
+          <ComponentModel>w_bullpupriflemk2_kawai_mag1</ComponentModel>
+        </Item>
+        <Item>
+          <ComponentName>COMPONENT_BULLPUPRIFLE_MK2_CLIP_02</ComponentName>
+          <ComponentModel>w_bullpupriflemk2_kawai_mag1</ComponentModel>
+        </Item>
+        <Item>
+          <ComponentName>COMPONENT_AT_AR_AFGRIP_02</ComponentName>
+          <ComponentModel>skin_omex_base_anim</ComponentModel>
+        </Item>                       
+        <Item>
+          <ComponentName>COMPONENT_AT_BP_BARREL_01</ComponentName>
+          <ComponentModel>w_bullpupriflemk2_kawai_animuv</ComponentModel>
+        </Item>
+        <Item>
+          <ComponentName>COMPONENT_AT_BP_BARREL_02</ComponentName>
+          <ComponentModel>w_bullpupriflemk2_kawai_animuv</ComponentModel>
+        </Item>               
+      </ExtraComponents>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_BOTTLE_POKER_01</Name>
+      <Model>gta5vn_bottle_poker</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+      <TintIndexOverride value="0"/>
+      <ExtraComponents/>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_SWITCHBLADE_POKER_01</Name>
+      <Model>gta5vn_switchblade_poker</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+      <TintIndexOverride value="0"/>
+      <ExtraComponents/>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_KNUCKLE_POKER_01</Name>
+      <Model>gta5vn_knuckle_poker</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+      <TintIndexOverride value="0"/>
+      <ExtraComponents/>
+    </Item>
+	<Item type="CWeaponComponentVariantModelInfo">
+      <Name>COMPONENT_POOLCUE_POKER_01</Name>
+      <Model>gta5vn_poolcue_poker</Model>
+      <LocName>WCT_INVALID</LocName>
+      <LocDesc>WCD_INVALID</LocDesc>
+      <AttachBone />
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="false" />
+      <CreateObject value="false" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="0" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+      <TintIndexOverride value="0"/>
+      <ExtraComponents/>
+    </Item>
+  </Infos>
+  <InfoBlobName>DLC - CF Thoms</InfoBlobName>
+</CWeaponComponentInfoBlob>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CWeaponModelInfo__InitDataList>
+	<InitDatas>
+		<!-- Flower Bouquet -->
+		<Item>
+		  <modelName>w_me_flowerbouquet</modelName>
+		  <txdName>w_me_flowerbouquet</txdName>
+		  <ptfxAssetName>NULL</ptfxAssetName>
+		  <lodDist value="50"/>
+		</Item>
+		
+		<!-- WEAPON_SUMIRERIFLE -->
+	</InitDatas>
+</CWeaponModelInfo__InitDataList>

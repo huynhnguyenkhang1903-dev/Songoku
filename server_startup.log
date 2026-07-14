@@ -1,0 +1,310 @@
+[38;5;218m[    c-server-monitor] [0m[0m[32m  _______  ______                           
+[38;5;218m[    c-server-monitor] [0m[32m |  ___\ \/ / ___|  ___ _ ____   _____ _ __ 
+[38;5;218m[    c-server-monitor] [0m[32m | |_   \  /\___ \ / _ \ '__\ \ / / _ \ '__|
+[38;5;218m[    c-server-monitor] [0m[32m |  _|  /  \ ___) |  __/ |   \ V /  __/ |   
+[38;5;218m[    c-server-monitor] [0m[32m |_|   /_/\_\____/ \___|_|    \_/ \___|_|   
+[38;5;218m[    c-server-monitor] [0m[32m-------------------------------- [93mtxAdmin[32m ---[0m
+[38;5;218m[    c-server-monitor] [0m[0m
+[38;5;161m[    c-scripting-core] [0m[0mCreating script environments for monitor
+]0;txAdmin v8.0.1[08:32:27][tx] Starting txAdmin v8.0.1/b25770/Win...
+[08:32:27][tx:UpdateChecker] This version of txAdmin is outdated.
+[08:32:27][tx:UpdateChecker] Please update as soon as possible.
+[08:32:27][tx:UpdateChecker] For more information: https://discord.gg/uAmsGa2
+[08:32:28][tx] 
+[08:32:28][tx]    ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+[08:32:28][tx]    ┃                                    ┃
+[08:32:28][tx]    ┃     All ready! Please access:      ┃
+[08:32:28][tx]    ┃      http://localhost:40120/       ┃
+[08:32:28][tx]    ┃    http://14.164.166.241:40120/    ┃
+[08:32:28][tx]    ┃                                    ┃
+[08:32:28][tx]    ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+[08:32:28][tx] 
+[08:32:28][tx] [!] Home-hosting fxserver is not recommended [!]
+[08:32:28][tx] You need to open the fxserver port (usually 30120) on Windows Firewall
+[08:32:28][tx] and set up port forwarding on your router so other players can access it.
+[08:32:28][tx] We recommend renting a server from  https://zap-hosting.com/txAdmin .
+[08:32:28][tx:FXProc][18064] FXServer Started!
+║             TXADMIN║ ================================================================
+║             TXADMIN║ ======== [18064] FXServer Starting - 08:32:28, 11/7/2026        
+║             TXADMIN║ ================================================================
+[38;5;83m[           resources] [0m[0m[32mScanning resources.[0m
+[38;5;23m[ resources:Clothing2] [0m[0m[93mWarning: Clothing2 does not have a resource manifest (fxmanifest.lua)[0m
+[38;5;83m[           resources] [0m[0m[32mFound 75 resources.[0m
+[38;5;83m[           resources] [0m[0m[93m1 warning was encountered.[0m
+[38;5;66m[          svadhesive] [0m[0mAuthenticating server license key...
+[38;5;66m[          svadhesive] [0m[0mServer license key authentication succeeded. Welcome!
+[38;5;161m[    c-scripting-core] [0m[0mCreating script environments for monitor
+[38;5;84m[      script:monitor] [0m[0m[36m[txAdmin][97m Resource v8.0.1 threads and commands set up. All Ready.[97m
+[38;5;83m[           resources] [0m[97mStarted resource monitor
+[38;5;161m[    c-scripting-core] [0m[97mCreating script environments for mapmanager
+[38;5;83m[           resources] [0m[97mStarted resource mapmanager
+[38;5;161m[    c-scripting-core] [0m[97mCreating script environments for yarn
+[38;5;83m[           resources] [0m[97mStarted resource yarn
+[38;5;161m[    c-scripting-core] [0m[97mCreating script environments for webpack
+[38;5;83m[           resources] [0m[97mStarted resource webpack
+[38;5;161m[    c-scripting-core] [0m[97mCreating script environments for chat
+[38;5;83m[           resources] [0m[97mStarted resource chat
+[38;5;83m[           resources] [0m[97mStarted resource spawnmanager
+[38;5;161m[    c-scripting-core] [0m[97mCreating script environments for sessionmanager
+[38;5;83m[           resources] [0m[97mStarted resource sessionmanager
+[38;5;154m[   script:mapmanager] [0m[97mStarted gametype Freeroam
+[38;5;83m[           resources] [0m[97mStarted resource basic-gamemode
+[38;5;161m[    c-scripting-core] [0m[97mCreating script environments for hardcap
+[38;5;83m[           resources] [0m[97mStarted resource hardcap
+[38;5;161m[    c-scripting-core] [0m[97mCreating script environments for rconlog
+[38;5;83m[           resources] [0m[97mStarted resource rconlog
+[38;5;73m[ citizen-server-impl] [0m[97m[93mCouldn't find resource khang_loading.[0m
+[38;5;73m[ citizen-server-impl] [0m[0m[93mCouldn't find resource female_aps.[0m
+[38;5;73m[ citizen-server-impl] [0m[0m[93mCouldn't find resource mp_femalefixaddon.[0m
+[38;5;73m[ citizen-server-impl] [0m[0m[93mCouldn't find resource skin_replace.[0m
+[38;5;73m[ citizen-server-impl] [0m[0m[93mCouldn't find resource skinchanger.[0m
+[38;5;46m[resources:evclick125] [0m[0m[94mAsset evclick125/evclick125.yft uses 27.8 MiB of virtual memory.[0m
+[38;5;46m[resources:evclick125] [0m[0m[94mAsset evclick125/evclick125.ytd uses 17.0 MiB of physical memory.[0m
+[38;5;46m[resources:evclick125] [0m[0m[94mAsset evclick125/evclick125_hi.yft uses 27.8 MiB of virtual memory.[0m
+[38;5;83m[           resources] [0m[0mStarted resource evclick125 (3 warnings)
+[38;5;21m[resources:exciter201] [0m[0m[94mAsset exciter2010v1/exciter2010v1.yft uses 26.0 MiB of virtual memory.[0m
+[38;5;21m[resources:exciter201] [0m[0m[93mAsset exciter2010v1/exciter2010v1.ytd uses 43.0 MiB of physical memory.[0m
+[38;5;21m[resources:exciter201] [0m[0m[94mAsset exciter2010v1/exciter2010v1_hi.yft uses 26.0 MiB of virtual memory.[0m
+[38;5;83m[           resources] [0m[0mStarted resource exciter2010v1 (3 warnings)
+[38;5;129m[resources:exdrag:str] [0m[0m[94mAsset exdrag/exdrag.yft uses 31.1 MiB of virtual memory.[0m
+[38;5;129m[resources:exdrag:str] [0m[0m[93mAsset exdrag/exdrag.ytd uses 52.5 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;129m[resources:exdrag:str] [0m[0m[94mAsset exdrag/exdrag_hi.yft uses 31.1 MiB of virtual memory.[0m
+[38;5;83m[           resources] [0m[0mStarted resource exdrag (3 warnings)
+[38;5;116m[resources:rpv_lawand] [0m[0m[91mAsset rpv_lawandservice_pack/24gcmustred.ytd uses 92.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[91mAsset rpv_lawandservice_pack/BearcatRBstairs.ytd uses 142.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[91mAsset rpv_lawandservice_pack/BearcatRBstairs_hi.ytd uses 142.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/PD150JYZS22.ytd uses 24.0 MiB of physical memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/RoyalYamahaEMS_white.yft uses 20.1 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/RoyalYamahaEMS_white_hi.yft uses 20.1 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[93mAsset rpv_lawandservice_pack/abrams.ytd uses 36.2 MiB of physical memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[93mAsset rpv_lawandservice_pack/ah6.ytd uses 48.0 MiB of physical memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[93mAsset rpv_lawandservice_pack/bearcat.yft uses 32.1 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[93mAsset rpv_lawandservice_pack/bearcat.ytd uses 43.0 MiB of physical memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[93mAsset rpv_lawandservice_pack/bearcat_hi.yft uses 32.1 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[93mAsset rpv_lawandservice_pack/bmwm8nonels.yft uses 34.0 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[93mAsset rpv_lawandservice_pack/bmwm8nonels.ytd uses 38.0 MiB of physical memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[93mAsset rpv_lawandservice_pack/bmwm8nonels_hi.yft uses 34.0 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[93mAsset rpv_lawandservice_pack/bolidepo.ytd uses 34.0 MiB of physical memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/chal2.ytd uses 23.0 MiB of physical memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/coach2.ytd uses 18.0 MiB of physical memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[93mAsset rpv_lawandservice_pack/corvettepd.ytd uses 42.0 MiB of physical memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/emsgs1200.yft uses 17.5 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/emsgs1200_hi.yft uses 17.5 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/expems.yft uses 26.5 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[91mAsset rpv_lawandservice_pack/expems.ytd uses 119.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/expems_hi.yft uses 26.5 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/fbin.yft uses 21.5 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/fbin.ytd uses 27.0 MiB of physical memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/fbin_hi.yft uses 21.5 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/foxosh.yft uses 31.0 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[93mAsset rpv_lawandservice_pack/foxosh.ytd uses 46.0 MiB of physical memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/foxosh2.ytd uses 18.0 MiB of physical memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/foxosh_hi.yft uses 31.0 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/foxtr2.yft uses 28.2 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/foxtr2.ytd uses 28.0 MiB of physical memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/foxtr2_hi.yft uses 28.2 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/hcbr500rgn.yft uses 18.0 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/hcbr500rgn.ytd uses 30.0 MiB of physical memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/hcbr500rgn_hi.yft uses 18.0 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/hemt.yft uses 17.5 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/hemt.ytd uses 17.0 MiB of physical memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/humv.yft uses 30.8 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/humv.ytd uses 28.5 MiB of physical memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/humv2.yft uses 30.8 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/hurcop.yft uses 22.8 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[91mAsset rpv_lawandservice_pack/hurcop.ytd uses 132.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/hurcop_hi.yft uses 22.8 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/lp770cop.yft uses 16.3 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[91mAsset rpv_lawandservice_pack/lp770cop.ytd uses 88.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/lp770cop_hi.yft uses 16.3 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[93mAsset rpv_lawandservice_pack/mh6.ytd uses 48.0 MiB of physical memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[91mAsset rpv_lawandservice_pack/mox.ytd uses 120.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[93mAsset rpv_lawandservice_pack/newsvan.ytd uses 52.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/nm_amg.yft uses 16.8 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/nm_amg.ytd uses 25.5 MiB of physical memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/nm_amg1.ytd uses 19.5 MiB of physical memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/nm_amg_hi.yft uses 16.8 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[93mAsset rpv_lawandservice_pack/onebeast.ytd uses 34.0 MiB of physical memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/polamggtr.yft uses 20.0 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[91mAsset rpv_lawandservice_pack/polamggtr.ytd uses 176.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/polamggtr_hi.yft uses 20.0 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[91mAsset rpv_lawandservice_pack/polgt17.ytd uses 116.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[93mAsset rpv_lawandservice_pack/policebvn.ytd uses 52.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/polporsche.yft uses 25.2 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[91mAsset rpv_lawandservice_pack/polporsche.ytd uses 81.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/polporsche_hi.yft uses 25.2 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[93mAsset rpv_lawandservice_pack/polzonda.ytd uses 64.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[93mAsset rpv_lawandservice_pack/pressuv.yft uses 38.0 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[93mAsset rpv_lawandservice_pack/pressuv.ytd uses 50.5 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[93mAsset rpv_lawandservice_pack/pressuv_hi.yft uses 38.0 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[91mAsset rpv_lawandservice_pack/rpv_13fpiu.ytd uses 197.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[91mAsset rpv_lawandservice_pack/rpv_18chgr.ytd uses 190.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/rpv_boat_large.yft uses 26.1 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[91mAsset rpv_lawandservice_pack/rpv_boat_large.ytd uses 224.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/rpv_boat_large_hi.yft uses 26.1 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/rpv_boat_military.yft uses 26.1 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[91mAsset rpv_lawandservice_pack/rpv_boat_military.ytd uses 160.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/rpv_boat_military_hi.yft uses 26.1 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[91mAsset rpv_lawandservice_pack/rpv_ems_dodgert.ytd uses 153.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[93mAsset rpv_lawandservice_pack/rpv_ems_speedo.ytd uses 33.0 MiB of physical memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[93mAsset rpv_lawandservice_pack/rpv_fibchgr.ytd uses 46.0 MiB of physical memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/rpv_leo_911turbo.yft uses 16.5 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[91mAsset rpv_lawandservice_pack/rpv_leo_911turbo.ytd uses 131.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/rpv_leo_911turbo_hi.yft uses 16.5 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/rpv_mod_zl1.yft uses 24.8 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[91mAsset rpv_lawandservice_pack/rpv_mod_zl1.ytd uses 88.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/rpv_mod_zl1_hi.yft uses 22.2 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/rpv_mw_car1.ytd uses 32.0 MiB of physical memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/rpv_mw_car2.ytd uses 32.0 MiB of physical memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/rpv_umsrt.yft uses 16.8 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[91mAsset rpv_lawandservice_pack/rpv_umsrt.ytd uses 140.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/rpv_umsrt_hi.yft uses 16.8 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[93mAsset rpv_lawandservice_pack/sprinterweazel.ytd uses 43.0 MiB of physical memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/umtahoe.yft uses 16.5 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[91mAsset rpv_lawandservice_pack/umtahoe.ytd uses 88.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/umtahoe_hi.yft uses 16.5 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/vc_pols63e2023.yft uses 17.2 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/vc_pols63e2023_hi.yft uses 17.2 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/vehicles_stormchaser_equipment.ytd uses 26.0 MiB of physical memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/x7police.yft uses 20.2 MiB of virtual memory.[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[93mAsset rpv_lawandservice_pack/x7police.ytd uses 51.5 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;116m[resources:rpv_lawand] [0m[0m[94mAsset rpv_lawandservice_pack/x7police_hi.yft uses 20.2 MiB of virtual memory.[0m
+[38;5;83m[           resources] [0m[0mStarted resource rpv_lawandservice_pack (99 warnings)
+[38;5;43m[resources:rpv_vehicl] [0m[0m[93mWarning: could not find file `carvariations.meta` (defined in __resource.lua:3)[0m
+[38;5;43m[resources:rpv_vehicl] [0m[0m[93mWarning: could not find file `carcols.meta` (defined in __resource.lua:3)[0m
+[38;5;43m[resources:rpv_vehicl] [0m[0m[93mWarning: could not find file `vehiclelayouts_formula5.meta` (defined in __resource.lua:3)[0m
+[38;5;83m[           resources] [0m[0mStarted resource rpv_vehicles_replace (3 warnings)
+[38;5;67m[resources:rpv_wheels] [0m[0m[93mAsset rpv_wheels/dodge_hellcat_01.ydr uses 64.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;67m[resources:rpv_wheels] [0m[0m[94mAsset rpv_wheels/dodge_scatpack_01.ydr uses 21.0 MiB of physical memory.[0m
+[38;5;67m[resources:rpv_wheels] [0m[0m[94mAsset rpv_wheels/dodge_scatpack_02.ydr uses 20.0 MiB of physical memory.[0m
+[38;5;67m[resources:rpv_wheels] [0m[0m[94mAsset rpv_wheels/dodge_srt_01.ydr uses 24.0 MiB of physical memory.[0m
+[38;5;67m[resources:rpv_wheels] [0m[0m[94mAsset rpv_wheels/dodge_sxt_01.ydr uses 20.0 MiB of physical memory.[0m
+[38;5;67m[resources:rpv_wheels] [0m[0m[91mAsset rpv_wheels/qx80wh_01.ydr uses 72.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;67m[resources:rpv_wheels] [0m[0m[91mAsset rpv_wheels/qx80wh_02.ydr uses 72.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;67m[resources:rpv_wheels] [0m[0m[91mAsset rpv_wheels/qx80wh_03.ydr uses 72.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;67m[resources:rpv_wheels] [0m[0m[93mAsset rpv_wheels/wheel_brabusF_01.ydr uses 48.0 MiB of physical memory.[0m
+[38;5;67m[resources:rpv_wheels] [0m[0m[93mAsset rpv_wheels/wheel_brabusZ_01.ydr uses 48.0 MiB of physical memory.[0m
+[38;5;67m[resources:rpv_wheels] [0m[0m[93mAsset rpv_wheels/wheel_dodge_redeye.ydr uses 64.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;67m[resources:rpv_wheels] [0m[0m[93mAsset rpv_wheels/wheel_dodge_redeye_2.ydr uses 64.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;67m[resources:rpv_wheels] [0m[0m[94mAsset rpv_wheels/wheel_mansory_cs11_02.ydr uses 18.0 MiB of physical memory.[0m
+[38;5;67m[resources:rpv_wheels] [0m[0m[94mAsset rpv_wheels/wheel_mansory_cs11_03.ydr uses 18.0 MiB of physical memory.[0m
+[38;5;67m[resources:rpv_wheels] [0m[0m[93mAsset rpv_wheels/wheel_techart_daytona_2.ydr uses 56.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;67m[resources:rpv_wheels] [0m[0m[93mAsset rpv_wheels/wheel_urus4.ydr uses 48.0 MiB of physical memory.[0m
+[38;5;83m[           resources] [0m[0mStarted resource rpv_wheels (16 warnings)
+[38;5;189m[resources:satria2006] [0m[0m[94mAsset satria2006/satria2006.yft uses 30.8 MiB of virtual memory.[0m
+[38;5;189m[resources:satria2006] [0m[0m[94mAsset satria2006/satria2006_hi.yft uses 30.8 MiB of virtual memory.[0m
+[38;5;83m[           resources] [0m[0mStarted resource satria2006 (2 warnings)
+[38;5;118m[resources:sh350:stre] [0m[0m[94mAsset sh350/sh350.yft uses 19.0 MiB of virtual memory.[0m
+[38;5;118m[resources:sh350:stre] [0m[0m[93mAsset sh350/sh350.ytd uses 57.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;118m[resources:sh350:stre] [0m[0m[94mAsset sh350/sh350_hi.yft uses 19.0 MiB of virtual memory.[0m
+[38;5;83m[           resources] [0m[0mStarted resource sh350 (3 warnings)
+[38;5;25m[resources:vf3:stream] [0m[0m[91mAsset vf3/vf3.ytd uses 168.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;83m[           resources] [0m[0mStarted resource vf3 (1 warning)
+[38;5;207m[resources:vin:stream] [0m[0m[94mAsset vin/vinfastluxa.yft uses 28.4 MiB of virtual memory.[0m
+[38;5;207m[resources:vin:stream] [0m[0m[91mAsset vin/vinfastluxa.ytd uses 186.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;207m[resources:vin:stream] [0m[0m[94mAsset vin/vinfastluxa_hi.yft uses 28.4 MiB of virtual memory.[0m
+[38;5;83m[           resources] [0m[0mStarted resource vin (3 warnings)
+[38;5;90m[resources:visionnpgt] [0m[0m[94mAsset visionnpgthanhtfng/visionnpgthanhtfng.yft uses 26.6 MiB of virtual memory.[0m
+[38;5;90m[resources:visionnpgt] [0m[0m[93mAsset visionnpgthanhtfng/visionnpgthanhtfng.ytd uses 63.5 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;90m[resources:visionnpgt] [0m[0m[94mAsset visionnpgthanhtfng/visionnpgthanhtfng_hi.yft uses 26.6 MiB of virtual memory.[0m
+[38;5;83m[           resources] [0m[0mStarted resource visionnpgthanhtfng (3 warnings)
+[38;5;78m[resources:winnerv1:s] [0m[0m[94mAsset winnerv1/winnerv1.yft uses 25.6 MiB of virtual memory.[0m
+[38;5;78m[resources:winnerv1:s] [0m[0m[93mAsset winnerv1/winnerv1.ytd uses 37.0 MiB of physical memory.[0m
+[38;5;78m[resources:winnerv1:s] [0m[0m[94mAsset winnerv1/winnerv1_hi.yft uses 25.6 MiB of virtual memory.[0m
+[38;5;83m[           resources] [0m[0mStarted resource winnerv1 (3 warnings)
+[38;5;41m[resources:yaznos:str] [0m[0m[94mAsset yaznos/yaznos.yft uses 29.9 MiB of virtual memory.[0m
+[38;5;41m[resources:yaznos:str] [0m[0m[94mAsset yaznos/yaznos.ytd uses 18.0 MiB of physical memory.[0m
+[38;5;41m[resources:yaznos:str] [0m[0m[94mAsset yaznos/yaznos_hi.yft uses 29.9 MiB of virtual memory.[0m
+[38;5;83m[           resources] [0m[0mStarted resource yaznos (3 warnings)
+[38;5;83m[           resources] [0m[0mStarted resource a80ffeng
+[38;5;83m[           resources] [0m[0mStarted resource amg1eng
+[38;5;83m[           resources] [0m[0mStarted resource audr8tteng
+[38;5;83m[           resources] [0m[0mStarted resource bnr34ffeng
+[38;5;83m[           resources] [0m[0mStarted resource ea825
+[38;5;83m[           resources] [0m[0mStarted resource evoixsound
+[38;5;83m[           resources] [0m[0mStarted resource ferrarif140fe
+[38;5;83m[           resources] [0m[0mStarted resource kc144kawazx10rsc
+[38;5;83m[           resources] [0m[0mStarted resource kc63fordgt2gen
+[38;5;83m[           resources] [0m[0mStarted resource lamveneng
+[38;5;80m[  resources:lfasound] [0m[0m[93mWarning: could not find client_script `vehicle_names.lua` (defined in __resource.lua:14)[0m
+[38;5;83m[           resources] [0m[0mStarted resource lfasound (1 warning)
+[38;5;83m[           resources] [0m[0mStarted resource lg157por911
+[38;5;83m[           resources] [0m[0mStarted resource lg59hurv10
+[38;5;83m[           resources] [0m[0mStarted resource lg62chironpursport
+[38;5;83m[           resources] [0m[0mStarted resource m297zonda
+[38;5;83m[           resources] [0m[0mStarted resource ml720v8eng
+[38;5;83m[           resources] [0m[0mStarted resource prgc30a
+[38;5;83m[           resources] [0m[0mStarted resource rx7bpeng
+[38;5;83m[           resources] [0m[0mStarted resource subaruej257
+[38;5;83m[           resources] [0m[0mStarted resource ta018ferf140b
+[38;5;83m[           resources] [0m[0mStarted resource ta103ninjah2r
+[38;5;83m[           resources] [0m[0mStarted resource ta116lp640f
+[38;5;83m[           resources] [0m[0mStarted resource ta176m177
+[38;5;83m[           resources] [0m[0mStarted resource ta178amgb
+[38;5;83m[           resources] [0m[0mStarted resource ta488f154
+[38;5;83m[           resources] [0m[0mStarted resource tagt3flat6
+[38;5;83m[           resources] [0m[0mStarted resource w_mk47mf
+[38;5;144m[resources:w_replace:] [0m[0m[94mAsset w_replace/w_ar_assaultrifle_green.ydr uses 24.0 MiB of physical memory.[0m
+[38;5;144m[resources:w_replace:] [0m[0m[94mAsset w_replace/w_ar_assaultrifle_green_mag1.ydr uses 24.0 MiB of physical memory.[0m
+[38;5;144m[resources:w_replace:] [0m[0m[94mAsset w_replace/w_ar_assaultrifle_lan.ydr uses 24.0 MiB of physical memory.[0m
+[38;5;144m[resources:w_replace:] [0m[0m[94mAsset w_replace/w_ar_assaultrifle_lan_mag1.ydr uses 24.0 MiB of physical memory.[0m
+[38;5;144m[resources:w_replace:] [0m[0m[94mAsset w_replace/w_ar_assaultrifle_poolparty.ydr uses 24.0 MiB of physical memory.[0m
+[38;5;144m[resources:w_replace:] [0m[0m[94mAsset w_replace/w_ar_assaultriflemk2_noel.ydr uses 24.0 MiB of physical memory.[0m
+[38;5;144m[resources:w_replace:] [0m[0m[94mAsset w_replace/w_ar_assaultriflemk2_noel_mag2.ydr uses 24.0 MiB of physical memory.[0m
+[38;5;144m[resources:w_replace:] [0m[0m[94mAsset w_replace/w_ar_bullpuprifle_blacklove.ydr uses 24.0 MiB of physical memory.[0m
+[38;5;144m[resources:w_replace:] [0m[0m[94mAsset w_replace/w_ar_bullpuprifle_lan.ydr uses 24.0 MiB of physical memory.[0m
+[38;5;144m[resources:w_replace:] [0m[0m[94mAsset w_replace/w_ar_bullpuprifle_lan_mag1.ydr uses 24.0 MiB of physical memory.[0m
+[38;5;144m[resources:w_replace:] [0m[0m[94mAsset w_replace/w_ar_bullpupriflemk2_noel.ydr uses 24.0 MiB of physical memory.[0m
+[38;5;144m[resources:w_replace:] [0m[0m[94mAsset w_replace/w_ar_bullpupriflemk2_noel_mag2.ydr uses 24.0 MiB of physical memory.[0m
+[38;5;144m[resources:w_replace:] [0m[0m[91mAsset w_replace/w_ar_bullpupriflemk2_print.ytd uses 128.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;144m[resources:w_replace:] [0m[0m[91mAsset w_replace/w_ar_bullpupriflemk2_print_mag1.ytd uses 128.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;144m[resources:w_replace:] [0m[0m[91mAsset w_replace/w_ar_bullpupriflemk2_print_mag2.ytd uses 128.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).[0m
+[38;5;144m[resources:w_replace:] [0m[0m[93mAsset w_replace/w_ar_carbinerifle_dragong.ydr uses 48.0 MiB of physical memory.[0m
+[38;5;144m[resources:w_replace:] [0m[0m[93mAsset w_replace/w_ar_carbinerifle_dragonr.ydr uses 48.0 MiB of physical memory.[0m
+[38;5;144m[resources:w_replace:] [0m[0m[93mAsset w_replace/w_ar_carbinerifle_dragons.ydr uses 48.0 MiB of physical memory.[0m
+[38;5;144m[resources:w_replace:] [0m[0m[94mAsset w_replace/w_ar_carbinerifle_trungthu.ydr uses 24.0 MiB of physical memory.[0m
+[38;5;144m[resources:w_replace:] [0m[0m[93mAsset w_replace/w_ar_carbineriflemk2_lan.ydr uses 48.0 MiB of physical memory.[0m
+[38;5;144m[resources:w_replace:] [0m[0m[94mAsset w_replace/w_ar_carbineriflemk2_lan_mag1.ydr uses 24.0 MiB of physical memory.[0m
+[38;5;144m[resources:w_replace:] [0m[0m[94mAsset w_replace/w_ar_carbineriflemk2_noel.ydr uses 24.0 MiB of physical memory.[0m
+[38;5;144m[resources:w_replace:] [0m[0m[94mAsset w_replace/w_ar_carbineriflemk2_noel_mag2.ydr uses 24.0 MiB of physical memory.[0m
+[38;5;144m[resources:w_replace:] [0m[0m[94mAsset w_replace/w_ar_carbineriflemk2_tet2025_mag1.ydr uses 24.0 MiB of physical memory.[0m
+[38;5;144m[resources:w_replace:] [0m[0m[94mAsset w_replace/w_ar_specialcarbine_print.ytd uses 32.0 MiB of physical memory.[0m
+[38;5;144m[resources:w_replace:] [0m[0m[94mAsset w_replace/w_mg_mg_boom.ydr uses 24.0 MiB of physical memory.[0m
+[38;5;144m[resources:w_replace:] [0m[0m[94mAsset w_replace/w_pi_appistol_cat.ydr uses 24.0 MiB of physical memory.[0m
+[38;5;144m[resources:w_replace:] [0m[0m[94mAsset w_replace/w_pi_appistol_cat_mag1.ydr uses 24.0 MiB of physical memory.[0m
+[38;5;144m[resources:w_replace:] [0m[0m[94mAsset w_replace/w_pi_appistol_snake.ydr uses 24.0 MiB of physical memory.[0m
+[38;5;144m[resources:w_replace:] [0m[0m[94mAsset w_replace/w_pi_appistol_snake_mag1.ydr uses 24.0 MiB of physical memory.[0m
+[38;5;83m[           resources] [0m[0mStarted resource w_replace (30 warnings)
+[38;5;83m[           resources] [0m[0mStarted resource w_scarh
+[38;5;83m[           resources] [0m[0mStarted resource weapon_addons
+[38;5;53m[resources:wp_cq300:s] [0m[0m[93mAsset wp_cq300/w_sb_cq300.ytd uses 45.0 MiB of physical memory.[0m
+[38;5;53m[resources:wp_cq300:s] [0m[0m[94mAsset wp_cq300/w_sb_cq300_mag1.ytd uses 32.0 MiB of physical memory.[0m
+[38;5;83m[           resources] [0m[0mStarted resource wp_cq300 (2 warnings)
+[38;5;83m[           resources] [0m[0mStarted resource wp_flowerbq
+[38;5;57m[resources:wp_victus:] [0m[0m[93mAsset wp_victus/victusxmr.ytd uses 40.0 MiB of physical memory.[0m
+[38;5;57m[resources:wp_victus:] [0m[0m[94mAsset wp_victus/victusxmr_scope_01.ytd uses 32.0 MiB of physical memory.[0m
+[38;5;83m[           resources] [0m[0mStarted resource wp_victus (2 warnings)
+[38;5;83m[           resources] [0m[0mStarted resource lovers_couple_pack
+[38;5;83m[           resources] [0m[0mStarted resource xmenu
+[38;5;73m[ citizen-server-impl] [0m[0m[93mCouldn't find resource rpemotes-reborn.[0m
+[38;5;73m[ citizen-server-impl] [0m[0m[93mCouldn't find resource NativeUI.[0m
+[38;5;73m[ citizen-server-impl] [0m[0m[93mCouldn't find resource npc_spawner.[0m
+[38;5;73m[ citizen-server-impl] [0m[0m[93mCouldn't find resource remove-npcs.[0m
+[38;5;73m[ citizen-server-impl] [0m[0m[93mCouldn't find resource torso_fix.[0m
+[38;5;73m[ citizen-server-impl] [0m[0m[93mCouldn't find resource bob74-ipl.[0m
+[38;5;73m[ citizen-server-impl] [0m[0m[93mCouldn't find resource hnganh_sett.[0m
+[38;5;73m[ citizen-server-impl] [0m[0m[93mCouldn't find resource vMenu.[0m
+[38;5;154m[   script:mapmanager] [0m[0mStarted map fivem-map-skater
+[38;5;83m[           resources] [0m[0mStarted resource fivem-map-skater
+[38;5;73m[ citizen-server-impl] [0m[0m[91m        fff                          
+[38;5;73m[ citizen-server-impl] [0m[91m[91m  cccc ff   xx  xx     rr rr    eee  
+[38;5;73m[ citizen-server-impl] [0m[91m[91mcc     ffff   xx       rrr  r ee   e 
+[38;5;73m[ citizen-server-impl] [0m[91m[91mcc     ff     xx   ... rr     eeeee  
+[38;5;73m[ citizen-server-impl] [0m[91m[91m ccccc ff   xx  xx ... rr      eeeee 
+[38;5;73m[ citizen-server-impl] [0m[91m                                     [0m
+[38;5;73m[ citizen-server-impl] [0m[0m[32mAuthenticated with cfx.re Nucleus: [0mhttps://deprecated-7b9rded.users.cfx.re/
+]0;(0) Eren Yeager Media - txAdmin - txAdmin[08:32:56][tx:DatabaseDao] Internal Database optimized. This applies only for the txAdmin internal database, and does not affect your MySQL or framework (ESX/QBCore/etc) databases.
+[08:32:56][tx:DatabaseDao] - 0 players that haven't connected in the past 16 days and had less than 2 hours of playtime.
+[08:32:56][tx:DatabaseDao] - 0 whitelist requests older than a week.
+[08:32:56][tx:DatabaseDao] - 0 whitelist approvals older than a week.
+]0;(0) Eren Yeager Media - txAdmin - txAdmin]0;(0) Eren Yeager Media - txAdmin - txAdmin]0;(0) Eren Yeager Media - txAdmin - txAdmin]0;(0) Eren Yeager Media - txAdmin - txAdmin]0;(0) Eren Yeager Media - txAdmin - txAdmin]0;(0) Eren Yeager Media - txAdmin - txAdmin]0;(0) Eren Yeager Media - txAdmin - txAdmin]0;(0) Eren Yeager Media - txAdmin - txAdmin]0;(0) Eren Yeager Media - txAdmin - txAdmin]0;(0) Eren Yeager Media - txAdmin - txAdmin]0;(0) Eren Yeager Media - txAdmin - txAdmin]0;(0) Eren Yeager Media - txAdmin - txAdmin]0;(0) Eren Yeager Media - txAdmin - txAdmin]0;(0) Eren Yeager Media - txAdmin - txAdmin]0;(0) Eren Yeager Media - txAdmin - txAdmin]0;(0) Eren Yeager Media - txAdmin - txAdmin]0;(0) Eren Yeager Media - txAdmin - txAdmin

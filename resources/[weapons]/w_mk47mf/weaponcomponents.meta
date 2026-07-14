@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CWeaponComponentInfoBlob>
+  <Data>
+  </Data>
+  <Infos>
+	    <Item type="CWeaponComponentClipInfo">
+      <Name>COMPONENT_MK47_CLIP_01</Name>
+      <Model>MK47FluffysMods_mag1</Model>
+      <LocName>WCT_CLIP_DRM</LocName>
+      <LocDesc>WCD_CLIP3</LocDesc>
+      <AttachBone>AAPClip</AttachBone>
+      <AccuracyModifier type="NULL" />
+      <DamageModifier type="NULL" />
+      <bShownOnWheel value="true" />
+      <CreateObject value="true" />
+      <HudDamage value="0" />
+      <HudSpeed value="0" />
+      <HudCapacity value="100" />
+      <HudAccuracy value="0" />
+      <HudRange value="0" />
+      <ClipSize value="30" />
+      <ReloadData ref="RELOAD_DEFAULT" />
+	</Item>
+  </Infos>
+  <InfoBlobName>Dont Copy This Code Its SpikeProMike's :)</InfoBlobName>
+</CWeaponComponentInfoBlob>

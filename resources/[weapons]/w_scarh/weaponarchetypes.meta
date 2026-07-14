@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CWeaponModelInfo__InitDataList>
+	<InitDatas>
+		<!-- ### SCAR-H ### -->
+		<Item>
+			<modelName>W_AR_SCARH</modelName>
+			<txdName>W_AR_SCARH</txdName>
+			<ptfxAssetName>null</ptfxAssetName>
+			<lodDist value="50"/>
+		</Item>
+		<Item>
+			<modelName>W_AR_SCARH_MAG1</modelName>
+			<txdName>W_AR_SCARH_MAG1</txdName>
+			<ptfxAssetName>null</ptfxAssetName>
+			<lodDist value="50"/>
+		</Item>
+		<Item>
+			<modelName>W_AR_SCARH_MAG2</modelName>
+			<txdName>W_AR_SCARH_MAG2</txdName>
+			<ptfxAssetName>null</ptfxAssetName>
+			<lodDist value="50"/>
+		</Item>
+		<Item>
+			<modelName>W_AT_SCARH_FLASH</modelName>
+			<txdName>W_AT_SCARH_FLASH</txdName>
+			<ptfxAssetName>null</ptfxAssetName>
+			<lodDist value="50"/>
+		</Item>
+		<Item>
+			<modelName>W_AT_SCARH_AIMPOINT</modelName>
+			<txdName>W_AT_SCARH_AIMPOINT</txdName>
+			<ptfxAssetName>null</ptfxAssetName>
+			<lodDist value="50"/>
+		</Item>
+		<Item>
+			<modelName>W_AT_SCARH_EOTECH</modelName>
+			<txdName>W_AT_SCARH_EOTECH</txdName>
+			<ptfxAssetName>null</ptfxAssetName>
+			<lodDist value="50"/>
+		</Item>
+
+	</InitDatas>
+</CWeaponModelInfo__InitDataList>

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XMenu - NPC Spawn Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="menuArrow" class="menu-arrow">
+        <span>◀</span>
+    </div>
+    
+    <div id="menu" class="menu-container">
+        <div class="menu-header">
+            <h1>XMenu</h1>
+            <p>NPC Spawn Menu for Rockstar Edits</p>
+            <div class="header-info">
+                <div class="npc-count">
+                    Tổng NPCs: <span id="npcCount">0</span>
+                </div>
+                <div class="active-group-container">
+                    <label for="activeGroupSelect">Đang chọn:</label>
+                    <select id="activeGroupSelect" onchange="updateActiveGroup()">
+                        <option value="all">Tất cả (0)</option>
+                        <option value="group1">Nhóm 1 (0)</option>
+                        <option value="group2">Nhóm 2 (0)</option>
+                        <option value="group3">Nhóm 3 (0)</option>
+                        <option value="group4">Nhóm 4 (0)</option>
+                        <option value="group5">Nhóm 5 (0)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="menu-content">
+            <!-- Spawn Tab -->
+            <div class="tab-content active" id="spawn-tab">
+                <h2>Spawn NPC</h2>
+                <div class="input-group">
+                    <label for="npcCountInput">Số lượng NPC:</label>
+                    <input type="number" id="npcCountInput" min="1" max="100" value="5">
+                </div>
+                <div class="input-group">
+                    <label for="spawnDirection">Hướng xếp hàng:</label>
+                    <select id="spawnDirection">
+                        <option value="horizontal">Ngang (bên phải)</option>
+                        <option value="vertical">Dọc (phía trước)</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="spawnGroupInput">Số Nhóm (tự nhập):</label>
+                    <input type="number" id="spawnGroupInput" min="1" max="20" value="1"
+                           placeholder="Nhập số nhóm (1-20)"
+                           style="width:100%;box-sizing:border-box;">
+                    <small style="color:#aaa;font-size:11px;">Nhập số nhóm bạn muốn spawn vào (VD: 1, 2, 3...)</small>
+                </div>
+                <div class="input-group">
+                    <label for="spawnRelationshipSelect">Mối quan hệ (Hành vi):</label>
+                    <select id="spawnRelationshipSelect">
+                        <option value="friendly">Đồng minh (Thân thiện / Bảo vệ)</option>
+                        <option value="neutral">Trung lập (Bị động)</option>
+                        <option value="hostile_player">Kẻ thù (Tấn công Player & Nhóm khác)</option>
+                        <option value="hostile_other">Quân địch (Chỉ tấn công nhóm khác)</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary" onclick="spawnNPCs()">Spawn NPCs</button>
+            </div>
+            
+            <!-- Animations Tab -->
+            <div class="tab-content" id="animations-tab">
+                <h2>Animations / Scenarios</h2>
+                <div class="input-group">
+                    <label for="emojiCodeInput">Nhap ma emoji (VD: smoke, cop2):</label>
+                    <input type="text" id="emojiCodeInput" placeholder="Nhap ma emoji...">
+                </div>
+                <button class="btn btn-primary" onclick="applyEmojiCode()">Apply Emoji Code</button>
+                <div class="input-group">
+                    <label for="scenarioSelect">Chọn Scenario:</label>
+                    <select id="scenarioSelect"></select>
+                </div>
+                <div class="button-group">
+                    <button class="btn btn-primary" onclick="applyScenario()">Apply</button>
+                    <button class="btn btn-secondary" onclick="clearScenarios()">Clear</button>
+                </div>
+            </div>
+            
+            <!-- Props Tab -->
+            <div class="tab-content" id="props-tab">
+                <h2>Props</h2>
+                <div class="input-group">
+                    <label for="propSelect">Chọn Prop:</label>
+                    <select id="propSelect"></select>
+                </div>
+                <div class="button-group">
+                    <button class="btn btn-primary" onclick="giveProp()">Give Prop</button>
+                    <button class="btn btn-secondary" onclick="removeProps()">Remove Props</button>
+                </div>
+            </div>
+            
+            <!-- Weapons Tab -->
+            <div class="tab-content" id="weapons-tab">
+                <h2>Weapons</h2>
+                <div class="input-group">
+                    <label for="weaponSelect">Chọn Vũ Khí:</label>
+                    <select id="weaponSelect" onchange="updateWeaponSkins()"></select>
+                </div>
+                <div class="input-group">
+                    <label for="weaponSkinSelect">Chọn Skin:</label>
+                    <select id="weaponSkinSelect">
+                        <option value="default">Mặc định</option>
+                    </select>
+                </div>
+                <div class="button-group">
+                    <button class="btn btn-primary" onclick="giveWeapon()">Give Weapon</button>
+                    <button class="btn btn-secondary" onclick="removeWeapons()">Remove Weapons</button>
+                </div>
+            </div>
+            
+            <!-- Expressions Tab -->
+            <div class="tab-content" id="expressions-tab">
+                <h2>Expressions</h2>
+                <div class="input-group">
+                    <label for="expressionSelect">Chọn Expression:</label>
+                    <select id="expressionSelect"></select>
+                </div>
+                <button class="btn btn-primary" onclick="setExpression()">Set Expression</button>
+            </div>
+            
+            <!-- Manage Tab -->
+            <div class="tab-content" id="manage-tab">
+                <h2>Quản Lý NPC</h2>
+
+                <!-- Xoa NPC -->
+                <h3 style="color:#f0c040;margin:4px 0 6px;">🗑️ Xóa NPC</h3>
+                <div class="button-group">
+                    <button class="btn btn-danger" onclick="deleteAllNPCs()">Delete All NPCs</button>
+                </div>
+
+                <!-- Dong bang -->
+                <h3 style="color:#f0c040;margin:12px 0 6px;">🧊 Đóng Băng</h3>
+                <div class="input-group">
+                    <label for="freezeGroupSelect">Chọn Nhóm:</label>
+                    <select id="freezeGroupSelect">
+                        <option value="all">Tất cả nhóm</option>
+                        <option value="group1">Nhóm 1</option>
+                        <option value="group2">Nhóm 2</option>
+                        <option value="group3">Nhóm 3</option>
+                        <option value="group4">Nhóm 4</option>
+                        <option value="group5">Nhóm 5</option>
+                    </select>
+                </div>
+                <div class="button-group">
+                    <button class="btn btn-primary" onclick="freezeNPCs(true)">❄️ Freeze</button>
+                    <button class="btn btn-secondary" onclick="freezeNPCs(false)">🔥 Unfreeze</button>
+                </div>
+
+                <!-- Bat tu -->
+                <h3 style="color:#f0c040;margin:12px 0 6px;">🛡️ Bất Tử (Invincible)</h3>
+                <div class="input-group">
+                    <label for="invincibleGroupSelect">Chọn Nhóm Bất Tử:</label>
+                    <select id="invincibleGroupSelect">
+                        <option value="all">Tất cả nhóm</option>
+                        <option value="group1">Nhóm 1</option>
+                        <option value="group2">Nhóm 2</option>
+                        <option value="group3">Nhóm 3</option>
+                        <option value="group4">Nhóm 4</option>
+                        <option value="group5">Nhóm 5</option>
+                    </select>
+                </div>
+                <div class="button-group">
+                    <button class="btn btn-primary" onclick="setInvincibleGroup(true)">🛡️ Bật Bất Tử</button>
+                    <button class="btn btn-secondary" onclick="setInvincibleGroup(false)">💀 Tắt Bất Tử</button>
+                </div>
+
+                <!-- Set mau -->
+                <h3 style="color:#f0c040;margin:12px 0 6px;">❤️ Set Máu</h3>
+                <div class="input-group">
+                    <label for="healthGroupSelect">Chọn Nhóm:</label>
+                    <select id="healthGroupSelect">
+                        <option value="all">Tất cả nhóm</option>
+                        <option value="group1">Nhóm 1</option>
+                        <option value="group2">Nhóm 2</option>
+                        <option value="group3">Nhóm 3</option>
+                        <option value="group4">Nhóm 4</option>
+                        <option value="group5">Nhóm 5</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="healthInput">Lượng Máu (1–1000):</label>
+                    <input type="number" id="healthInput" min="1" max="1000" value="200">
+                    <button class="btn btn-primary" onclick="setHealth()">Set Health</button>
+                </div>
+
+                <!-- Di chuyen theo player -->
+                <h3 style="color:#f0c040;margin:12px 0 6px;">🚶 Di Chuyển Theo Player</h3>
+                <div class="input-group">
+                    <label for="followGroupSelect">Chọn Nhóm Di Chuyển:</label>
+                    <select id="followGroupSelect">
+                        <option value="all">Tất cả nhóm</option>
+                        <option value="group1">Nhóm 1</option>
+                        <option value="group2">Nhóm 2</option>
+                        <option value="group3">Nhóm 3</option>
+                        <option value="group4">Nhóm 4</option>
+                        <option value="group5">Nhóm 5</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="followSpeedSelect">Tốc Độ Di Chuyển:</label>
+                    <select id="followSpeedSelect">
+                        <option value="1.0">🐢 Đi bộ chậm (1.0)</option>
+                        <option value="2.0">🚶 Đi bộ thường (2.0)</option>
+                        <option value="3.0" selected>🏃 Chạy bộ (3.0)</option>
+                        <option value="5.0">💨 Chạy nhanh (5.0)</option>
+                        <option value="8.0">⚡ Chạy tốc độ tối đa (8.0)</option>
+                    </select>
+                </div>
+                <div class="button-group">
+                    <button class="btn btn-primary" onclick="followPlayerGroup()">🚶 Theo Player</button>
+                    <button class="btn btn-secondary" onclick="stay()">⛔ Dừng Lại</button>
+                </div>
+
+                <!-- Dang di -->
+                <h3 style="color:#f0c040;margin:12px 0 6px;">💃 Dáng Đi (Movement Style)</h3>
+                <div class="input-group">
+                    <label for="movementGroupSelect">Chọn Nhóm:</label>
+                    <select id="movementGroupSelect">
+                        <option value="all">Tất cả nhóm</option>
+                        <option value="group1">Nhóm 1</option>
+                        <option value="group2">Nhóm 2</option>
+                        <option value="group3">Nhóm 3</option>
+                        <option value="group4">Nhóm 4</option>
+                        <option value="group5">Nhóm 5</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="movementClipSelect">Kiểu Dáng Đi:</label>
+                    <select id="movementClipSelect">
+                        <option value="walk_normal">🚶 Bình thường (Normal)</option>
+                        <option value="walk_casual">😎 Thoải mái (Casual)</option>
+                        <option value="walk_swagger">🕺 Kiêu ngạo (Swagger)</option>
+                        <option value="walk_gangster">🤙 Gangster</option>
+                        <option value="walk_sexy">💋 Quyến rũ (Sexy)</option>
+                        <option value="walk_drunk">🍺 Say rượu (Drunk)</option>
+                        <option value="walk_injured">🤕 Bị thương (Injured)</option>
+                        <option value="walk_fat">🍔 Mập (Fat)</option>
+                        <option value="run_normal">🏃 Chạy vội (Hurrying)</option>
+                        <option value="run_fast">💨 Chạy nước rút (Sprint)</option>
+                        <option value="walk_stealth">🕵️ Lén lút (Stealth Crouch)</option>
+                        <option value="walk_alien">👽 Alien</option>
+                    </select>
+                </div>
+                <div class="button-group">
+                    <button class="btn btn-primary" onclick="setMovementClip()">✅ Áp Dụng Dáng Đi</button>
+                    <button class="btn btn-secondary" onclick="resetMovementClip()">🔄 Reset Mặc Định</button>
+                </div>
+            </div>
+            
+            <!-- Vehicles Tab -->
+            <div class="tab-content" id="vehicles-tab">
+                <h2>Quản Lý Xe</h2>
+                <div class="input-group">
+                    <label for="vehicleModelInput">Tên Model Xe (VD: adder, zentorno):</label>
+                    <input type="text" id="vehicleModelInput" value="adder" placeholder="Nhập tên model xe...">
+                </div>
+                <div class="input-group">
+                    <label for="vehicleCountInput">Số lượng:</label>
+                    <input type="number" id="vehicleCountInput" min="1" max="50" value="1">
+                </div>
+                <div class="input-group">
+                    <label for="vehicleDistanceInput">Khoảng cách hàng ngũ (m):</label>
+                    <input type="number" id="vehicleDistanceInput" min="2.0" max="50.0" step="0.5" value="5.0">
+                </div>
+                <div class="input-group">
+                    <label for="vehicleSpawnNPC">Có NPC lái xe:</label>
+                    <select id="vehicleSpawnNPC">
+                        <option value="yes">Có tài xế NPC</option>
+                        <option value="no">Xe trống</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="vehicleDriveMode">Chế độ lái xe:</label>
+                    <select id="vehicleDriveMode">
+                        <option value="follow">Di chuyển theo đoàn (Bám đuôi)</option>
+                        <option value="chaos">Hỗn loạn (Lái điên cuồng)</option>
+                        <option value="gps">Đi theo GPS (Waypoint)</option>
+                        <option value="race">Đua xe (Tốc độ tối đa)</option>
+                    </select>
+                </div>
+                <div class="button-group">
+                    <button class="btn btn-primary" onclick="spawnVehicles()">Spawn Xe</button>
+                    <button class="btn btn-danger" onclick="deleteVehicles()">Xóa Xe Đã Chọn</button>
+                </div>
+                <div class="button-group" style="margin-top: 10px;">
+                    <button class="btn btn-secondary" onclick="updateVehicleBehavior()">Cập Nhật Hành Vi Lái</button>
+                </div>
+            </div>
+            
+            <!-- Combat Tab -->
+            <div class="tab-content" id="combat-tab">
+                <h2>Cấu Hình Giao Tranh</h2>
+
+                <!-- Nhom A -->
+                <h3 style="color:#e74c3c;margin:4px 0 6px;">🔴 Nhóm A</h3>
+                <div class="input-group" style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+                    <div style="flex:1;min-width:120px;">
+                        <label for="combatGroupAInput">Số Nhóm A:</label>
+                        <input type="number" id="combatGroupAInput" min="1" max="20" value="1"
+                               style="width:100%;box-sizing:border-box;">
+                    </div>
+                    <div style="display:flex;align-items:center;gap:6px;padding-top:18px;">
+                        <input type="checkbox" id="combatGroupAIsPlayer" onchange="toggleCombatGroupA()">
+                        <label for="combatGroupAIsPlayer" style="margin:0;cursor:pointer;">👤 Là Player</label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="combatWeaponASelect">🔫 Súng Nhóm A:</label>
+                    <select id="combatWeaponASelect" onchange="updateCombatWeaponSkinsA()"></select>
+                </div>
+                <div class="input-group">
+                    <label for="combatWeaponSkinASelect">🎨 Skin Súng Nhóm A:</label>
+                    <select id="combatWeaponSkinASelect">
+                        <option value="default">Mặc định</option>
+                    </select>
+                </div>
+
+                <!-- Nhom B -->
+                <h3 style="color:#3498db;margin:12px 0 6px;">🔵 Nhóm B</h3>
+                <div class="input-group" style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+                    <div style="flex:1;min-width:120px;">
+                        <label for="combatGroupBInput">Số Nhóm B:</label>
+                        <input type="number" id="combatGroupBInput" min="1" max="20" value="2"
+                               style="width:100%;box-sizing:border-box;">
+                    </div>
+                    <div style="display:flex;align-items:center;gap:6px;padding-top:18px;">
+                        <input type="checkbox" id="combatGroupBIsPlayer" onchange="toggleCombatGroupB()">
+                        <label for="combatGroupBIsPlayer" style="margin:0;cursor:pointer;">👤 Là Player</label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="combatWeaponBSelect">🔫 Súng Nhóm B:</label>
+                    <select id="combatWeaponBSelect" onchange="updateCombatWeaponSkinsB()"></select>
+                </div>
+                <div class="input-group">
+                    <label for="combatWeaponSkinBSelect">🎨 Skin Súng Nhóm B:</label>
+                    <select id="combatWeaponSkinBSelect">
+                        <option value="default">Mặc định</option>
+                    </select>
+                </div>
+
+                <!-- Nut hanh dong -->
+                <div class="button-group" style="margin-top:14px;">
+                    <button class="btn btn-danger" onclick="startFight()">⚔️ Bắt Đầu Đánh Nhau</button>
+                    <button class="btn btn-secondary" onclick="makePeace()">🕊️ Giảng Hòa</button>
+                </div>
+            </div>
+
+            <!-- Couple Tab -->
+            <div class="tab-content" id="couple-tab">
+                <h2>Tương Tác Đôi & Võ Thuật (Synced Poses)</h2>
+
+                <!-- Nguoi Thuc Hien (A) -->
+                <h3 style="color:#e74c3c;margin:4px 0 6px;">🔴 Người thực hiện (Actor / Nhóm A)</h3>
+                <div class="input-group" style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+                    <div style="flex:1;min-width:120px;">
+                        <label for="coupleGroupAInput">Số Nhóm A:</label>
+                        <input type="number" id="coupleGroupAInput" min="1" max="20" value="1"
+                               style="width:100%;box-sizing:border-box;">
+                    </div>
+                    <div style="display:flex;align-items:center;gap:6px;padding-top:18px;">
+                        <input type="checkbox" id="coupleGroupAIsPlayer" onchange="toggleCoupleGroupA()">
+                        <label for="coupleGroupAIsPlayer" style="margin:0;cursor:pointer;">👤 Là Player</label>
+                    </div>
+                </div>
+
+                <!-- Nguoi Nhan (B) -->
+                <h3 style="color:#3498db;margin:12px 0 6px;">🔵 Người nhận (Receiver / Nhóm B)</h3>
+                <div class="input-group" style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+                    <div style="flex:1;min-width:120px;">
+                        <label for="coupleGroupBInput">Số Nhóm B:</label>
+                        <input type="number" id="coupleGroupBInput" min="1" max="20" value="2"
+                               style="width:100%;box-sizing:border-box;">
+                    </div>
+                    <div style="display:flex;align-items:center;gap:6px;padding-top:18px;">
+                        <input type="checkbox" id="coupleGroupBIsPlayer" onchange="toggleCoupleGroupB()">
+                        <label for="coupleGroupBIsPlayer" style="margin:0;cursor:pointer;">👤 Là Player</label>
+                    </div>
+                </div>
+
+                <!-- Dong Tac -->
+                <div class="input-group">
+                    <label for="coupleAnimSelect">Chọn Động Tác Đôi:</label>
+                    <select id="coupleAnimSelect">
+                        <optgroup label="Tình Cảm (Lovers Pack)">
+                            <option value="sit_on_lap">Ngồi vào lòng (Sit on lap)</option>
+                            <option value="sitseatedhug">Ngồi ôm nhau (Seated Hug)</option>
+                            <option value="sitarmsaround">Ngồi khoác vai (Seated arms around)</option>
+                            <option value="navy_kiss">Hôn thắm thiết (Navy Kiss)</option>
+                            <option value="hug_n_kiss">Ôm & Hôn (Hug & Kiss)</option>
+                            <option value="hug">Ôm nhau (Hug)</option>
+                            <option value="back_rejection">Từ chối từ phía sau (Back Rejection)</option>
+                            <option value="back_hug">Ôm từ phía sau (Back Hug)</option>
+                            <option value="arms_around_shoulder">Khoác vai nhau (Arms around shoulder)</option>
+                        </optgroup>
+                        <optgroup label="Võ Thuật & Đối Kháng (Combat Emotes)">
+                            <option value="heavyfinish">🥊 Đấm kết thúc mạnh / Nhận đòn</option>
+                            <option value="sidekick">🥋 Đá nghiêng / Né cú đá</option>
+                            <option value="counterattack">🛡️ Phản công (Tấn công / Bị đánh)</option>
+                            <option value="backslap">💥 Tát mạnh / Bị tát mạnh</option>
+                            <option value="trainingspar">👊 Tư thế tập luyện đôi</option>
+                            <option value="wingchun1">🐉 Vịnh Xuân Quyền 1</option>
+                            <option value="wingchun2">🐉 Vịnh Xuân Quyền 2</option>
+                            <option value="lowkick">🦵 Đá hạ thấp / Bị đá</option>
+                            <option value="kickattack">🦵 Đá vào người / Đỡ cú đá</option>
+                            <option value="hookpunch">🥊 Đấm móc trái / Đỡ đấm móc</option>
+                            <option value="spar">🥊 Đấm mạnh (Sparring) / Bị đấm</option>
+                            <option value="uppercutpunch">🥊 Đấm Uppercut / Nhận đòn</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <!-- Nut hanh dong -->
+                <div class="button-group" style="margin-top:14px;">
+                    <button class="btn btn-primary" onclick="startCoupleAnim()">❤️ Bắt Đầu Cặp Đôi</button>
+                    <button class="btn btn-secondary" onclick="stopCoupleAnim()">🛑 Dừng Cặp Đôi</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="menu-tabs">
+            <button class="tab-btn active" onclick="switchTab('spawn')">Spawn</button>
+            <button class="tab-btn" onclick="switchTab('animations')">Animations</button>
+            <button class="tab-btn" onclick="switchTab('props')">Props</button>
+            <button class="tab-btn" onclick="switchTab('weapons')">Weapons</button>
+            <button class="tab-btn" onclick="switchTab('expressions')">Expressions</button>
+            <button class="tab-btn" onclick="switchTab('vehicles')">Vehicles</button>
+            <button class="tab-btn" onclick="switchTab('combat')">Combat</button>
+            <button class="tab-btn" onclick="switchTab('couple')">Couple</button>
+            <button class="tab-btn" onclick="switchTab('manage')">Manage</button>
+        </div>
+        
+        <button class="close-btn" onclick="closeMenu()">ESC - Đóng</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -311,6 +311,8 @@ function spawnPlayer(spawnIdx, cb)
             Citizen.Wait(0)
         end
 
+
+
         ShutdownLoadingScreen()
 
         if IsScreenFadedOut() then
@@ -349,7 +351,7 @@ Citizen.CreateThread(function()
             -- check if we want to autospawn
             if autoSpawnEnabled then
                 if NetworkIsPlayerActive(PlayerId()) then
-                    if (diedAt and (math.abs(GetTimeDifference(GetGameTimer(), diedAt)) > 2000)) or respawnForced then
+                    if respawnForced then
                         if autoSpawnCallback then
                             autoSpawnCallback()
                         else
@@ -384,3 +386,31 @@ exports('loadSpawns', loadSpawns)
 exports('setAutoSpawn', setAutoSpawn)
 exports('setAutoSpawnCallback', setAutoSpawnCallback)
 exports('forceRespawn', forceRespawn)
+
+-- Lệnh hồi sinh thủ công khi chết
+RegisterCommand('hoisinh', function()
+    local ped = PlayerPedId()
+    if IsEntityDead(ped) then
+        -- Lấy vị trí hiện tại lúc nhân vật chết
+        local coords = GetEntityCoords(ped)
+        local heading = GetEntityHeading(ped)
+        
+        -- Hồi sinh người chơi ngay tại vị trí chết
+        NetworkResurrectLocalPlayer(coords.x, coords.y, coords.z, heading, true, false)
+        SetEntityHealth(ped, 200)
+        ClearPedBloodDamage(ped)
+        
+        -- Gửi thông báo hệ thống lên khung Chat
+        TriggerEvent('chat:addMessage', {
+            color = {0, 255, 0},
+            multiline = true,
+            args = {'Hệ thống', 'Bạn đã được hồi sinh!'}
+        })
+    else
+        TriggerEvent('chat:addMessage', {
+            color = {255, 0, 0},
+            multiline = true,
+            args = {'Hệ thống', 'Bạn không ở trạng thái chết!'}
+        })
+    end
+end, false)

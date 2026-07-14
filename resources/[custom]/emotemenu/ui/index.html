@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emote Menu</title>
+    <!-- Fonts from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app" class="hidden">
+        <div class="menu-container">
+            <!-- Sidebar for Categories -->
+            <div class="sidebar">
+                <div class="logo">
+                    <i class="fa-solid fa-person-running logo-icon"></i>
+                    <span>EMOTE MENU</span>
+                </div>
+                <div class="category-list">
+                    <button class="category-btn active" data-category="all">
+                        <i class="fa-solid fa-border-all"></i>
+                        <span>Tất cả</span>
+                    </button>
+                    <button class="category-btn" data-category="actions">
+                        <i class="fa-solid fa-hands-clapping"></i>
+                        <span>Hành động</span>
+                    </button>
+                    <button class="category-btn" data-category="postures">
+                        <i class="fa-solid fa-couch"></i>
+                        <span>Tư thế</span>
+                    </button>
+                    <button class="category-btn" data-category="dances">
+                        <i class="fa-solid fa-music"></i>
+                        <span>Điệu nhảy</span>
+                    </button>
+                    <button class="category-btn" data-category="scenarios">
+                        <i class="fa-solid fa-mug-hot"></i>
+                        <span>Vật phẩm</span>
+                    </button>
+                    <button class="category-btn" data-category="combat_atk">
+                        <i class="fa-solid fa-hand-fist"></i>
+                        <span>Tấn công</span>
+                    </button>
+                    <button class="category-btn" data-category="combat_def">
+                        <i class="fa-solid fa-user-injured"></i>
+                        <span>Bị đòn / Đỡ</span>
+                    </button>
+                    <button class="category-btn" data-category="combat_choreo">
+                        <i class="fa-solid fa-user-ninja"></i>
+                        <span>Đấu võ tự động</span>
+                    </button>
+                </div>
+                <button class="clear-btn" id="stop-emote-sidebar">
+                    <i class="fa-solid fa-circle-stop"></i>
+                    <span>Hủy Emote</span>
+                </button>
+            </div>
+
+            <!-- Main Content Panel -->
+            <div class="main-panel">
+                <div class="header">
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input type="text" id="search-input" placeholder="Tìm kiếm emote...">
+                        <button id="clear-search" class="hidden"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                </div>
+
+                <!-- Scrollable Emote Grid -->
+                <div class="content-body">
+                    <div class="emote-grid" id="emote-grid">
+                        <!-- Emote cards will be injected here by Javascript -->
+                    </div>
+                </div>
+
+                <!-- Footer / Status Bar -->
+                <div class="footer">
+                    <div class="status-info">
+                        <span class="active-badge hidden" id="active-emote-badge">
+                            <i class="fa-solid fa-play animate-pulse"></i> Đang chạy: <span id="active-emote-name">...</span>
+                        </span>
+                    </div>
+                    <div class="hotkey-tips">
+                        <span><kbd>ESC</kbd> hoặc <kbd>F5</kbd> để đóng</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NUI Communication Script -->
+    <script src="script.js"></script>
+</body>
+</html>
