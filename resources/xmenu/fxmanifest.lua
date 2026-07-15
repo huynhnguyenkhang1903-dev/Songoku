@@ -3,7 +3,7 @@ games { 'gta5' }
 
 author 'XMenu'
 description 'NPC Spawn Menu for Rockstar Edits'
-version '1.0.0'
+version '2.0.0'
 
 ui_page 'ui/index.html'
 

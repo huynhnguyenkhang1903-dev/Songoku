@@ -3,7 +3,7 @@ game 'gta5'
 
 description 'Custom Emote Menu F5'
 author 'Antigravity'
-version '1.0.0'
+version '2.0.0'
 
 ui_page 'ui/index.html'
 

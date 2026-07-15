@@ -1,9 +1,9 @@
-fx_version 'adamant'
+fx_version 'cerulean'
 game 'gta5'
 
 name "hnganh"
 author "hnganh"
-version "v4.0.0"
+version "v5.0.0"
 description "Made by - hnganh#9999"
 
 client_scripts {

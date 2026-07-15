@@ -3,7 +3,7 @@ games { 'gta5' }
 
 author 'Nguyễn Gia Khang'
 description 'Pack Tổng Hợp Vũ Khí, Cấu Hình Chống Hack & Phụ Kiện Kawai'
-version '1.0.0'
+version '2.0.0'
 
 -- Khai báo danh sách các file cấu hình hệ thống gửi xuống client
 files {

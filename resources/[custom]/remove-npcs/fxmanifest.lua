@@ -3,7 +3,7 @@ game 'gta5'
 
 author 'Khang'
 description 'Xóa sổ NPC + Menu VIP Phím F3 Thuần RageUI Canvas'
-version '5.2.0'
+version '5.3.0'
 
 client_scripts {
     'client.lua'
