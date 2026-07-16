@@ -782,6 +782,7 @@ local function DrawText3D(x, y, z, text)
 end
 
 local function SetupCompanionPed(clone, playerPed, isDriver)
+    SetEntityAsMissionEntity(clone, true, true)
     SetBlockingOfNonTemporaryEvents(clone, true)
     SetPedCanRagdoll(clone, false)
     SetPedCanRagdollFromPlayerImpact(clone, false)

@@ -882,6 +882,7 @@ function CreateNPC(npcName)
     local playerHeading = GetEntityHeading(playerPed)
 
     local npcPed = CreatePed(4, modelHash, playerCoords.x + 1.0, playerCoords.y, playerCoords.z, playerHeading, true, true)
+    SetEntityAsMissionEntity(npcPed, true, true)
     SetEntityInvincible(npcPed, true)
     SetBlockingOfNonTemporaryEvents(npcPed, true)
     TaskStandStill(npcPed, -1)

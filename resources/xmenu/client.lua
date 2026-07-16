@@ -725,22 +725,37 @@ function NPCEnterNearestVehicles(group)
     local numNpcs = #targets
     local boardedCount = 0
 
+    -- Phase 1: Try to occupy all driver seats (-1) first
     for _, vehData in ipairs(nearbyVehicles) do
         if npcIndex > numNpcs then break end
         local veh = vehData.vehicle
-        local maxPassengers = GetVehicleMaxNumberOfPassengers(veh)
         
-        -- Seats in GTA V: Seat -1 is driver, seat 0 is front passenger, seats 1, 2, etc. are rear passengers.
-        for seat = -1, maxPassengers - 1 do
+        if IsVehicleSeatFree(veh, -1) then
+            local npc = targets[npcIndex]
+            ClearPedTasks(npc)
+            TaskEnterVehicle(npc, veh, 20000, -1, 2.0, 1, 0)
+            npcIndex = npcIndex + 1
+            boardedCount = boardedCount + 1
+        end
+    end
+
+    -- Phase 2: Occupy remaining empty passenger seats
+    if npcIndex <= numNpcs then
+        for _, vehData in ipairs(nearbyVehicles) do
             if npcIndex > numNpcs then break end
+            local veh = vehData.vehicle
+            local maxPassengers = GetVehicleMaxNumberOfPassengers(veh)
             
-            if IsVehicleSeatFree(veh, seat) then
-                local npc = targets[npcIndex]
-                ClearPedTasks(npc)
-                -- speed = 2.0 (running), flag 1 (normal enter)
-                TaskEnterVehicle(npc, veh, 20000, seat, 2.0, 1, 0)
-                npcIndex = npcIndex + 1
-                boardedCount = boardedCount + 1
+            for seat = 0, maxPassengers - 1 do
+                if npcIndex > numNpcs then break end
+                
+                if IsVehicleSeatFree(veh, seat) then
+                    local npc = targets[npcIndex]
+                    ClearPedTasks(npc)
+                    TaskEnterVehicle(npc, veh, 20000, seat, 2.0, 1, 0)
+                    npcIndex = npcIndex + 1
+                    boardedCount = boardedCount + 1
+                end
             end
         end
     end
@@ -931,6 +946,8 @@ function ApplyVehicleDriveTask(driver, vehicle, driveMode)
         ClearPedTasks(driver)
         TaskVehicleMissionPedTarget(driver, vehicle, playerPed, 7, 30.0, 786603, 6.0, 0.0, true)
 
+
+
     elseif driveMode == "chaos" then
         ClearPedTasks(driver)
         TaskVehicleDriveWander(driver, vehicle, 40.0, 786469)
@@ -1016,7 +1033,7 @@ function SpawnVehicles(modelName, count, spacing, spawnNpc, driveMode, groupName
             local driver = nil
             if spawnNpc then
                 if LoadModel(playerModel) then
-                    driver = CreatePedInsideVehicle(vehicle, 26, playerModel, -1, true, true)
+                    driver = CreatePed(26, playerModel, offsetCoords.x, offsetCoords.y, offsetCoords.z, playerHeading, true, true)
                     if DoesEntityExist(driver) then
                         SetEntityAsMissionEntity(driver, true, true)
                         SetBlockingOfNonTemporaryEvents(driver, true)
@@ -1044,6 +1061,9 @@ function SpawnVehicles(modelName, count, spacing, spawnNpc, driveMode, groupName
                         table.insert(spawnedNPCs, driver)
                         
                         ApplyVehicleDriveTask(driver, vehicle, driveMode)
+                        
+                        -- Warp driver into vehicle after applying tasks to prevent task cancellation/ejection
+                        SetPedIntoVehicle(driver, vehicle, -1)
                     end
                 end
             end
@@ -1053,7 +1073,8 @@ function SpawnVehicles(modelName, count, spacing, spawnNpc, driveMode, groupName
                 driver = driver,
                 lastDriver = driver,
                 group = groupName,
-                driveMode = driveMode
+                driveMode = driveMode,
+                spacing = spacing
             })
             spawnedCount = spawnedCount + 1
         end
@@ -1792,58 +1813,193 @@ Citizen.CreateThread(function()
     end
 end)
 
--- Thread to monitor and keep follow vehicles close to the player
+local lastPlayerVeh = nil
+local lastFollowCount = 0
+
+-- Thread to monitor and keep follow vehicles close to the player, with auto line-up when stopped
 Citizen.CreateThread(function()
+    local wasPlayerStopped = false
+    
     while true do
-        Citizen.Wait(1000)
+        local sleep = 500
         local playerPed = PlayerPedId()
+        
         if playerPed and playerPed ~= 0 then
-            local playerCoords = GetEntityCoords(playerPed)
+            local playerVeh = GetVehiclePedIsIn(playerPed, false)
+            if playerVeh ~= 0 then
+                lastPlayerVeh = playerVeh
+            end
             
+            -- Determine anchorEntity for lining up
+            local anchorEntity = playerPed
+            if playerVeh ~= 0 then
+                anchorEntity = playerVeh
+            elseif lastPlayerVeh and DoesEntityExist(lastPlayerVeh) then
+                local playerCoords = GetEntityCoords(playerPed)
+                local vehCoords = GetEntityCoords(lastPlayerVeh)
+                if #(playerCoords - vehCoords) < 25.0 then
+                    anchorEntity = lastPlayerVeh
+                end
+            end
+            
+            -- Check if anchor entity is stopped (speed < 0.2 m/s)
+            local speedOfAnchor = GetEntitySpeed(anchorEntity)
+            local isAnchorStopped = (speedOfAnchor < 0.2)
+            
+            -- Find all active follow vehicles
+            local followEntries = {}
             for _, entry in ipairs(spawnedVehicles) do
                 if entry.vehicle and DoesEntityExist(entry.vehicle) then
-                    local currentDriver = GetPedInVehicleSeat(entry.vehicle, -1)
-                    if currentDriver and currentDriver ~= 0 and DoesEntityExist(currentDriver) then
-                        entry.driver = currentDriver
-                        if entry.driveMode == "follow" or entry.driveMode == "follow_player" then
-                            local vehCoords = GetEntityCoords(entry.vehicle)
-                            local dist = #(vehCoords - playerCoords)
-                            
-                            -- Adjust speed and driving style dynamically based on distance
-                            local speed = 30.0
-                            local style = 786603 -- Normal driving style
-                            
-                            if dist > 60.0 then
-                                speed = 60.0 -- Drive very fast to catch up
-                                style = 288  -- Ignore traffic/red lights to catch up quickly
-                            elseif dist > 35.0 then
-                                speed = 40.0 -- Drive fast
-                                style = 786603
-                            elseif dist < 12.0 then
-                                speed = 8.0  -- Slow down when close
-                                style = 786603
-                            elseif dist < 25.0 then
-                                speed = 18.0 -- Moderate speed
-                                style = 786603
-                            end
-                            
-                            local isPlayerInVeh = IsPedInAnyVehicle(playerPed, false)
-                            if not isPlayerInVeh and dist < 8.0 then
-                                speed = 3.0 -- Walk speed if player is on foot nearby
-                            end
-                            
-                            -- Re-apply task if speed or style changes
-                            if not entry.lastSpeed or math.abs(entry.lastSpeed - speed) > 4.0 or entry.lastStyle ~= style then
-                                entry.lastSpeed = speed
-                                entry.lastStyle = style
+                    if entry.driveMode == "follow" or entry.driveMode == "follow_player" then
+                        local currentDriver = GetPedInVehicleSeat(entry.vehicle, -1)
+                        if currentDriver and currentDriver ~= 0 and DoesEntityExist(currentDriver) then
+                            entry.driver = currentDriver
+                            table.insert(followEntries, entry)
+                        end
+                    end
+                end
+            end
+            
+            if #followEntries > 0 then
+                if isAnchorStopped then
+                    -- When player is stopped, we want to align them.
+                    sleep = 0 -- Run fast for alignment checks
+                    
+                    -- Assign stable queue slots if count changed or not yet assigned
+                    local countChanged = (#followEntries ~= lastFollowCount)
+                    if not wasPlayerStopped or countChanged then
+                        lastFollowCount = #followEntries
+                        local baseCoords = GetEntityCoords(anchorEntity)
+                        table.sort(followEntries, function(a, b)
+                            local distA = #(GetEntityCoords(a.vehicle) - baseCoords)
+                            local distB = #(GetEntityCoords(b.vehicle) - baseCoords)
+                            return distA < distB
+                        end)
+                        for idx, entry in ipairs(followEntries) do
+                            entry.slotIndex = idx
+                        end
+                    end
+                    
+                    local baseCoords = GetEntityCoords(anchorEntity)
+                    local forward = GetEntityForwardVector(anchorEntity)
+                    local dirVector = -forward
+                    
+                    for _, entry in ipairs(followEntries) do
+                        local currentDriver = entry.driver
+                        local vehicle = entry.vehicle
+                        local vehCoords = GetEntityCoords(vehicle)
+                        
+                        local spacing = entry.spacing or 8.0
+                        local slotIdx = entry.slotIndex or 1
+                        
+                        -- Calculate target slot position and heading
+                        local targetPos = baseCoords + dirVector * (spacing * slotIdx)
+                        local targetHeading = GetEntityHeading(anchorEntity)
+                        
+                        local finalTargetPos
+                        if entry.targetZ then
+                            finalTargetPos = vector3(targetPos.x, targetPos.y, entry.targetZ)
+                        else
+                            local retval, groundZ = GetGroundZFor_3dCoord(targetPos.x, targetPos.y, targetPos.z, 0)
+                            local finalZ = retval and groundZ or baseCoords.z
+                            entry.targetZ = finalZ
+                            finalTargetPos = vector3(targetPos.x, targetPos.y, finalZ)
+                        end
+                        
+                        local distToSlot = #(vehCoords - finalTargetPos)
+                        
+                        if distToSlot > 3.0 then
+                            -- Far from slot, drive there!
+                            if entry.alignState ~= "driving" then
+                                entry.alignState = "driving"
                                 ClearPedTasks(currentDriver)
-                                TaskVehicleMissionPedTarget(currentDriver, entry.vehicle, playerPed, 7, speed, style, 6.0, 0.0, true)
+                                TaskVehicleDriveToCoordLongrange(currentDriver, vehicle, finalTargetPos.x, finalTargetPos.y, finalTargetPos.z, 15.0, 786603, 1.5)
                             end
+                            SetVehicleHandbrake(vehicle, false)
+                        else
+                            -- Close to slot, snap once and park!
+                            if entry.alignState ~= "parked" then
+                                entry.alignState = "parked"
+                                ClearPedTasksImmediately(currentDriver)
+                                
+                                -- Only snap coordinates and heading if there is a noticeable offset (to prevent glitching on spawn)
+                                local currentHeading = GetEntityHeading(vehicle)
+                                local headingDiff = math.abs(currentHeading - targetHeading)
+                                while headingDiff > 180.0 do headingDiff = 360.0 - headingDiff end
+                                
+                                if distToSlot > 0.5 or headingDiff > 5.0 then
+                                    SetEntityCoordsNoOffset(vehicle, finalTargetPos.x, finalTargetPos.y, finalTargetPos.z, true, false, false)
+                                    SetEntityHeading(vehicle, targetHeading)
+                                end
+                                
+                                SetVehicleForwardSpeed(vehicle, 0.0)
+                                SetVehicleHandbrake(vehicle, true)
+                                SetVehicleEngineOn(vehicle, true, true, true)
+                            end
+                        end
+                    end
+                    wasPlayerStopped = true
+                else
+                    -- Player is moving!
+                    if wasPlayerStopped then
+                        -- Just started moving again, reset all alignment states
+                        for _, entry in ipairs(followEntries) do
+                            entry.alignState = nil
+                            entry.slotIndex = nil
+                            entry.targetZ = nil
+                            SetVehicleHandbrake(entry.vehicle, false)
+                            -- Force re-apply of follow task
+                            entry.lastSpeed = nil
+                            entry.lastStyle = nil
+                        end
+                        wasPlayerStopped = false
+                        lastFollowCount = 0
+                    end
+                    
+                    -- Normal follow behavior
+                    local baseCoords = GetEntityCoords(playerPed)
+                    local isPlayerInVeh = (playerVeh ~= 0)
+                    
+                    for _, entry in ipairs(followEntries) do
+                        local currentDriver = entry.driver
+                        local vehicle = entry.vehicle
+                        local vehCoords = GetEntityCoords(vehicle)
+                        local dist = #(vehCoords - baseCoords)
+                        
+                        -- Adjust speed and driving style dynamically based on distance
+                        local speed = 30.0
+                        local style = 786603
+                        
+                        if dist > 60.0 then
+                            speed = 60.0
+                            style = 288
+                        elseif dist > 35.0 then
+                            speed = 40.0
+                            style = 786603
+                        elseif dist < 12.0 then
+                            speed = 8.0
+                            style = 786603
+                        elseif dist < 25.0 then
+                            speed = 18.0
+                            style = 786603
+                        end
+                        
+                        if not isPlayerInVeh and dist < 8.0 then
+                            speed = 3.0
+                        end
+                        
+                        if not entry.lastSpeed or math.abs(entry.lastSpeed - speed) > 4.0 or entry.lastStyle ~= style then
+                            entry.lastSpeed = speed
+                            entry.lastStyle = style
+                            ClearPedTasks(currentDriver)
+                            TaskVehicleMissionPedTarget(currentDriver, vehicle, playerPed, 7, speed, style, 6.0, 0.0, true)
                         end
                     end
                 end
             end
         end
+        
+        Citizen.Wait(sleep)
     end
 end)
 
@@ -1866,7 +2022,9 @@ Citizen.CreateThread(function()
                     if not GetIsVehicleEngineRunning(entry.vehicle) then
                         SetVehicleEngineOn(entry.vehicle, true, true, false)
                     end
-                    SetVehicleHandbrake(entry.vehicle, false)
+                    if entry.alignState ~= "parked" and entry.alignState ~= "lerping" then
+                        SetVehicleHandbrake(entry.vehicle, false)
+                    end
                 end
                 
                 -- Check if driver has changed
