@@ -338,6 +338,7 @@ function ApplyEmojiCode(emojiCode, group)
     local commonEmotes = {
         ["smoke"] = "WORLD_HUMAN_SMOKING",
         ["cop2"] = "WORLD_HUMAN_SECURITY_GUARD",
+        ["guard"] = "WORLD_HUMAN_SECURITY_GUARD",
         ["sit"] = "WORLD_HUMAN_SEAT_STEPS",
         ["party"] = "WORLD_HUMAN_PARTYING",
         ["cheer"] = "WORLD_HUMAN_CHEERING",
@@ -759,7 +760,7 @@ function ApplyVehicleDriveTask(driver, vehicle, driveMode)
 end
 
 -- Spawn Vehicles
-function SpawnVehicles(modelName, count, spacing, spawnNpc, driveMode, groupName)
+function SpawnVehicles(modelName, count, spacing, spawnNpc, driveMode, groupName, color1, color2)
     local vehicleHash = GetHashKey(modelName)
     if not IsModelInCdimage(vehicleHash) or not IsModelAVehicle(vehicleHash) then
         ShowNotification("~r~Loi: Model xe khong hop le!")
@@ -770,10 +771,30 @@ function SpawnVehicles(modelName, count, spacing, spawnNpc, driveMode, groupName
         ShowNotification("~r~Loi: Khong the load vehicle model!")
         return
     end
+
+    color1 = tonumber(color1) or 0
+    color2 = tonumber(color2) or 0
     
     local playerPed = PlayerPedId()
     local playerCoords = GetEntityCoords(playerPed)
     local playerHeading = GetEntityHeading(playerPed)
+
+    local playerModel = GetEntityModel(playerPed)
+    local playerDrawable = {}
+    local playerTexture = {}
+    local playerPalette = {}
+    for i = 0, 11 do
+        playerDrawable[i] = GetPedDrawableVariation(playerPed, i) or 0
+        playerTexture[i] = GetPedTextureVariation(playerPed, i) or 0
+        playerPalette[i] = GetPedPaletteVariation(playerPed, i) or 0
+    end
+    local playerProps = {}
+    for i = 0, 9 do
+        playerProps[i] = {
+            drawable = GetPedPropIndex(playerPed, i),
+            texture = GetPedPropTextureIndex(playerPed, i)
+        }
+    end
     
     local spawnedCount = 0
     for i = 0, count - 1 do
@@ -785,17 +806,26 @@ function SpawnVehicles(modelName, count, spacing, spawnNpc, driveMode, groupName
             SetEntityAsMissionEntity(vehicle, true, true)
             SetVehicleHasBeenOwnedByPlayer(vehicle, true)
             SetVehicleOnGroundProperly(vehicle)
+            SetVehicleColours(vehicle, color1, color2)
             
             local driver = nil
             if spawnNpc then
-                local pedModel = GetHashKey("s_m_m_security_01")
-                if LoadModel(pedModel) then
-                    driver = CreatePedInsideVehicle(vehicle, 26, pedModel, -1, true, true)
+                if LoadModel(playerModel) then
+                    driver = CreatePedInsideVehicle(vehicle, 26, playerModel, -1, true, true)
                     if DoesEntityExist(driver) then
                         SetEntityAsMissionEntity(driver, true, true)
                         SetBlockingOfNonTemporaryEvents(driver, true)
                         SetPedFleeAttributes(driver, 0, false)
                         SetPedCombatAttributes(driver, 46, true)
+                        
+                        for j = 0, 11 do
+                            SetPedComponentVariation(driver, j, playerDrawable[j], playerTexture[j], playerPalette[j])
+                        end
+                        for j = 0, 9 do
+                            if playerProps[j].drawable ~= -1 then
+                                SetPedPropIndex(driver, j, playerProps[j].drawable, playerProps[j].texture, true)
+                            end
+                        end
                         
                         local groupHash = groupHashes[groupName]
                         if groupHash then
@@ -813,7 +843,8 @@ function SpawnVehicles(modelName, count, spacing, spawnNpc, driveMode, groupName
             table.insert(spawnedVehicles, {
                 vehicle = vehicle,
                 driver = driver,
-                group = groupName
+                group = groupName,
+                driveMode = driveMode
             })
             spawnedCount = spawnedCount + 1
         end
@@ -852,6 +883,8 @@ function UpdateVehicleBehavior(driveMode, groupName)
         if groupName == "all" or entry.group == groupName then
             if entry.driver and DoesEntityExist(entry.driver) and entry.vehicle and DoesEntityExist(entry.vehicle) then
                 ApplyVehicleDriveTask(entry.driver, entry.vehicle, driveMode)
+                entry.driveMode = driveMode
+                entry.aligned = false -- Reset aligned state when behavior is updated
                 updateCount = updateCount + 1
             end
         end
@@ -885,7 +918,7 @@ function GiveWeaponToGroup(groupName, weapon, skin)
 end
 
 -- Start Fight between two groups (moi nhom co weapon/skin rieng)
-function StartFight(groupA, groupB, weaponA, skinA, weaponB, skinB)
+function StartFight(groupA, groupB, weaponA, skinA, weaponB, skinB, behavior)
     local playerPed = PlayerPedId()
     local hashA = (groupA == "player" and GetPedRelationshipGroupHash(playerPed) or groupHashes[groupA])
     local hashB = (groupB == "player" and GetPedRelationshipGroupHash(playerPed) or groupHashes[groupB])
@@ -893,6 +926,27 @@ function StartFight(groupA, groupB, weaponA, skinA, weaponB, skinB)
     if not hashA or not hashB then
         ShowNotification("~r~Loi: Nhom khong hop le!")
         return
+    end
+    
+    behavior = behavior or "shoot"
+    
+    -- Force melee/unarmed weapons if behavior is melee
+    if behavior == "melee" then
+        local function getMeleeWeapon(w)
+            if not w or w == "WEAPON_UNARMED" then return "WEAPON_UNARMED" end
+            local meleeWeapons = {
+                ["WEAPON_UNARMED"] = true, ["WEAPON_DAGGER"] = true, ["WEAPON_BAT"] = true,
+                ["WEAPON_BOTTLE"] = true, ["WEAPON_CROWBAR"] = true, ["WEAPON_FLASHLIGHT"] = true,
+                ["WEAPON_GOLFCLUB"] = true, ["WEAPON_HAMMER"] = true, ["WEAPON_HATCHET"] = true,
+                ["WEAPON_KNUCKLE"] = true, ["WEAPON_KNIFE"] = true, ["WEAPON_MACHETE"] = true,
+                ["WEAPON_SWITCHBLADE"] = true, ["WEAPON_NIGHTSTICK"] = true, ["WEAPON_WRENCH"] = true,
+                ["WEAPON_BATTLEAXE"] = true, ["WEAPON_POOLCUE"] = true, ["WEAPON_STONE_HATCHET"] = true
+            }
+            if meleeWeapons[w] then return w end
+            return "WEAPON_BAT"
+        end
+        weaponA = getMeleeWeapon(weaponA)
+        weaponB = getMeleeWeapon(weaponB)
     end
     
     -- Equip weapons rieng cho tung nhom
@@ -928,10 +982,18 @@ function StartFight(groupA, groupB, weaponA, skinA, weaponB, skinB)
                 SetBlockingOfNonTemporaryEvents(ped, true)
                 SetPedFleeAttributes(ped, 0, 0)
                 SetPedCombatAttributes(ped, 46, true) -- BF_AlwaysFight
-                SetPedCombatAttributes(ped, 5, true)  -- BF_CanUseCover
-                SetPedCombatAttributes(ped, 16, true) -- BF_CanFightArmedPedsWhenNotArmed
+                
+                if behavior == "melee" then
+                    SetPedCombatAttributes(ped, 5, false)  -- BF_CanUseCover = false
+                    SetPedCombatAttributes(ped, 16, true)  -- BF_CanFightArmedPedsWhenNotArmed
+                    SetPedCombatMovement(ped, 2)           -- Offensive
+                else
+                    SetPedCombatAttributes(ped, 5, true)   -- BF_CanUseCover = true
+                    SetPedCombatAttributes(ped, 16, true)
+                    SetPedCombatMovement(ped, 2)           -- Offensive
+                end
+                
                 SetPedCombatAbility(ped, 2)           -- Professional
-                SetPedCombatMovement(ped, 2)          -- Offensive
                 SetPedCombatRange(ped, 2)             -- Far
                 SetPedAlertness(ped, 3)               -- Alert
                 SetPedAccuracy(ped, 80)               -- Good accuracy
@@ -945,48 +1007,55 @@ function StartFight(groupA, groupB, weaponA, skinA, weaponB, skinB)
     Citizen.CreateThread(function()
         Citizen.Wait(300) -- Wait slightly for weapons to equip
         
-        -- Group A attacks targets in Group B
-        if groupA ~= "player" then
-            for _, pedA in ipairs(pedsA) do
-                if IsPedUsable(pedA) then
-                    if groupB == "player" then
-                        -- Attack player directly
-                        ClearPedTasks(pedA)
-                        TaskCombatPed(pedA, playerPed, 0, 16)
-                    elseif #pedsB > 0 then
-                        local target = pedsB[math.random(1, #pedsB)]
-                        if IsPedUsable(target) then
-                            ClearPedTasks(pedA)
-                            TaskCombatPed(pedA, target, 0, 16)
+        local function ApplyCombatBehavior(pedsSource, pedsTarget, targetGroup, isSourcePlayer)
+            if isSourcePlayer then return end
+            
+            for _, ped in ipairs(pedsSource) do
+                if IsPedUsable(ped) then
+                    local targetPed = nil
+                    if targetGroup == "player" then
+                        targetPed = playerPed
+                    elseif #pedsTarget > 0 then
+                        targetPed = pedsTarget[math.random(1, #pedsTarget)]
+                    end
+                    
+                    if targetPed and IsPedUsable(targetPed) then
+                        ClearPedTasks(ped)
+                        
+                        -- Check if ped is in a vehicle and is the driver
+                        local vehicle = GetVehiclePedIsIn(ped, false)
+                        local isDriver = (vehicle ~= 0 and GetPedInVehicleSeat(vehicle, -1) == ped)
+                        
+                        if behavior == "chase" and isDriver then
+                            TaskVehicleChase(ped, targetPed)
+                            SetDriverAbility(ped, 1.0)
+                            SetDriverAggressiveness(ped, 1.0)
+                        else
+                            TaskCombatPed(ped, targetPed, 0, 16)
                         end
                     end
                 end
             end
         end
         
+        -- Group A attacks targets in Group B
+        ApplyCombatBehavior(pedsA, pedsB, groupB, groupA == "player")
+        
         -- Group B attacks targets in Group A
-        if groupB ~= "player" then
-            for _, pedB in ipairs(pedsB) do
-                if IsPedUsable(pedB) then
-                    if groupA == "player" then
-                        -- Attack player directly
-                        ClearPedTasks(pedB)
-                        TaskCombatPed(pedB, playerPed, 0, 16)
-                    elseif #pedsA > 0 then
-                        local target = pedsA[math.random(1, #pedsA)]
-                        if IsPedUsable(target) then
-                            ClearPedTasks(pedB)
-                            TaskCombatPed(pedB, target, 0, 16)
-                        end
-                    end
-                end
-            end
-        end
+        ApplyCombatBehavior(pedsB, pedsA, groupA, groupB == "player")
     end)
     
     local nameA = groupA == "player" and "Player" or "Nhom " .. groupA:gsub("group", "")
     local nameB = groupB == "player" and "Player" or "Nhom " .. groupB:gsub("group", "")
-    ShowNotification("~r~" .. nameA .. " va " .. nameB .. " dang tan cong nhau!")
+    local behaviorLabel = "giao tranh"
+    if behavior == "shoot" then
+        behaviorLabel = "ban nhau"
+    elseif behavior == "melee" then
+        behaviorLabel = "danh nhau"
+    elseif behavior == "chase" then
+        behaviorLabel = "truy duoi"
+    end
+    ShowNotification("~r~" .. nameA .. " va " .. nameB .. " dang " .. behaviorLabel .. "!")
 end
 
 -- Make Peace between two groups
@@ -1265,10 +1334,10 @@ RegisterNUICallback('setMovementClip', function(data, cb) SetMovementClipForGrou
 RegisterNUICallback('stay', function(data, cb) Stay(data.group) cb({}) end)
 RegisterNUICallback('closeMenu', function(data, cb) isMenuOpen = false SendNUIMessage({ type = 'toggleMenu', visible = false }) SetNuiFocus(false, false) cb({}) end)
 RegisterNUICallback('changeActiveGroup', function(data, cb) selectedGroup = data.group cb({}) end)
-RegisterNUICallback('spawnVehicles', function(data, cb) SpawnVehicles(data.model, tonumber(data.count), tonumber(data.distance), data.spawnNpc, data.driveMode, data.group) cb({}) end)
+RegisterNUICallback('spawnVehicles', function(data, cb) SpawnVehicles(data.model, tonumber(data.count), tonumber(data.distance), data.spawnNpc, data.driveMode, data.group, tonumber(data.color1), tonumber(data.color2)) cb({}) end)
 RegisterNUICallback('deleteVehicles', function(data, cb) DeleteVehicles(data.group) cb({}) end)
 RegisterNUICallback('updateVehicleBehavior', function(data, cb) UpdateVehicleBehavior(data.driveMode, data.group) cb({}) end)
-RegisterNUICallback('startFight', function(data, cb) StartFight(data.groupA, data.groupB, data.weaponA, data.skinA, data.weaponB, data.skinB) cb({}) end)
+RegisterNUICallback('startFight', function(data, cb) StartFight(data.groupA, data.groupB, data.weaponA, data.skinA, data.weaponB, data.skinB, data.behavior) cb({}) end)
 RegisterNUICallback('makePeace', function(data, cb) MakePeace(data.groupA, data.groupB) cb({}) end)
 
 RegisterNUICallback('startCoupleAnim', function(data, cb)
@@ -1356,5 +1425,110 @@ AddEventHandler('onResourceStop', function(resourceName)
     if resourceName == GetCurrentResourceName() then
         DeleteNPCs("all")
         DeleteVehicles("all")
+    end
+end)
+
+-- Function to align vehicles neatly at the target GPS waypoint
+function AlignGroupVehicles(groupName, gpsCoords)
+    local vehiclesToAlign = {}
+    for _, entry in ipairs(spawnedVehicles) do
+        if entry.group == groupName and entry.vehicle and DoesEntityExist(entry.vehicle) then
+            entry.aligned = true -- Mark as aligned
+            table.insert(vehiclesToAlign, entry)
+        end
+    end
+    
+    if #vehiclesToAlign == 0 then return end
+    
+    -- Find the closest road node with its heading
+    local success, roadCoords, roadHeading = GetClosestVehicleNodeWithHeading(gpsCoords.x, gpsCoords.y, gpsCoords.z, 1, 3.0, 0)
+    local targetCoords = gpsCoords
+    local targetHeading = 0.0
+    
+    if success then
+        targetCoords = roadCoords
+        targetHeading = roadHeading
+    else
+        -- Fallback to ground Z and player heading
+        local retval, groundZ = GetGroundZFor_3dCoord(gpsCoords.x, gpsCoords.y, gpsCoords.z, 0)
+        if retval then
+            targetCoords = vector3(gpsCoords.x, gpsCoords.y, groundZ)
+        else
+            targetCoords = gpsCoords
+        end
+        targetHeading = GetEntityHeading(PlayerPedId())
+    end
+    
+    -- Compute direction vector based on road heading (moving forward)
+    local headingRad = math.rad(targetHeading)
+    local dirVector = vector3(-math.sin(headingRad), math.cos(headingRad), 0.0)
+    
+    -- Spacing between vehicles (in meters)
+    local spacing = 7.0
+    
+    -- Align vehicles one behind another along the road node
+    for i, entry in ipairs(vehiclesToAlign) do
+        local offsetDist = (i - 1) * spacing
+        local spawnPos = targetCoords - (dirVector * offsetDist)
+        
+        -- Stop NPC driver tasks immediately
+        if entry.driver and DoesEntityExist(entry.driver) then
+            ClearPedTasksImmediately(entry.driver)
+        end
+        
+        -- Position and stabilize the vehicle
+        SetEntityCoordsNoOffset(entry.vehicle, spawnPos.x, spawnPos.y, spawnPos.z, true, false, false)
+        SetEntityHeading(entry.vehicle, targetHeading)
+        SetVehicleOnGroundProperly(entry.vehicle)
+        SetVehicleForwardSpeed(entry.vehicle, 0.0)
+        SetVehicleHandbrake(entry.vehicle, true)
+        SetVehicleEngineOn(entry.vehicle, false, true, true)
+    end
+    
+    local numStr = groupName:gsub("group", "")
+    ShowNotification("~g~Nhom " .. numStr .. " da den diem den va tu dong xep hang ngay ngan!")
+end
+
+-- Thread to monitor GPS waypoint arrival
+local lastGpsCoords = nil
+
+Citizen.CreateThread(function()
+    while true do
+        Citizen.Wait(1000)
+        local blip = GetFirstBlipInfoId(8) -- 8 = Waypoint
+        if DoesBlipExist(blip) then
+            local gpsCoords = GetBlipInfoIdCoord(blip)
+            
+            -- If GPS waypoint shifts by more than 5 meters, allow re-alignment
+            if not lastGpsCoords or #(lastGpsCoords - gpsCoords) > 5.0 then
+                lastGpsCoords = gpsCoords
+                for _, entry in ipairs(spawnedVehicles) do
+                    entry.aligned = false
+                end
+            end
+            
+            -- Identify vehicle groups driving to GPS that are close to the target
+            local groupsToAlign = {}
+            for _, entry in ipairs(spawnedVehicles) do
+                if not entry.aligned and (entry.driveMode == "gps" or entry.driveMode == "race") then
+                    if entry.vehicle and DoesEntityExist(entry.vehicle) then
+                        local vehCoords = GetEntityCoords(entry.vehicle)
+                        local dist = #(vehCoords - gpsCoords)
+                        
+                        -- If within 30 meters of target waypoint
+                        if dist < 30.0 then
+                            groupsToAlign[entry.group] = true
+                        end
+                    end
+                end
+            end
+            
+            -- Align vehicles in the groups that arrived
+            for groupName, _ in pairs(groupsToAlign) do
+                AlignGroupVehicles(groupName, gpsCoords)
+            end
+        else
+            lastGpsCoords = nil
+        end
     end
 end)

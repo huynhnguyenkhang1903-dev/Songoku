@@ -94,7 +94,7 @@ export default Vue.extend({
     window.removeEventListener("message", this.listener);
   },
   mounted() {
-    post("http://chat/loaded", JSON.stringify({}));
+    post("https://chat/loaded", JSON.stringify({}));
 
     this.listener = (event: MessageEvent) => {
       const item: any = event.data || (<any>event).detail; //'detail' is for debugging via browsers
@@ -431,7 +431,7 @@ export default Vue.extend({
     send() {
       if (this.message !== "") {
         post(
-          "http://chat/chatResult",
+          "https://chat/chatResult",
           JSON.stringify({
             message: this.message,
             mode: this.modes[this.modeIdxGet].name
@@ -445,13 +445,20 @@ export default Vue.extend({
       }
     },
     hideInput(canceled = false) {
+      let isCanceled = canceled;
+      if (typeof isCanceled !== 'boolean') {
+        isCanceled = true;
+      }
+
       setTimeout(() => {
         const input = this.$refs.input as HTMLInputElement;
-        delete input.style.height;
+        if (input) {
+          delete input.style.height;
+        }
       }, 50);
 
-      if (canceled) {
-        post("http://chat/chatResult", JSON.stringify({ canceled }));
+      if (isCanceled) {
+        post("https://chat/chatResult", JSON.stringify({ canceled: true }));
       }
       this.message = "";
       this.showInput = false;

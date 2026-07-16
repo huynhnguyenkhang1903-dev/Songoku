@@ -71,7 +71,7 @@
             <div class="tab-content" id="animations-tab">
                 <h2>Animations / Scenarios</h2>
                 <div class="input-group">
-                    <label for="emojiCodeInput">Nhap ma emoji (VD: smoke, cop2):</label>
+                    <label for="emojiCodeInput">Nhap ma emoji (VD: smoke, cop2, guard):</label>
                     <input type="text" id="emojiCodeInput" placeholder="Nhap ma emoji...">
                 </div>
                 <button class="btn btn-primary" onclick="applyEmojiCode()">Apply Emoji Code</button>
@@ -279,6 +279,78 @@
                     </select>
                 </div>
                 <div class="input-group">
+                    <label for="vehicleColor1">Màu chính (Primary):</label>
+                    <select id="vehicleColor1">
+                        <option value="0">Đen</option>
+                        <option value="1">Xám đen</option>
+                        <option value="2">Xám</option>
+                        <option value="3">Bạc</option>
+                        <option value="4">Trắng</option>
+                        <option value="6">Đỏ Maroon</option>
+                        <option value="7">Đỏ tía</option>
+                        <option value="9">Đỏ</option>
+                        <option value="11">Đỏ Ferrari</option>
+                        <option value="12">Hồng</option>
+                        <option value="14">Cam</option>
+                        <option value="18">Vàng</option>
+                        <option value="20">Xanh Lime</option>
+                        <option value="22">Xanh lá</option>
+                        <option value="25">Xanh dương</option>
+                        <option value="26">Xanh galaxy</option>
+                        <option value="27">Xanh navy</option>
+                        <option value="28">Xanh cobalt</option>
+                        <option value="30">Xanh ô-liu</option>
+                        <option value="32">Tím</option>
+                        <option value="35">Nâu</option>
+                        <option value="37">Kem</option>
+                        <option value="39">Vàng đồng</option>
+                        <option value="41">Bạc ánh</option>
+                        <option value="43">Vàng kim loại</option>
+                        <option value="45">Chrome</option>
+                        <option value="135">Chrome đen</option>
+                        <option value="137">Cam sáng</option>
+                        <option value="140">Xanh neon</option>
+                        <option value="141">Đỏ neon</option>
+                        <option value="143">Hồng neon</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="vehicleColor2">Màu phụ (Secondary):</label>
+                    <select id="vehicleColor2">
+                        <option value="0">Đen</option>
+                        <option value="1">Xám đen</option>
+                        <option value="2">Xám</option>
+                        <option value="3">Bạc</option>
+                        <option value="4">Trắng</option>
+                        <option value="6">Đỏ Maroon</option>
+                        <option value="7">Đỏ tía</option>
+                        <option value="9">Đỏ</option>
+                        <option value="11">Đỏ Ferrari</option>
+                        <option value="12">Hồng</option>
+                        <option value="14">Cam</option>
+                        <option value="18">Vàng</option>
+                        <option value="20">Xanh Lime</option>
+                        <option value="22">Xanh lá</option>
+                        <option value="25">Xanh dương</option>
+                        <option value="26">Xanh galaxy</option>
+                        <option value="27">Xanh navy</option>
+                        <option value="28">Xanh cobalt</option>
+                        <option value="30">Xanh ô-liu</option>
+                        <option value="32">Tím</option>
+                        <option value="35">Nâu</option>
+                        <option value="37">Kem</option>
+                        <option value="39">Vàng đồng</option>
+                        <option value="41">Bạc ánh</option>
+                        <option value="43">Vàng kim loại</option>
+                        <option value="45">Chrome</option>
+                        <option value="135">Chrome đen</option>
+                        <option value="137">Cam sáng</option>
+                        <option value="140">Xanh neon</option>
+                        <option value="141">Đỏ neon</option>
+                        <option value="143">Hồng neon</option>
+                    </select>
+                </div>
+                <div class="input-group">
                     <label for="vehicleDriveMode">Chế độ lái xe:</label>
                     <select id="vehicleDriveMode">
                         <option value="follow">Di chuyển theo đoàn (Bám đuôi)</option>
@@ -345,6 +417,14 @@
                     <label for="combatWeaponSkinBSelect">🎨 Skin Súng Nhóm B:</label>
                     <select id="combatWeaponSkinBSelect">
                         <option value="default">Mặc định</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="combatBehaviorSelect">⚔️ Hành vi giao tranh:</label>
+                    <select id="combatBehaviorSelect">
+                        <option value="shoot">🔫 Bắn nhau (Gunfight)</option>
+                        <option value="melee">👊 Đánh nhau (Melee/Fist)</option>
+                        <option value="chase">🚗 Truy đuổi nhóm (Chase/Pursue)</option>
                     </select>
                 </div>
 

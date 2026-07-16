@@ -540,6 +540,9 @@ function spawnVehicles() {
         return;
     }
 
+    const color1 = parseInt(document.getElementById('vehicleColor1').value) || 0;
+    const color2 = parseInt(document.getElementById('vehicleColor2').value) || 0;
+
     fetch(`https://${GetParentResourceName()}/spawnVehicles`, {
         method: 'POST',
         headers: {
@@ -551,7 +554,9 @@ function spawnVehicles() {
             distance: distance,
             spawnNpc: spawnNpc,
             driveMode: driveMode,
-            group: group
+            group: group,
+            color1: color1,
+            color2: color2
         })
     });
 }
@@ -624,6 +629,7 @@ function startFight() {
     const skinA   = document.getElementById('combatWeaponSkinASelect').value;
     const weaponB = document.getElementById('combatWeaponBSelect').value;
     const skinB   = document.getElementById('combatWeaponSkinBSelect').value;
+    const behavior = document.getElementById('combatBehaviorSelect').value;
 
     if (groupA === groupB) {
         alert('Nhóm A và Nhóm B phải khác nhau!');
@@ -641,7 +647,8 @@ function startFight() {
             weaponA: weaponA,
             skinA:   skinA,
             weaponB: weaponB,
-            skinB:   skinB
+            skinB:   skinB,
+            behavior: behavior
         })
     });
 }

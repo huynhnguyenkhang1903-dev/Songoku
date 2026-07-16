@@ -26,7 +26,7 @@
                     autofocus
                     spellcheck="false"
                     rows="1"
-                    @keyup.esc="hideInput"
+                    @keyup.esc="hideInput(true)"
                     @keyup="keyUp"
                     @keydown="keyDown"
                     @keypress.enter.prevent="send">
