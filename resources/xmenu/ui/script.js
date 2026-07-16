@@ -115,13 +115,15 @@ function populateSelects() {
         expressionSelect.appendChild(option);
     });
     
-    // Populate weapons (tab Weapons + combat A + combat B)
+    // Populate weapons (tab Weapons + combat A + combat B + exit vehicle)
     const weaponSelect    = document.getElementById('weaponSelect');
     const combatWeaponA   = document.getElementById('combatWeaponASelect');
     const combatWeaponB   = document.getElementById('combatWeaponBSelect');
+    const exitVehicleWeaponSelect = document.getElementById('exitVehicleWeaponSelect');
     weaponSelect.innerHTML = '';
     combatWeaponA.innerHTML = '';
     combatWeaponB.innerHTML = '';
+    exitVehicleWeaponSelect.innerHTML = '<option value="WEAPON_UNARMED">Không trang bị (Unarmed)</option>';
 
     config.weapons.forEach(weapon => {
         const makeOpt = () => {
@@ -133,6 +135,7 @@ function populateSelects() {
         weaponSelect.appendChild(makeOpt());
         combatWeaponA.appendChild(makeOpt());
         combatWeaponB.appendChild(makeOpt());
+        exitVehicleWeaponSelect.appendChild(makeOpt());
     });
     
     updateWeaponSkins();
@@ -208,7 +211,7 @@ function spawnNPCs() {
 // Apply emoji code
 function applyEmojiCode() {
     const emojiCode = document.getElementById('emojiCodeInput').value;
-    const group = document.getElementById('activeGroupSelect').value;
+    const group = document.getElementById('animGroupSelect').value;
     if (emojiCode) {
         fetch(`https://${GetParentResourceName()}/applyEmojiCode`, {
             method: 'POST',
@@ -226,7 +229,7 @@ function applyEmojiCode() {
 // Apply scenario
 function applyScenario() {
     const scenario = document.getElementById('scenarioSelect').value;
-    const group = document.getElementById('activeGroupSelect').value;
+    const group = document.getElementById('animGroupSelect').value;
     fetch(`https://${GetParentResourceName()}/applyScenario`, {
         method: 'POST',
         headers: {
@@ -241,7 +244,7 @@ function applyScenario() {
 
 // Clear scenarios
 function clearScenarios() {
-    const group = document.getElementById('activeGroupSelect').value;
+    const group = document.getElementById('animGroupSelect').value;
     fetch(`https://${GetParentResourceName()}/clearScenarios`, {
         method: 'POST',
         headers: {
@@ -773,6 +776,48 @@ function stopCoupleAnim() {
         body: JSON.stringify({
             groupA: groupA,
             groupB: groupB
+        })
+    });
+}
+
+function npcEnterVehicles() {
+    const group = document.getElementById('activeGroupSelect').value;
+    fetch(`https://${GetParentResourceName()}/npcEnterVehicles`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json; charset=UTF-8',
+        },
+        body: JSON.stringify({
+            group: group
+        })
+    });
+}
+
+function npcExitVehicles() {
+    const group = document.getElementById('activeGroupSelect').value;
+    const weapon = document.getElementById('exitVehicleWeaponSelect').value;
+    fetch(`https://${GetParentResourceName()}/npcExitVehicles`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json; charset=UTF-8',
+        },
+        body: JSON.stringify({
+            group: group,
+            weapon: weapon
+        })
+    });
+}
+
+function vehicleFollowPlayer() {
+    const group = document.getElementById('activeGroupSelect').value;
+    fetch(`https://${GetParentResourceName()}/updateVehicleBehavior`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json; charset=UTF-8',
+        },
+        body: JSON.stringify({
+            driveMode: 'follow',
+            group: group
         })
     });
 }

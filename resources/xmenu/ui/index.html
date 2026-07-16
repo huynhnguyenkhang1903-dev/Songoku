@@ -71,8 +71,19 @@
             <div class="tab-content" id="animations-tab">
                 <h2>Animations / Scenarios</h2>
                 <div class="input-group">
-                    <label for="emojiCodeInput">Nhap ma emoji (VD: smoke, cop2, guard):</label>
-                    <input type="text" id="emojiCodeInput" placeholder="Nhap ma emoji...">
+                    <label for="animGroupSelect">Chọn Nhóm:</label>
+                    <select id="animGroupSelect">
+                        <option value="all">Tất cả nhóm</option>
+                        <option value="group1">Nhóm 1</option>
+                        <option value="group2">Nhóm 2</option>
+                        <option value="group3">Nhóm 3</option>
+                        <option value="group4">Nhóm 4</option>
+                        <option value="group5">Nhóm 5</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="emojiCodeInput">Nhập mã emoji (VD: smoke, cop, guard):</label>
+                    <input type="text" id="emojiCodeInput" placeholder="Nhập mã emoji...">
                 </div>
                 <button class="btn btn-primary" onclick="applyEmojiCode()">Apply Emoji Code</button>
                 <div class="input-group">
@@ -354,6 +365,7 @@
                     <label for="vehicleDriveMode">Chế độ lái xe:</label>
                     <select id="vehicleDriveMode">
                         <option value="follow">Di chuyển theo đoàn (Bám đuôi)</option>
+                        <option value="follow_player">Di chuyển theo Player (Lái theo)</option>
                         <option value="chaos">Hỗn loạn (Lái điên cuồng)</option>
                         <option value="gps">Đi theo GPS (Waypoint)</option>
                         <option value="race">Đua xe (Tốc độ tối đa)</option>
@@ -365,6 +377,19 @@
                 </div>
                 <div class="button-group" style="margin-top: 10px;">
                     <button class="btn btn-secondary" onclick="updateVehicleBehavior()">Cập Nhật Hành Vi Lái</button>
+                    <button class="btn btn-primary" onclick="vehicleFollowPlayer()">🚗 Xe Theo Player</button>
+                </div>
+                <h3 style="color:#f0c040;margin:12px 0 6px;">🚌 Tự Động Lên Xe</h3>
+                <div class="button-group">
+                    <button class="btn btn-primary" onclick="npcEnterVehicles()">🚌 NPC Lên Xe Gần Nhất</button>
+                </div>
+                <h3 style="color:#f0c040;margin:12px 0 6px;">🚪 Xuống Xe & Trang Bị</h3>
+                <div class="input-group">
+                    <label for="exitVehicleWeaponSelect">Vũ khí khi xuống xe:</label>
+                    <select id="exitVehicleWeaponSelect"></select>
+                </div>
+                <div class="button-group">
+                    <button class="btn btn-danger" onclick="npcExitVehicles()">🚪 NPC Xuống Xe</button>
                 </div>
             </div>
             

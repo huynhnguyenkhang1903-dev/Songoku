@@ -156,7 +156,7 @@
               <ForceBack value="4.000000" />
             </Item>
             <Item>
-              <BoneTag>BONETAG_L_FOOT</BoneTag>
+              <BoneTag>BONETAG_R_FOOT</BoneTag>
               <ForceFront value="20.000000" />
               <ForceBack value="4.000000" />
             </Item>
@@ -285,7 +285,6 @@
           <RecoilShakeHash>CARBINE_RIFLE_RECOIL_SHAKE</RecoilShakeHash>
           <RecoilShakeHashFirstPerson>FPS_ASSAULT_RIFLE_RECOIL_SHAKE</RecoilShakeHashFirstPerson>
           <AccuracyOffsetShakeHash>CARBINE_RIFLE_ACCURACY_OFFSET_SHAKE</AccuracyOffsetShakeHash>
-          <AccuracyOffsetShakeHash />
           <MinTimeBetweenRecoilShakes value="100" />
           <RecoilShakeAmplitude value="0.333000" />
           <ExplosionShakeAmplitude value="-1.000000" />

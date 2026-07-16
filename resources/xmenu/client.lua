@@ -7,6 +7,7 @@ local spawnedNPCs = {}
 local spawnedVehicles = {}
 local npcOriginalPositions = {} -- Store original spawn positions
 local npcGroups = {}            -- maps npc entity -> group name
+local npcFollowStates = {}      -- maps npc entity -> follow state
 local groupRelationships = {}   -- maps group name -> relationship behavior
 for i = 1, MAX_GROUPS do
     groupRelationships["group" .. i] = "friendly"
@@ -41,10 +42,10 @@ function UpdateNPCCounts()
         groupCounts["group" .. i] = 0
     end
     
-    -- Clean up dead or deleted NPCs first
+    -- Clean up deleted NPCs first (only if the entity no longer exists)
     for i = #spawnedNPCs, 1, -1 do
         local npc = spawnedNPCs[i]
-        if not IsPedUsable(npc) then
+        if not DoesEntityExist(npc) then
             npcOriginalPositions[npc] = nil
             npcGroups[npc] = nil
             table.remove(spawnedNPCs, i)
@@ -52,10 +53,12 @@ function UpdateNPCCounts()
     end
     
     for _, npc in ipairs(spawnedNPCs) do
-        local g = npcGroups[npc]
-        if g and groupCounts[g] ~= nil then
-            groupCounts[g] = groupCounts[g] + 1
-            total = total + 1
+        if IsPedUsable(npc) then
+            local g = npcGroups[npc]
+            if g and groupCounts[g] ~= nil then
+                groupCounts[g] = groupCounts[g] + 1
+                total = total + 1
+            end
         end
     end
     
@@ -68,13 +71,12 @@ end
 
 -- Get targets filtered by group
 function GetTargetNPCs(groupName)
-    if not groupName or groupName == "all" then
-        return spawnedNPCs
-    end
     local targets = {}
     for _, npc in ipairs(spawnedNPCs) do
-        if IsPedUsable(npc) and npcGroups[npc] == groupName then
-            table.insert(targets, npc)
+        if IsPedUsable(npc) then
+            if not groupName or groupName == "all" or npcGroups[npc] == groupName then
+                table.insert(targets, npc)
+            end
         end
     end
     return targets
@@ -278,8 +280,8 @@ function SpawnNPCs(count, direction, groupName, relationship)
             SetEntityAsMissionEntity(npc, true, true)
             SetBlockingOfNonTemporaryEvents(npc, true)
             SetPedFleeAttributes(npc, 0, false)
-            SetPedCombatAttributes(npc, 46, true)
-            SetPedCombatAttributes(npc, 17, true)
+            SetPedCombatAttributes(npc, 5, true)   -- Always fight (CA_ALWAYS_FIGHT)
+            SetPedCombatAttributes(npc, 17, false) -- Disable always flee (CA_ALWAYS_FLEE)
             
             local groupHash = groupHashes[groupName]
             if groupHash then
@@ -337,8 +339,14 @@ function ApplyEmojiCode(emojiCode, group)
     
     local commonEmotes = {
         ["smoke"] = "WORLD_HUMAN_SMOKING",
+        ["cop"] = "WORLD_HUMAN_COP_IDLES",
         ["cop2"] = "WORLD_HUMAN_SECURITY_GUARD",
-        ["guard"] = "WORLD_HUMAN_SECURITY_GUARD",
+        ["guard"] = "WORLD_HUMAN_GUARD_STAND",
+        ["guard2"] = "WORLD_HUMAN_SECURITY_GUARD",
+        ["guard_patrol"] = "WORLD_HUMAN_GUARD_PATROL",
+        ["torch"] = "WORLD_HUMAN_SECURITY_SHINE_TORCH",
+        ["shoulder"] = "WORLD_HUMAN_SECURITY_SHOULDER",
+        ["army"] = "WORLD_HUMAN_GUARD_STAND_ARMY",
         ["sit"] = "WORLD_HUMAN_SEAT_STEPS",
         ["party"] = "WORLD_HUMAN_PARTYING",
         ["cheer"] = "WORLD_HUMAN_CHEERING",
@@ -551,11 +559,16 @@ function DeleteNPCs(groupName)
         local npc = spawnedNPCs[i]
         if groupName == "all" or npcGroups[npc] == groupName then
             if DoesEntityExist(npc) then
+                RemovePedFromGroup(npc)
                 SetEntityAsMissionEntity(npc, true, true)
                 DeletePed(npc)
+                if DoesEntityExist(npc) then
+                    DeleteEntity(npc)
+                end
             end
             npcOriginalPositions[npc] = nil
             npcGroups[npc] = nil
+            npcFollowStates[npc] = nil
             table.remove(spawnedNPCs, i)
             deleteCount = deleteCount + 1
         end
@@ -610,6 +623,20 @@ function SetHealthAll(health, group)
     ShowNotification("~g~Da set mau cho nhom: " .. health)
 end
 
+local playerGroupId = nil
+
+function GetOrCreatePlayerGroup()
+    local playerPed = PlayerPedId()
+    local grp = GetPedGroupIndex(playerPed)
+    if grp == 0 or grp == -1 or not playerGroupId then
+        playerGroupId = CreateGroup(0)
+        SetPedAsGroupLeader(playerPed, playerGroupId)
+        SetGroupFormation(playerGroupId, 3) -- Circle formation
+        SetGroupFormationSpacing(playerGroupId, 1.5, 1.5, 3.0)
+    end
+    return playerGroupId
+end
+
 -- Follow Player Selected NPCs
 function FollowPlayer(group)
     local playerPed = PlayerPedId()
@@ -619,10 +646,26 @@ function FollowPlayer(group)
     end
     
     local targets = GetTargetNPCs(group)
+    local playerGroup = GetOrCreatePlayerGroup()
+    
     for _, npc in ipairs(targets) do
         if IsPedUsable(npc) then
-            ClearPedTasks(npc)
-            TaskFollowToOffsetOfEntity(npc, playerPed, 0.0, 0.0, 0.0, 5.0, -1, 0.0, true)
+            if IsPedInAnyVehicle(npc, false) then
+                TaskLeaveAnyVehicle(npc, 0, 0)
+            end
+            npcFollowStates[npc] = { following = true, speed = 5.0 }
+            
+            local _, memberCount = GetGroupSize(playerGroup)
+            if memberCount < 7 then
+                SetPedAsGroupMember(npc, playerGroup)
+                SetPedCombatAttributes(npc, 2, true)  -- Can fight armed peds when unarmed
+                SetPedCombatAttributes(npc, 46, true) -- Always fight
+                SetPedCombatRange(npc, 2)
+                SetPedCombatAbility(npc, 2)
+            else
+                ClearPedTasksImmediately(npc)
+                TaskFollowToOffsetOfEntity(npc, playerPed, 0.0, 0.0, 0.0, 5.0, -1, 3.0, true)
+            end
         end
     end
     ShowNotification("~g~Nhom dang di theo ban!")
@@ -633,10 +676,125 @@ function Stay(group)
     local targets = GetTargetNPCs(group)
     for _, npc in ipairs(targets) do
         if IsPedUsable(npc) then
-            ClearPedTasks(npc)
+            npcFollowStates[npc] = nil
+            RemovePedFromGroup(npc)
+            ClearPedTasksImmediately(npc)
         end
     end
     ShowNotification("~g~Nhom dang dung yen!")
+end
+
+-- NPC Auto-Board Nearest Vehicles
+function NPCEnterNearestVehicles(group)
+    local allNPCs = GetTargetNPCs(group)
+    local targets = {}
+    for _, npc in ipairs(allNPCs) do
+        if not IsPedInAnyVehicle(npc, false) then
+            table.insert(targets, npc)
+        end
+    end
+    
+    if #targets == 0 then
+        ShowNotification("~r~Khong co NPC nao dang o ngoai xe!")
+        return
+    end
+
+    local playerPed = PlayerPedId()
+    local playerCoords = GetEntityCoords(playerPed)
+    local vehicles = GetGamePool('CVehicle')
+    
+    local nearbyVehicles = {}
+    for _, veh in ipairs(vehicles) do
+        if DoesEntityExist(veh) and not IsEntityDead(veh) then
+            local coords = GetEntityCoords(veh)
+            local dist = #(coords - playerCoords)
+            if dist < 150.0 then
+                table.insert(nearbyVehicles, { vehicle = veh, dist = dist })
+            end
+        end
+    end
+
+    if #nearbyVehicles == 0 then
+        ShowNotification("~r~Khong tim thay xe nao trong ban kinh 150m!")
+        return
+    end
+
+    table.sort(nearbyVehicles, function(a, b) return a.dist < b.dist end)
+
+    local npcIndex = 1
+    local numNpcs = #targets
+    local boardedCount = 0
+
+    for _, vehData in ipairs(nearbyVehicles) do
+        if npcIndex > numNpcs then break end
+        local veh = vehData.vehicle
+        local maxPassengers = GetVehicleMaxNumberOfPassengers(veh)
+        
+        -- Seats in GTA V: Seat -1 is driver, seat 0 is front passenger, seats 1, 2, etc. are rear passengers.
+        for seat = -1, maxPassengers - 1 do
+            if npcIndex > numNpcs then break end
+            
+            if IsVehicleSeatFree(veh, seat) then
+                local npc = targets[npcIndex]
+                ClearPedTasks(npc)
+                -- speed = 2.0 (running), flag 1 (normal enter)
+                TaskEnterVehicle(npc, veh, 20000, seat, 2.0, 1, 0)
+                npcIndex = npcIndex + 1
+                boardedCount = boardedCount + 1
+            end
+        end
+    end
+
+    if boardedCount > 0 then
+        ShowNotification("~g~Da ra lenh cho " .. boardedCount .. " NPC di tim va len cac xe gan nhat!")
+    else
+        ShowNotification("~y~Tat ca cac xe gan day deu da day cho!")
+    end
+end
+
+-- NPC Exit Vehicles & Equip Weapon
+function NPCExitNearestVehicles(group, weaponName)
+    local targets = GetTargetNPCs(group)
+    if #targets == 0 then
+        ShowNotification("~r~Khong co NPC nao trong nhom!")
+        return
+    end
+
+    local weaponHash = GetHashKey(weaponName or "WEAPON_UNARMED")
+    local exitedCount = 0
+
+    for _, npc in ipairs(targets) do
+        if IsPedUsable(npc) and IsPedInAnyVehicle(npc, false) then
+            ClearPedTasks(npc)
+            TaskLeaveAnyVehicle(npc, 0, 0)
+            
+            -- Run a thread to wait until they exit, then give the weapon
+            Citizen.CreateThread(function()
+                local timeout = 0
+                while IsPedInAnyVehicle(npc, false) and timeout < 100 do -- up to 10 seconds
+                    Citizen.Wait(100)
+                    timeout = timeout + 1
+                end
+                Citizen.Wait(500) -- Split second for safety
+                if IsPedUsable(npc) then
+                    if weaponHash ~= GetHashKey("WEAPON_UNARMED") then
+                        GiveWeaponToPed(npc, weaponHash, 9999, false, true)
+                        SetCurrentPedWeapon(npc, weaponHash, true)
+                    else
+                        RemoveAllPedWeapons(npc, true)
+                    end
+                end
+            end)
+            
+            exitedCount = exitedCount + 1
+        end
+    end
+    
+    if exitedCount > 0 then
+        ShowNotification("~g~Da ra lenh cho " .. exitedCount .. " NPC xuong xe!")
+    else
+        ShowNotification("~y~Khong co NPC nao trong nhom dang o trong xe!")
+    end
 end
 
 -- Follow Player with specific group (with configurable speed)
@@ -649,17 +807,49 @@ function FollowPlayerGroup(group, speed)
     
     speed = tonumber(speed) or 3.0
     local targets = GetTargetNPCs(group)
+    
+    print(string.format("[XMenu] FollowPlayerGroup: group=%s, speed=%f, targets=%d", tostring(group), speed, #targets))
+    
     if #targets == 0 then
         ShowNotification("~r~Khong co NPC nao trong nhom!")
         return
     end
+    
+    local playerGroup = GetOrCreatePlayerGroup()
+    
     for i, npc in ipairs(targets) do
         if IsPedUsable(npc) then
-            ClearPedTasks(npc)
-            -- Offset tung con NPC mot chut de khong chong len nhau
-            local offsetX = (i % 3 - 1) * 1.0
-            local offsetY = -math.floor((i - 1) / 3) * 1.5 - 1.5
-            TaskFollowToOffsetOfEntity(npc, playerPed, offsetX, offsetY, 0.0, speed, -1, 1.0, true)
+            if IsPedInAnyVehicle(npc, false) then
+                TaskLeaveAnyVehicle(npc, 0, 0)
+            end
+            
+            npcFollowStates[npc] = { following = true, speed = speed }
+            
+            local _, memberCount = GetGroupSize(playerGroup)
+            if memberCount < 7 then
+                SetPedAsGroupMember(npc, playerGroup)
+                SetPedCombatAttributes(npc, 2, true)  -- Can fight armed peds when unarmed
+                SetPedCombatAttributes(npc, 46, true) -- Always fight
+                SetPedCombatRange(npc, 2)
+                SetPedCombatAbility(npc, 2)
+            else
+                Citizen.CreateThread(function()
+                    if IsPedInAnyVehicle(npc, false) then
+                        local timeout = 0
+                        while IsPedInAnyVehicle(npc, false) and timeout < 100 do
+                            Citizen.Wait(100)
+                            timeout = timeout + 1
+                        end
+                        Citizen.Wait(500)
+                    end
+                    
+                    if IsPedUsable(npc) and npcFollowStates[npc] and npcFollowStates[npc].following then
+                        ClearPedTasksImmediately(npc)
+                        -- Use 0.0 offset and 3.0m stopping range to prevent getting stuck on walls/trees
+                        TaskFollowToOffsetOfEntity(npc, playerPed, 0.0, 0.0, 0.0, speed, -1, 3.0, true)
+                    end
+                end)
+            end
         end
     end
     local groupLabel = (group == "all") and "Tat ca" or ("Nhom " .. group:gsub("group", ""))
@@ -720,12 +910,27 @@ function ApplyVehicleDriveTask(driver, vehicle, driveMode)
     
     local playerPed = PlayerPedId()
     
+    -- Ensure the vehicle is ready to drive (forces engine ON and releases handbrake)
+    SetVehicleEngineOn(vehicle, true, true, false)
+    SetVehicleHandbrake(vehicle, false)
+    
+    -- Set driver attributes for boarded NPCs as well
+    SetDriverAbility(driver, 1.0)
+    SetDriverAggressiveness(driver, 1.0)
+    SetBlockingOfNonTemporaryEvents(driver, true)
+    SetPedFleeAttributes(driver, 0, false)
+    SetPedCombatAttributes(driver, 46, true)
+    
+    print(string.format("[XMenu] ApplyVehicleDriveTask: driver=%s, vehicle=%s, driveMode=%s", tostring(driver), tostring(vehicle), tostring(driveMode)))
+    
     if driveMode == "follow" then
-        local target = GetVehiclePedIsIn(playerPed, false)
-        if target == 0 then target = playerPed end
         ClearPedTasks(driver)
-        TaskVehicleFollow(driver, vehicle, target, 25.0, 786603, 10.0)
+        TaskVehicleMissionPedTarget(driver, vehicle, playerPed, 7, 25.0, 786603, 6.0, 0.0, true)
         
+    elseif driveMode == "follow_player" then
+        ClearPedTasks(driver)
+        TaskVehicleMissionPedTarget(driver, vehicle, playerPed, 7, 30.0, 786603, 6.0, 0.0, true)
+
     elseif driveMode == "chaos" then
         ClearPedTasks(driver)
         TaskVehicleDriveWander(driver, vehicle, 40.0, 786469)
@@ -835,6 +1040,9 @@ function SpawnVehicles(modelName, count, spacing, spawnNpc, driveMode, groupName
                         SetDriverAbility(driver, 1.0)
                         SetDriverAggressiveness(driver, 1.0)
                         
+                        npcGroups[driver] = groupName
+                        table.insert(spawnedNPCs, driver)
+                        
                         ApplyVehicleDriveTask(driver, vehicle, driveMode)
                     end
                 end
@@ -843,6 +1051,7 @@ function SpawnVehicles(modelName, count, spacing, spawnNpc, driveMode, groupName
             table.insert(spawnedVehicles, {
                 vehicle = vehicle,
                 driver = driver,
+                lastDriver = driver,
                 group = groupName,
                 driveMode = driveMode
             })
@@ -858,7 +1067,11 @@ function DeleteVehicles(groupName)
     for i = #spawnedVehicles, 1, -1 do
         local entry = spawnedVehicles[i]
         if groupName == "all" or entry.group == groupName then
-            if entry.driver and DoesEntityExist(entry.driver) then
+            local currentDriver = entry.vehicle and DoesEntityExist(entry.vehicle) and GetPedInVehicleSeat(entry.vehicle, -1) or entry.driver
+            if currentDriver and DoesEntityExist(currentDriver) then
+                DeletePed(currentDriver)
+            end
+            if entry.driver and DoesEntityExist(entry.driver) and entry.driver ~= currentDriver then
                 DeletePed(entry.driver)
             end
             if entry.vehicle and DoesEntityExist(entry.vehicle) then
@@ -879,16 +1092,58 @@ end
 -- Update Vehicle Driving Behavior
 function UpdateVehicleBehavior(driveMode, groupName)
     local updateCount = 0
+    
+    -- 1. Update existing spawned vehicles
     for _, entry in ipairs(spawnedVehicles) do
         if groupName == "all" or entry.group == groupName then
-            if entry.driver and DoesEntityExist(entry.driver) and entry.vehicle and DoesEntityExist(entry.vehicle) then
-                ApplyVehicleDriveTask(entry.driver, entry.vehicle, driveMode)
-                entry.driveMode = driveMode
-                entry.aligned = false -- Reset aligned state when behavior is updated
+            entry.driveMode = driveMode
+            entry.aligned = false -- Reset aligned state when behavior is updated
+            
+            if entry.vehicle and DoesEntityExist(entry.vehicle) then
+                local currentDriver = GetPedInVehicleSeat(entry.vehicle, -1)
+                if currentDriver and currentDriver ~= 0 and currentDriver ~= PlayerPedId() and DoesEntityExist(currentDriver) then
+                    ApplyVehicleDriveTask(currentDriver, entry.vehicle, driveMode)
+                    entry.driver = currentDriver
+                    entry.lastDriver = currentDriver
+                end
                 updateCount = updateCount + 1
             end
         end
     end
+    
+    -- 2. Dynamically find any NPCs of this group driving other vehicles and register them
+    local targets = GetTargetNPCs(groupName)
+    for _, npc in ipairs(targets) do
+        if IsPedUsable(npc) and IsPedInAnyVehicle(npc, false) then
+            local vehicle = GetVehiclePedIsIn(npc, false)
+            if DoesEntityExist(vehicle) and GetPedInVehicleSeat(vehicle, -1) == npc then
+                -- Check if this vehicle is already in spawnedVehicles
+                local alreadyTracked = false
+                for _, entry in ipairs(spawnedVehicles) do
+                    if entry.vehicle == vehicle then
+                        alreadyTracked = true
+                        break
+                    end
+                end
+                
+                if not alreadyTracked then
+                    local npcGroup = npcGroups[npc] or groupName
+                    if npcGroup == "all" then npcGroup = "group1" end -- Default fallback
+                    
+                    table.insert(spawnedVehicles, {
+                        vehicle = vehicle,
+                        driver = npc,
+                        lastDriver = npc,
+                        group = npcGroup,
+                        driveMode = driveMode
+                    })
+                    ApplyVehicleDriveTask(npc, vehicle, driveMode)
+                    updateCount = updateCount + 1
+                end
+            end
+        end
+    end
+    
     ShowNotification("~g~Da cap nhat hanh vi cho " .. updateCount .. " xe!")
 end
 
@@ -1337,6 +1592,8 @@ RegisterNUICallback('changeActiveGroup', function(data, cb) selectedGroup = data
 RegisterNUICallback('spawnVehicles', function(data, cb) SpawnVehicles(data.model, tonumber(data.count), tonumber(data.distance), data.spawnNpc, data.driveMode, data.group, tonumber(data.color1), tonumber(data.color2)) cb({}) end)
 RegisterNUICallback('deleteVehicles', function(data, cb) DeleteVehicles(data.group) cb({}) end)
 RegisterNUICallback('updateVehicleBehavior', function(data, cb) UpdateVehicleBehavior(data.driveMode, data.group) cb({}) end)
+RegisterNUICallback('npcEnterVehicles', function(data, cb) NPCEnterNearestVehicles(data.group) cb({}) end)
+RegisterNUICallback('npcExitVehicles', function(data, cb) NPCExitNearestVehicles(data.group, data.weapon) cb({}) end)
 RegisterNUICallback('startFight', function(data, cb) StartFight(data.groupA, data.groupB, data.weaponA, data.skinA, data.weaponB, data.skinB, data.behavior) cb({}) end)
 RegisterNUICallback('makePeace', function(data, cb) MakePeace(data.groupA, data.groupB) cb({}) end)
 
@@ -1472,8 +1729,10 @@ function AlignGroupVehicles(groupName, gpsCoords)
         local spawnPos = targetCoords - (dirVector * offsetDist)
         
         -- Stop NPC driver tasks immediately
-        if entry.driver and DoesEntityExist(entry.driver) then
-            ClearPedTasksImmediately(entry.driver)
+        local currentDriver = GetPedInVehicleSeat(entry.vehicle, -1)
+        if currentDriver and currentDriver ~= 0 and DoesEntityExist(currentDriver) then
+            ClearPedTasksImmediately(currentDriver)
+            entry.driver = currentDriver
         end
         
         -- Position and stabilize the vehicle
@@ -1529,6 +1788,362 @@ Citizen.CreateThread(function()
             end
         else
             lastGpsCoords = nil
+        end
+    end
+end)
+
+-- Thread to monitor and keep follow vehicles close to the player
+Citizen.CreateThread(function()
+    while true do
+        Citizen.Wait(1000)
+        local playerPed = PlayerPedId()
+        if playerPed and playerPed ~= 0 then
+            local playerCoords = GetEntityCoords(playerPed)
+            
+            for _, entry in ipairs(spawnedVehicles) do
+                if entry.vehicle and DoesEntityExist(entry.vehicle) then
+                    local currentDriver = GetPedInVehicleSeat(entry.vehicle, -1)
+                    if currentDriver and currentDriver ~= 0 and DoesEntityExist(currentDriver) then
+                        entry.driver = currentDriver
+                        if entry.driveMode == "follow" or entry.driveMode == "follow_player" then
+                            local vehCoords = GetEntityCoords(entry.vehicle)
+                            local dist = #(vehCoords - playerCoords)
+                            
+                            -- Adjust speed and driving style dynamically based on distance
+                            local speed = 30.0
+                            local style = 786603 -- Normal driving style
+                            
+                            if dist > 60.0 then
+                                speed = 60.0 -- Drive very fast to catch up
+                                style = 288  -- Ignore traffic/red lights to catch up quickly
+                            elseif dist > 35.0 then
+                                speed = 40.0 -- Drive fast
+                                style = 786603
+                            elseif dist < 12.0 then
+                                speed = 8.0  -- Slow down when close
+                                style = 786603
+                            elseif dist < 25.0 then
+                                speed = 18.0 -- Moderate speed
+                                style = 786603
+                            end
+                            
+                            local isPlayerInVeh = IsPedInAnyVehicle(playerPed, false)
+                            if not isPlayerInVeh and dist < 8.0 then
+                                speed = 3.0 -- Walk speed if player is on foot nearby
+                            end
+                            
+                            -- Re-apply task if speed or style changes
+                            if not entry.lastSpeed or math.abs(entry.lastSpeed - speed) > 4.0 or entry.lastStyle ~= style then
+                                entry.lastSpeed = speed
+                                entry.lastStyle = style
+                                ClearPedTasks(currentDriver)
+                                TaskVehicleMissionPedTarget(currentDriver, entry.vehicle, playerPed, 7, speed, style, 6.0, 0.0, true)
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+end)
+
+-- Thread to monitor driver changes and apply tasks automatically
+Citizen.CreateThread(function()
+    while true do
+        Citizen.Wait(1000)
+        for _, entry in ipairs(spawnedVehicles) do
+            if entry.vehicle and DoesEntityExist(entry.vehicle) then
+                local currentDriver = GetPedInVehicleSeat(entry.vehicle, -1)
+                if currentDriver == 0 then currentDriver = nil end
+                
+                -- If player is driving, we don't control them
+                if currentDriver == PlayerPedId() then
+                    currentDriver = nil
+                end
+                
+                -- Continually ensure engine is ON and handbrake is OFF while driving
+                if currentDriver and DoesEntityExist(currentDriver) and entry.driveMode then
+                    if not GetIsVehicleEngineRunning(entry.vehicle) then
+                        SetVehicleEngineOn(entry.vehicle, true, true, false)
+                    end
+                    SetVehicleHandbrake(entry.vehicle, false)
+                end
+                
+                -- Check if driver has changed
+                if currentDriver ~= entry.lastDriver then
+                    entry.lastDriver = currentDriver
+                    entry.driver = currentDriver
+                    
+                    if currentDriver and DoesEntityExist(currentDriver) and entry.driveMode then
+                        print(string.format("[XMenu] Driver changed for vehicle %s. Applying task %s", tostring(entry.vehicle), tostring(entry.driveMode)))
+                        ApplyVehicleDriveTask(currentDriver, entry.vehicle, entry.driveMode)
+                    end
+                end
+            end
+        end
+    end
+end)
+
+-- Periodically check if any spawned NPCs are driving a vehicle that is not yet tracked
+Citizen.CreateThread(function()
+    while true do
+        Citizen.Wait(2000)
+        for _, npc in ipairs(spawnedNPCs) do
+            if IsPedUsable(npc) and IsPedInAnyVehicle(npc, false) then
+                local vehicle = GetVehiclePedIsIn(npc, false)
+                if DoesEntityExist(vehicle) and GetPedInVehicleSeat(vehicle, -1) == npc then
+                    -- Check if already tracked
+                    local alreadyTracked = false
+                    for _, entry in ipairs(spawnedVehicles) do
+                        if entry.vehicle == vehicle then
+                            alreadyTracked = true
+                            break
+                        end
+                    end
+                    
+                    if not alreadyTracked then
+                        local npcGroup = npcGroups[npc] or "group1"
+                        table.insert(spawnedVehicles, {
+                            vehicle = vehicle,
+                            driver = npc,
+                            lastDriver = npc,
+                            group = npcGroup,
+                            driveMode = "follow" -- Default mode for newly boarded vehicles
+                        })
+                        ApplyVehicleDriveTask(npc, vehicle, "follow")
+                        print("[XMenu] Dynamically tracked vehicle driven by NPC " .. tostring(npc))
+                    end
+                end
+            end
+        end
+    end
+end)
+
+-- Thread to monitor and enforce NPC follow behavior
+Citizen.CreateThread(function()
+    while true do
+        Citizen.Wait(1000) -- Check/re-apply every 1 second
+        local playerPed = PlayerPedId()
+        if playerPed and playerPed ~= 0 then
+            local playerCoords = GetEntityCoords(playerPed)
+            
+            for npc, state in pairs(npcFollowStates) do
+                if IsPedUsable(npc) and state.following then
+                    -- If they are in a vehicle, don't force follow task on foot
+                    -- Also, if they are currently defending/attacking, do not interrupt combat
+                    -- Also, if they are in the native group, do not interfere with native follow
+                    local isGroupMember = IsPedInGroup(npc)
+                    if not isGroupMember and not IsPedInAnyVehicle(npc, false) and not state.target then
+                        local npcCoords = GetEntityCoords(npc)
+                        local dist = #(npcCoords - playerCoords)
+                        
+                        -- If they are too far from their stopping range, ensure they are actively following
+                        if dist > 4.0 then
+                            -- Re-apply task to ensure they keep following even if task got cancelled
+                            TaskFollowToOffsetOfEntity(npc, playerPed, 0.0, 0.0, 0.0, state.speed, -1, 3.0, true)
+                        end
+                    end
+                else
+                    npcFollowStates[npc] = nil -- Clean up invalid peds
+                end
+            end
+        end
+    end
+end)
+
+local lastPlayerHealth = nil
+local lastPlayerArmor = nil
+
+function FindPlayerAttacker(playerPed)
+    local currentHealth = GetEntityHealth(playerPed)
+    local currentArmor = GetPedArmour(playerPed)
+    
+    if not lastPlayerHealth then
+        lastPlayerHealth = currentHealth
+        lastPlayerArmor = currentArmor
+    end
+    
+    local attacker = GetPedAttacker(playerPed)
+    if attacker and attacker ~= 0 and DoesEntityExist(attacker) and not IsEntityDead(attacker) then
+        lastPlayerHealth = currentHealth
+        lastPlayerArmor = currentArmor
+        return attacker
+    end
+    
+    -- Check if player health or armor decreased
+    local tookDamage = (currentHealth < lastPlayerHealth) or (currentArmor < lastPlayerArmor)
+    lastPlayerHealth = currentHealth
+    lastPlayerArmor = currentArmor
+    
+    -- Scan nearby peds using FindFirstPed/FindNextPed
+    local handle, ped = FindFirstPed()
+    local success
+    if handle ~= -1 then
+        repeat
+            if ped ~= playerPed and DoesEntityExist(ped) and not IsEntityDead(ped) then
+                -- Check 1: Did this ped damage the player recently?
+                if HasEntityBeenDamagedByEntity(playerPed, ped, true) then
+                    attacker = ped
+                    break
+                end
+                
+                -- Check 2: Is this ped aiming/shooting or in melee combat with the player?
+                if GetMeleeTargetForPed(ped) == playerPed then
+                    attacker = ped
+                    break
+                end
+                
+                -- Check 3: Is their combat target the player? (For NPCs)
+                if GetPedCombatTarget(ped) == playerPed then
+                    attacker = ped
+                    break
+                end
+                
+                -- Check 4: General combat fallback
+                if IsPedInCombat(ped, playerPed) then
+                    -- Check if not one of our own spawned NPCs
+                    local isOurNPC = false
+                    for _, spawnedNpc in ipairs(spawnedNPCs) do
+                        if spawnedNpc == ped then
+                            isOurNPC = true
+                            break
+                        end
+                    end
+                    if not isOurNPC then
+                        attacker = ped
+                        break
+                    end
+                end
+            end
+            success, ped = FindNextPed(handle)
+        until not success
+        EndFindPed(handle)
+    end
+    
+    return attacker
+end
+
+-- Thread to monitor if player is attacked or targets someone, and command NPCs to defend
+Citizen.CreateThread(function()
+    while true do
+        Citizen.Wait(500) -- Check every 500ms
+        local playerPed = PlayerPedId()
+        if playerPed and playerPed ~= 0 then
+            local attacker = FindPlayerAttacker(playerPed)
+            
+            -- Fallback: Check if player is free-aiming at or targeting a Ped
+            if not attacker or attacker == 0 or IsEntityDead(attacker) then
+                local isAiming, targetEntity = GetEntityPlayerIsFreeAimingAt(PlayerId())
+                if isAiming and DoesEntityExist(targetEntity) and IsEntityAPed(targetEntity) and not IsEntityDead(targetEntity) then
+                    local isOurNPC = false
+                    for _, spawnedNpc in ipairs(spawnedNPCs) do
+                        if spawnedNpc == targetEntity then
+                            isOurNPC = true
+                            break
+                        end
+                    end
+                    if not isOurNPC then
+                        attacker = targetEntity
+                    end
+                else
+                    local targetPed = GetPlayerTargetEntity(PlayerId())
+                    if targetPed and targetPed ~= 0 and DoesEntityExist(targetPed) and IsEntityAPed(targetPed) and not IsEntityDead(targetPed) then
+                        local isOurNPC = false
+                        for _, spawnedNpc in ipairs(spawnedNPCs) do
+                            if spawnedNpc == targetPed then
+                                isOurNPC = true
+                                break
+                            end
+                        end
+                        if not isOurNPC then
+                            attacker = targetPed
+                        end
+                    end
+                end
+            end
+            
+            if attacker and attacker ~= 0 and attacker ~= playerPed and not IsEntityDead(attacker) then
+                -- Check if the attacker is not one of our own spawned NPCs
+                local isOurNPC = false
+                for _, npc in ipairs(spawnedNPCs) do
+                    if npc == attacker then
+                        isOurNPC = true
+                        break
+                    end
+                end
+                
+                if not isOurNPC then
+                    -- Command all friendly NPCs to attack the attacker!
+                    for _, npc in ipairs(spawnedNPCs) do
+                        if IsPedUsable(npc) then
+                            local groupName = npcGroups[npc] or "group1"
+                            local rel = groupRelationships[groupName] or "friendly"
+                            
+                            -- Only friendly groups defend the player
+                            if rel == "friendly" then
+                                local isGroupMember = IsPedInGroup(npc)
+                                if not isGroupMember then
+                                    if not npcFollowStates[npc] then
+                                        npcFollowStates[npc] = { following = false, speed = 3.0 }
+                                    end
+                                    
+                                    local state = npcFollowStates[npc]
+                                    if state.target ~= attacker then
+                                        state.target = attacker
+                                        print(string.format("[XMenu] Friendly NPC %s attacking target %s", tostring(npc), tostring(attacker)))
+                                        ClearPedTasksImmediately(npc)
+                                        
+                                        -- Force Hate relationship group settings so the game engine allows them to attack
+                                        local npcGroup = GetPedRelationshipGroupHash(npc)
+                                        local attackerGroup = GetPedRelationshipGroupHash(attacker)
+                                        if npcGroup and attackerGroup then
+                                            SetRelationshipBetweenGroups(5, npcGroup, attackerGroup) -- 5 = Hate
+                                            SetRelationshipBetweenGroups(5, attackerGroup, npcGroup)
+                                        end
+                                        
+                                        SetBlockingOfNonTemporaryEvents(npc, false) -- Disable non-temporary blocking during combat
+                                        SetPedFleeAttributes(npc, 0, false)
+                                        SetPedCombatAttributes(npc, 5, true)   -- Always fight (CA_ALWAYS_FIGHT)
+                                        SetPedCombatAttributes(npc, 17, false) -- Disable flee (CA_ALWAYS_FLEE)
+                                        SetPedCombatAttributes(npc, 16, true)  -- Can fight armed peds when unarmed
+                                        SetPedCombatRange(npc, 2)             -- Far range
+                                        SetPedCombatAbility(npc, 2)           -- Professional
+                                        SetPedAlertness(npc, 3)               -- Alert
+                                        TaskCombatPed(npc, attacker, 0, 16)
+                                      end
+                                end
+                            end
+                        end
+                    end
+                end
+            else
+                -- No active enemy attacker, check if any NPC needs to resume their previous task
+                for npc, state in pairs(npcFollowStates) do
+                    if IsPedUsable(npc) then
+                        if state.target then
+                            -- Target is dead or no longer exists
+                            if not DoesEntityExist(state.target) or IsEntityDead(state.target) then
+                                print(string.format("[XMenu] Target gone. NPC %s resuming state.", tostring(npc)))
+                                state.target = nil
+                                ClearPedTasksImmediately(npc)
+                                SetBlockingOfNonTemporaryEvents(npc, true)
+                                
+                                if state.following then
+                                    local isGroupMember = IsPedInGroup(npc)
+                                    if not isGroupMember then
+                                        TaskFollowToOffsetOfEntity(npc, playerPed, 0.0, 0.0, 0.0, state.speed, -1, 3.0, true)
+                                    end
+                                else
+                                    -- If they were not following, they just stay put
+                                    npcFollowStates[npc] = nil -- Clean up temp state
+                                end
+                            end
+                        end
+                    else
+                        npcFollowStates[npc] = nil
+                    end
+                end
+            end
         end
     end
 end)
