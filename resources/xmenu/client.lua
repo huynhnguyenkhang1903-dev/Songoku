@@ -100,8 +100,8 @@ function UpdateRelationships()
         if hash1 then
             -- Relation to Player
             if rel1 == "friendly" or rel1 == "hostile_other" then
-                SetRelationshipBetweenGroups(0, hash1, playerGroup) -- Companion
-                SetRelationshipBetweenGroups(0, playerGroup, hash1)
+                SetRelationshipBetweenGroups(1, hash1, playerGroup) -- Respect (Friendly but avoids auto Companion AI follow on foot)
+                SetRelationshipBetweenGroups(1, playerGroup, hash1)
             elseif rel1 == "neutral" then
                 SetRelationshipBetweenGroups(3, hash1, playerGroup) -- Neutral
                 SetRelationshipBetweenGroups(3, playerGroup, hash1)
@@ -282,6 +282,10 @@ function SpawnNPCs(count, direction, groupName, relationship)
             SetPedFleeAttributes(npc, 0, false)
             SetPedCombatAttributes(npc, 5, true)   -- Always fight (CA_ALWAYS_FIGHT)
             SetPedCombatAttributes(npc, 17, false) -- Disable always flee (CA_ALWAYS_FLEE)
+            SetPedStayInVehicleWhenJacked(npc, true)
+            SetPedCanBeDraggedOut(npc, false)
+            SetPedConfigFlag(npc, 185, true) -- CPED_CONFIG_FLAG_PreventBehaviorToGetOutOnFootWhenInVehicle
+            SetPedConfigFlag(npc, 29, true)  -- Disable driver activity (prevent ambient exit)
             
             local groupHash = groupHashes[groupName]
             if groupHash then
@@ -651,6 +655,9 @@ function FollowPlayer(group)
     for _, npc in ipairs(targets) do
         if IsPedUsable(npc) then
             if IsPedInAnyVehicle(npc, false) then
+                SetPedStayInVehicleWhenJacked(npc, false)
+                SetPedConfigFlag(npc, 185, false)
+                SetPedConfigFlag(npc, 29, false)
                 TaskLeaveAnyVehicle(npc, 0, 0)
             end
             npcFollowStates[npc] = { following = true, speed = 5.0 }
@@ -732,6 +739,7 @@ function NPCEnterNearestVehicles(group)
         
         if IsVehicleSeatFree(veh, -1) then
             local npc = targets[npcIndex]
+            RemovePedFromGroup(npc)
             ClearPedTasks(npc)
             TaskEnterVehicle(npc, veh, 20000, -1, 2.0, 1, 0)
             npcIndex = npcIndex + 1
@@ -751,6 +759,7 @@ function NPCEnterNearestVehicles(group)
                 
                 if IsVehicleSeatFree(veh, seat) then
                     local npc = targets[npcIndex]
+                    RemovePedFromGroup(npc)
                     ClearPedTasks(npc)
                     TaskEnterVehicle(npc, veh, 20000, seat, 2.0, 1, 0)
                     npcIndex = npcIndex + 1
@@ -780,6 +789,9 @@ function NPCExitNearestVehicles(group, weaponName)
 
     for _, npc in ipairs(targets) do
         if IsPedUsable(npc) and IsPedInAnyVehicle(npc, false) then
+            SetPedStayInVehicleWhenJacked(npc, false)
+            SetPedConfigFlag(npc, 185, false)
+            SetPedConfigFlag(npc, 29, false)
             ClearPedTasks(npc)
             TaskLeaveAnyVehicle(npc, 0, 0)
             
@@ -835,6 +847,9 @@ function FollowPlayerGroup(group, speed)
     for i, npc in ipairs(targets) do
         if IsPedUsable(npc) then
             if IsPedInAnyVehicle(npc, false) then
+                SetPedStayInVehicleWhenJacked(npc, false)
+                SetPedConfigFlag(npc, 185, false)
+                SetPedConfigFlag(npc, 29, false)
                 TaskLeaveAnyVehicle(npc, 0, 0)
             end
             
@@ -924,6 +939,7 @@ function ApplyVehicleDriveTask(driver, vehicle, driveMode)
     if not DoesEntityExist(driver) or not DoesEntityExist(vehicle) then return end
     
     local playerPed = PlayerPedId()
+    RemovePedFromGroup(driver)
     
     -- Ensure the vehicle is ready to drive (forces engine ON and releases handbrake)
     SetVehicleEngineOn(vehicle, true, true, false)
@@ -935,16 +951,20 @@ function ApplyVehicleDriveTask(driver, vehicle, driveMode)
     SetBlockingOfNonTemporaryEvents(driver, true)
     SetPedFleeAttributes(driver, 0, false)
     SetPedCombatAttributes(driver, 46, true)
+    SetPedStayInVehicleWhenJacked(driver, true)
+    SetPedCanBeDraggedOut(driver, false)
+    SetPedConfigFlag(driver, 185, true) -- CPED_CONFIG_FLAG_PreventBehaviorToGetOutOnFootWhenInVehicle
+    SetPedConfigFlag(driver, 29, true)  -- Disable driver activity (prevent ambient exit)
     
     print(string.format("[XMenu] ApplyVehicleDriveTask: driver=%s, vehicle=%s, driveMode=%s", tostring(driver), tostring(vehicle), tostring(driveMode)))
     
     if driveMode == "follow" then
         ClearPedTasks(driver)
-        TaskVehicleMissionPedTarget(driver, vehicle, playerPed, 7, 25.0, 786603, 6.0, 0.0, true)
+        TaskVehicleMissionPedTarget(driver, vehicle, playerPed, 7, 25.0, 786603, 10.0, 0.0, true)
         
     elseif driveMode == "follow_player" then
         ClearPedTasks(driver)
-        TaskVehicleMissionPedTarget(driver, vehicle, playerPed, 7, 30.0, 786603, 6.0, 0.0, true)
+        TaskVehicleMissionPedTarget(driver, vehicle, playerPed, 7, 30.0, 786603, 10.0, 0.0, true)
 
 
 
@@ -1039,6 +1059,10 @@ function SpawnVehicles(modelName, count, spacing, spawnNpc, driveMode, groupName
                         SetBlockingOfNonTemporaryEvents(driver, true)
                         SetPedFleeAttributes(driver, 0, false)
                         SetPedCombatAttributes(driver, 46, true)
+                        SetPedStayInVehicleWhenJacked(driver, true)
+                        SetPedCanBeDraggedOut(driver, false)
+                        SetPedConfigFlag(driver, 185, true) -- CPED_CONFIG_FLAG_PreventBehaviorToGetOutOnFootWhenInVehicle
+                        SetPedConfigFlag(driver, 29, true)  -- Disable driver activity (prevent ambient exit)
                         
                         for j = 0, 11 do
                             SetPedComponentVariation(driver, j, playerDrawable[j], playerTexture[j], playerPalette[j])
@@ -1058,6 +1082,7 @@ function SpawnVehicles(modelName, count, spacing, spawnNpc, driveMode, groupName
                         SetDriverAggressiveness(driver, 1.0)
                         
                         npcGroups[driver] = groupName
+                        RemovePedFromGroup(driver)
                         table.insert(spawnedNPCs, driver)
                         
                         ApplyVehicleDriveTask(driver, vehicle, driveMode)
@@ -1749,20 +1774,21 @@ function AlignGroupVehicles(groupName, gpsCoords)
         local offsetDist = (i - 1) * spacing
         local spawnPos = targetCoords - (dirVector * offsetDist)
         
-        -- Stop NPC driver tasks immediately
         local currentDriver = GetPedInVehicleSeat(entry.vehicle, -1)
         if currentDriver and currentDriver ~= 0 and DoesEntityExist(currentDriver) then
-            ClearPedTasksImmediately(currentDriver)
+            -- Command driver to park naturally (reverse, steer, align heading)
+            ClearPedTasks(currentDriver)
+            TaskVehiclePark(currentDriver, entry.vehicle, spawnPos.x, spawnPos.y, spawnPos.z, targetHeading, 1, 1.5, false)
             entry.driver = currentDriver
+        else
+            -- No driver, snap/teleport vehicle immediately
+            SetEntityCoordsNoOffset(entry.vehicle, spawnPos.x, spawnPos.y, spawnPos.z, true, false, false)
+            SetEntityHeading(entry.vehicle, targetHeading)
+            SetVehicleOnGroundProperly(entry.vehicle)
+            SetVehicleForwardSpeed(entry.vehicle, 0.0)
+            SetVehicleHandbrake(entry.vehicle, true)
+            SetVehicleEngineOn(entry.vehicle, false, true, true)
         end
-        
-        -- Position and stabilize the vehicle
-        SetEntityCoordsNoOffset(entry.vehicle, spawnPos.x, spawnPos.y, spawnPos.z, true, false, false)
-        SetEntityHeading(entry.vehicle, targetHeading)
-        SetVehicleOnGroundProperly(entry.vehicle)
-        SetVehicleForwardSpeed(entry.vehicle, 0.0)
-        SetVehicleHandbrake(entry.vehicle, true)
-        SetVehicleEngineOn(entry.vehicle, false, true, true)
     end
     
     local numStr = groupName:gsub("group", "")
@@ -1889,7 +1915,7 @@ Citizen.CreateThread(function()
                         local vehicle = entry.vehicle
                         local vehCoords = GetEntityCoords(vehicle)
                         
-                        local spacing = entry.spacing or 8.0
+                        local spacing = entry.spacing or 10.0
                         local slotIdx = entry.slotIndex or 1
                         
                         -- Calculate target slot position and heading
@@ -1908,30 +1934,27 @@ Citizen.CreateThread(function()
                         
                         local distToSlot = #(vehCoords - finalTargetPos)
                         
-                        if distToSlot > 3.0 then
+                        if distToSlot > 12.0 then
                             -- Far from slot, drive there!
                             if entry.alignState ~= "driving" then
                                 entry.alignState = "driving"
                                 ClearPedTasks(currentDriver)
-                                TaskVehicleDriveToCoordLongrange(currentDriver, vehicle, finalTargetPos.x, finalTargetPos.y, finalTargetPos.z, 15.0, 786603, 1.5)
+                                TaskVehicleDriveToCoordLongrange(currentDriver, vehicle, finalTargetPos.x, finalTargetPos.y, finalTargetPos.z, 15.0, 786603, 3.0)
+                            end
+                            SetVehicleHandbrake(vehicle, false)
+                        elseif distToSlot > 1.5 then
+                            -- Close to slot, park naturally (steer, reverse, align heading)
+                            if entry.alignState ~= "parking" then
+                                entry.alignState = "parking"
+                                ClearPedTasks(currentDriver)
+                                TaskVehiclePark(currentDriver, vehicle, finalTargetPos.x, finalTargetPos.y, finalTargetPos.z, targetHeading, 1, 1.5, true)
                             end
                             SetVehicleHandbrake(vehicle, false)
                         else
-                            -- Close to slot, snap once and park!
+                            -- Arrived at slot, lock vehicle in place
                             if entry.alignState ~= "parked" then
                                 entry.alignState = "parked"
                                 ClearPedTasksImmediately(currentDriver)
-                                
-                                -- Only snap coordinates and heading if there is a noticeable offset (to prevent glitching on spawn)
-                                local currentHeading = GetEntityHeading(vehicle)
-                                local headingDiff = math.abs(currentHeading - targetHeading)
-                                while headingDiff > 180.0 do headingDiff = 360.0 - headingDiff end
-                                
-                                if distToSlot > 0.5 or headingDiff > 5.0 then
-                                    SetEntityCoordsNoOffset(vehicle, finalTargetPos.x, finalTargetPos.y, finalTargetPos.z, true, false, false)
-                                    SetEntityHeading(vehicle, targetHeading)
-                                end
-                                
                                 SetVehicleForwardSpeed(vehicle, 0.0)
                                 SetVehicleHandbrake(vehicle, true)
                                 SetVehicleEngineOn(vehicle, true, true, true)
@@ -1992,7 +2015,7 @@ Citizen.CreateThread(function()
                             entry.lastSpeed = speed
                             entry.lastStyle = style
                             ClearPedTasks(currentDriver)
-                            TaskVehicleMissionPedTarget(currentDriver, vehicle, playerPed, 7, speed, style, 6.0, 0.0, true)
+                            TaskVehicleMissionPedTarget(currentDriver, vehicle, playerPed, 7, speed, style, 10.0, 0.0, true)
                         end
                     end
                 end
@@ -2009,6 +2032,15 @@ Citizen.CreateThread(function()
         Citizen.Wait(1000)
         for _, entry in ipairs(spawnedVehicles) do
             if entry.vehicle and DoesEntityExist(entry.vehicle) then
+                -- Remove all occupants from the player's group to prevent native auto-exit logic
+                local maxPassengers = GetVehicleMaxNumberOfPassengers(entry.vehicle)
+                for seat = -1, maxPassengers - 1 do
+                    local ped = GetPedInVehicleSeat(entry.vehicle, seat)
+                    if ped and ped ~= 0 and DoesEntityExist(ped) and ped ~= PlayerPedId() then
+                        RemovePedFromGroup(ped)
+                    end
+                end
+                
                 local currentDriver = GetPedInVehicleSeat(entry.vehicle, -1)
                 if currentDriver == 0 then currentDriver = nil end
                 

@@ -793,7 +793,9 @@ local function SetupCompanionPed(clone, playerPed, isDriver)
     SetPedCombatRange(clone, 2)
     SetEntityInvincible(clone, companionInvincible)
     SetPedRelationshipGroupHash(clone, GetPedRelationshipGroupHash(playerPed))
-    SetPedAsGroupMember(clone, GetPedGroupIndex(playerPed))
+    if not isDriver then
+        SetPedAsGroupMember(clone, GetPedGroupIndex(playerPed))
+    end
     SetPedKeepTask(clone, true)
     SetPedCanBeDraggedOut(clone, false)
     SetCombatPedDefaults(clone)
@@ -813,9 +815,6 @@ local function ConvoyStopAndExit(data)
     if veh and DoesEntityExist(veh) then
         SetVehicleForwardSpeed(veh, 0.0)
         SetVehicleBrake(veh, true)
-    end
-    if IsPedInAnyVehicle(ped, false) then
-        TaskLeaveVehicle(ped, GetVehiclePedIsIn(ped, false), 0)
     end
     data.convoyDriving = false
 end
@@ -878,10 +877,16 @@ end
 local function OnPlayerExitedVehicle()
     for _, data in ipairs(companions) do
         if data.kind == "convoy" then
-            ConvoyStopAndExit(data)
-        elseif data.kind == "foot" and IsPedUsable(data.ped) and IsPedInAnyVehicle(data.ped, false) then
-            ClearPedTasks(data.ped)
-            TaskLeaveVehicle(data.ped, GetVehiclePedIsIn(data.ped, false), 0)
+            local ped = data.ped
+            local veh = data.veh
+            if IsPedUsable(ped) then
+                ClearPedTasks(ped)
+                if veh and DoesEntityExist(veh) then
+                    SetVehicleForwardSpeed(veh, 0.0)
+                    SetVehicleBrake(veh, true)
+                end
+                data.convoyDriving = false
+            end
         end
     end
 end
@@ -1356,13 +1361,7 @@ Citizen.CreateThread(function()
                             end
                         end
                     else
-                        if not inVehicle and IsPedInAnyVehicle(ped, false) then
-                            local cVeh = GetVehiclePedIsIn(ped, false)
-                            if cVeh ~= playerVeh then
-                                ClearPedTasks(ped)
-                                TaskLeaveVehicle(ped, cVeh, 0)
-                            end
-                        end
+                        -- Automatic vehicle exit when player is on foot has been disabled to prevent automatic exits.
                         footIndex = footIndex + 1
                         local idx = 0
                         for fi, fm in ipairs(footMembers) do
